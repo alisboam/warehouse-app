@@ -1151,3 +1151,183 @@ Processing by WarehousesController#show as HTML
   Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 715)
 Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1794)
   [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2022-09-16 10:19:21 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 764)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3672)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 6865)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWarehouse Create (0.2ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rio"], ["code", "SDU"], ["city", "Rio de Janeiro"], ["area", 60000], ["created_at", "2022-09-16 13:19:21.904281"], ["updated_at", "2022-09-16 13:19:21.904281"], ["address", nil], ["cep", nil], ["description", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWarehouse Create (0.1ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Maceio"], ["code", "MCZ"], ["city", "Maceio"], ["area", 50000], ["created_at", "2022-09-16 13:19:21.905741"], ["updated_at", "2022-09-16 13:19:21.905741"], ["address", nil], ["cep", nil], ["description", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2022-09-16 10:19:21 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 1.0ms | Allocations: 772)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 961)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2022-09-16 10:19:21 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 1.4ms | Allocations: 538)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 725)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWarehouse Create (0.2ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Aeroporto RJ"], ["code", "SDU"], ["city", "Rio de Janeiro"], ["area", 60000], ["created_at", "2022-09-16 13:19:21.929197"], ["updated_at", "2022-09-16 13:19:21.929197"], ["address", "Praça Sen. Salgado Filho"], ["cep", "20021-340"], ["description", "Galpão destinado a cargas pequenas"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2022-09-16 10:19:21 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.0ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 597)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 784)
+Started GET "/warehouses/1" for 127.0.0.1 at 2022-09-16 10:19:21 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 718)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.1ms | Allocations: 1795)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2022-09-16 10:21:51 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 764)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 3407)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 6600)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWarehouse Create (0.1ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rio"], ["code", "SDU"], ["city", "Rio de Janeiro"], ["area", 60000], ["created_at", "2022-09-16 13:21:51.621375"], ["updated_at", "2022-09-16 13:21:51.621375"], ["address", nil], ["cep", nil], ["description", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWarehouse Create (0.1ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Maceio"], ["code", "MCZ"], ["city", "Maceio"], ["area", 50000], ["created_at", "2022-09-16 13:21:51.622465"], ["updated_at", "2022-09-16 13:21:51.622465"], ["address", nil], ["cep", nil], ["description", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2022-09-16 10:21:51 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.0ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 767)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms | Allocations: 956)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2022-09-16 10:21:51 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 539)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms | Allocations: 726)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWarehouse Create (0.1ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Aeroporto RJ"], ["code", "SDU"], ["city", "Rio de Janeiro"], ["area", 60000], ["created_at", "2022-09-16 13:21:51.641542"], ["updated_at", "2022-09-16 13:21:51.641542"], ["address", "Praça Sen. Salgado Filho"], ["cep", "20021-340"], ["description", "Galpão destinado a cargas pequenas"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2022-09-16 10:21:51 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.0ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 597)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 784)
+Started GET "/warehouses/1" for 127.0.0.1 at 2022-09-16 10:21:51 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 0.4ms | Allocations: 219)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 718)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.1ms | Allocations: 1795)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2022-09-16 10:22:54 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 764)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 3407)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.1ms | Allocations: 6600)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWarehouse Create (0.2ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rio"], ["code", "SDU"], ["city", "Rio de Janeiro"], ["area", 60000], ["created_at", "2022-09-16 13:22:54.165488"], ["updated_at", "2022-09-16 13:22:54.165488"], ["address", nil], ["cep", nil], ["description", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWarehouse Create (0.1ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Maceio"], ["code", "MCZ"], ["city", "Maceio"], ["area", 50000], ["created_at", "2022-09-16 13:22:54.167012"], ["updated_at", "2022-09-16 13:22:54.167012"], ["address", nil], ["cep", nil], ["description", nil]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2022-09-16 10:22:54 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 772)
+Completed 200 OK in 1ms (Views: 1.2ms | ActiveRecord: 0.1ms | Allocations: 962)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2022-09-16 10:22:54 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 87)
+  Rendered layout layouts/application.html.erb (Duration: 0.9ms | Allocations: 538)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms | Allocations: 725)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mWarehouse Create (0.1ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Aeroporto RJ"], ["code", "SDU"], ["city", "Rio de Janeiro"], ["area", 60000], ["created_at", "2022-09-16 13:22:54.194523"], ["updated_at", "2022-09-16 13:22:54.194523"], ["address", "Praça Sen. Salgado Filho"], ["cep", "20021-340"], ["description", "Galpão destinado a cargas pequenas"]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2022-09-16 10:22:54 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.0ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 147)
+  Rendered layout layouts/application.html.erb (Duration: 0.8ms | Allocations: 597)
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 784)
+Started GET "/warehouses/1" for 127.0.0.1 at 2022-09-16 10:22:54 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 239)
+  Rendered layout layouts/application.html.erb (Duration: 1.1ms | Allocations: 738)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.1ms | Allocations: 1815)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m

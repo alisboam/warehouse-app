@@ -16,7 +16,7 @@ describe 'usuário vê detalhes de um galpão' do
         expect(page).to have_content('Nome: Aeroporto RJ')
         expect(page).to have_content('Cidade: Rio de Janeiro')
         expect(page).to have_content('60000 m2')
-        expect(page).to have_content('Praça Sen. Salgado Filho, CEP: 20021-340 ')
+        expect(page).to have_content('Praça Sen. Salgado Filho, CEP: 20021-340')
         expect(page).to have_content('Galpão destinado a cargas pequenas')
         
     end
