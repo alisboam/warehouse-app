@@ -13,6 +13,7 @@ class WarehousesController < ApplicationController
     warehouse_params = params.require(:warehouse)
                              .permit(:name, :code, :description, :address, :cep, :area)
     created_warehouse = Warehouse.create(warehouse_params)
+    flash[:notice] = 'Galpão cadastrado com sucesso'
     redirect_to root_path
   end
 end
