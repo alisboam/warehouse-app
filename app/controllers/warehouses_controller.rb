@@ -3,4 +3,8 @@ class WarehousesController < ApplicationController
 		id = params[:id]
     @warehouse = Warehouse.find(id)
   end
+
+  def new
+    
+  end
 end
