@@ -7,4 +7,12 @@ class WarehousesController < ApplicationController
   def new
     
   end
+
+  def create
+    
+    warehouse_params = params.require(:warehouse)
+                             .permit(:name, :code, :description, :address, :cep, :area)
+    created_warehouse = Warehouse.create(warehouse_params)
+    redirect_to root_path
+  end
 end
