@@ -262,3 +262,290 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.1ms | Allocations: 3085)
 
 
+Started GET "/" for ::1 at 2022-09-20 12:23:46 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 30.4ms | Allocations: 19006)
+  Rendered layout layouts/application.html.erb (Duration: 41.4ms | Allocations: 22291)
+Completed 200 OK in 52ms (Views: 43.9ms | ActiveRecord: 1.1ms | Allocations: 26097)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 12:23:47 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 4212)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 5213)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.0ms | Allocations: 6034)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 12:23:52 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar"}
+[31mUnpermitted parameter: :city. Context: { controller: WarehousesController, action: create, request: #<ActionDispatch::Request:0x00007fae0c4328f0>, params: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar", "controller"=>"warehouses", "action"=>"create"} }[0m
+Redirected to http://localhost:3000/warehouses/new
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms | Allocations: 1156)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 12:23:52 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1247)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2194)
+Completed 200 OK in 8ms (Views: 7.6ms | ActiveRecord: 0.0ms | Allocations: 2423)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 12:26:16 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar"}
+[31mUnpermitted parameter: :city. Context: { controller: WarehousesController, action: create, request: #<ActionDispatch::Request:0x00007fae0c760fe0>, params: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar", "controller"=>"warehouses", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.7ms | Allocations: 4511)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0..2)):
+  
+app/controllers/warehouses_controller.rb:20:in `create'
+Started POST "/warehouses" for ::1 at 2022-09-20 12:27:03 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar"}
+[31mUnpermitted parameter: :city. Context: { controller: WarehousesController, action: create, request: #<ActionDispatch::Request:0x00007fae0c4c9d18>, params: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar", "controller"=>"warehouses", "action"=>"create"} }[0m
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 815)
+
+
+  
+ArgumentError (wrong number of arguments (given 3, expected 0..2)):
+  
+app/controllers/warehouses_controller.rb:20:in `create'
+Started POST "/warehouses" for ::1 at 2022-09-20 12:28:14 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar"}
+[31mUnpermitted parameter: :city. Context: { controller: WarehousesController, action: create, request: #<ActionDispatch::Request:0x0000560ea544d3d8>, params: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar", "controller"=>"warehouses", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1682)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2894)
+Completed 200 OK in 15ms (Views: 6.9ms | ActiveRecord: 0.8ms | Allocations: 8111)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 12:28:19 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>"", "commit"=>"Enviar"}
+Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms | Allocations: 403)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: warehouse):
+  
+app/controllers/warehouses_controller.rb:13:in `create'
+Started POST "/warehouses" for ::1 at 2022-09-20 12:29:23 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>"", "commit"=>"Enviar"}
+Completed 400 Bad Request in 1ms (Allocations: 422)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: new_warehouse):
+  
+app/controllers/warehouses_controller.rb:13:in `create'
+Started POST "/warehouses" for ::1 at 2022-09-20 12:30:47 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>"", "commit"=>"Enviar"}
+Completed 400 Bad Request in 1ms (Allocations: 422)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: new_warehouse):
+  
+app/controllers/warehouses_controller.rb:13:in `create'
+Started POST "/warehouses" for ::1 at 2022-09-20 12:31:34 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>"", "commit"=>"Enviar"}
+Completed 400 Bad Request in 1ms (Allocations: 422)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: warehouse):
+  
+app/controllers/warehouses_controller.rb:13:in `create'
+Started POST "/warehouses" for ::1 at 2022-09-20 12:32:42 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>"", "commit"=>"Enviar"}
+Completed 400 Bad Request in 1ms (Allocations: 422)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: warehouse):
+  
+app/controllers/warehouses_controller.rb:13:in `create'
+Started POST "/warehouses" for ::1 at 2022-09-20 12:33:05 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>"", "commit"=>"Enviar"}
+Completed 400 Bad Request in 2ms (Allocations: 422)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: new_warehouse):
+  
+app/controllers/warehouses_controller.rb:13:in `create'
+Started POST "/warehouses" for ::1 at 2022-09-20 13:49:04 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>"", "commit"=>"Enviar"}
+Completed 400 Bad Request in 1ms (Allocations: 422)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: warehouse):
+  
+app/controllers/warehouses_controller.rb:13:in `create'
+Started GET "/" for ::1 at 2022-09-20 13:50:43 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.4ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 3959)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 5358)
+Completed 200 OK in 20ms (Views: 16.4ms | ActiveRecord: 1.8ms | Allocations: 6935)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 13:50:45 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1760)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 2759)
+Completed 200 OK in 19ms (Views: 17.3ms | ActiveRecord: 0.0ms | Allocations: 3525)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 13:50:49 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar"}
+[31mUnpermitted parameter: :city. Context: { controller: WarehousesController, action: create, request: #<ActionDispatch::Request:0x00007fae006210c8>, params: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar", "controller"=>"warehouses", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 27.2ms | Allocations: 7379)
+  Rendered layout layouts/application.html.erb (Duration: 29.1ms | Allocations: 8359)
+Completed 200 OK in 36ms (Views: 30.7ms | ActiveRecord: 0.0ms | Allocations: 9298)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 13:50:51 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar"}
+[31mUnpermitted parameter: :city. Context: { controller: WarehousesController, action: create, request: #<ActionDispatch::Request:0x00007fae0ca85248>, params: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar", "controller"=>"warehouses", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 22.4ms | Allocations: 4701)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 5681)
+Completed 200 OK in 32ms (Views: 26.9ms | ActiveRecord: 0.0ms | Allocations: 6543)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 13:50:53 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar"}
+[31mUnpermitted parameter: :city. Context: { controller: WarehousesController, action: create, request: #<ActionDispatch::Request:0x00007fae00946be0>, params: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar", "controller"=>"warehouses", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 4701)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 5682)
+Completed 200 OK in 21ms (Views: 16.7ms | ActiveRecord: 0.0ms | Allocations: 6551)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 13:50:54 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar"}
+[31mUnpermitted parameter: :city. Context: { controller: WarehousesController, action: create, request: #<ActionDispatch::Request:0x00007fae0cc046a0>, params: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar", "controller"=>"warehouses", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 4701)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 5681)
+Completed 200 OK in 15ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 6535)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 13:53:40 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar"}
+[31mUnpermitted parameter: :city. Context: { controller: WarehousesController, action: create, request: #<ActionDispatch::Request:0x00007fae0cd5c250>, params: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar", "controller"=>"warehouses", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4770)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 5762)
+Completed 200 OK in 19ms (Views: 11.8ms | ActiveRecord: 0.7ms | Allocations: 10714)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 13:55:04 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar"}
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 4777)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 5761)
+Completed 200 OK in 21ms (Views: 9.8ms | ActiveRecord: 1.7ms | Allocations: 10667)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 13:58:16 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar"}
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 4777)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 5766)
+Completed 200 OK in 20ms (Views: 12.6ms | ActiveRecord: 0.8ms | Allocations: 10658)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 13:58:17 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar"}
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 4708)
+  Rendered layout layouts/application.html.erb (Duration: 12.1ms | Allocations: 5682)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.0ms | Allocations: 6451)
+
+
+Started GET "/" for ::1 at 2022-09-20 13:58:21 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 771)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1952)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.2ms | Allocations: 2693)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 13:58:25 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1249)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 2235)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 2469)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 13:58:40 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar"}
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4777)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 5761)
+Completed 200 OK in 19ms (Views: 10.4ms | ActiveRecord: 0.8ms | Allocations: 10627)
+
+
+Started GET "/" for ::1 at 2022-09-20 13:58:43 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.4ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 771)
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 1975)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.4ms | Allocations: 2716)
+
+
