@@ -549,3 +549,121 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.4ms | Allocations: 2716)
 
 
+Started GET "/warehouses/new" for ::1 at 2022-09-20 14:30:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 4748)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 7709)
+Completed 200 OK in 28ms (Views: 13.6ms | ActiveRecord: 0.4ms | Allocations: 29012)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 14:31:01 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"RCF", "code"=>"RCF", "address"=>"XXXX", "city"=>"XXX", "cep"=>"XXXXXXX", "area"=>"333333"}, "commit"=>"Enviar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Create (0.4ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Recife"], ["code", "RCF"], ["city", "XXX"], ["area", 333333], ["created_at", "2022-09-20 17:31:01.180740"], ["updated_at", "2022-09-20 17:31:01.180740"], ["address", "XXXX"], ["cep", "XXXXXXX"], ["description", "RCF"]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 2.7ms | Allocations: 2908)
+
+
+Started GET "/" for ::1 at 2022-09-20 14:31:01 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1157)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 2370)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.2ms | Allocations: 3187)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 14:31:08 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1239)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 2184)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 2419)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 14:31:13 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"", "code"=>"", "address"=>"", "city"=>"", "cep"=>"", "area"=>""}, "commit"=>"Enviar"}
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 19.5ms | Allocations: 7388)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 8359)
+Completed 200 OK in 27ms (Views: 22.8ms | ActiveRecord: 0.0ms | Allocations: 9174)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 15:26:12 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"sssss", "code"=>"sssss", "address"=>"sss", "city"=>"ss", "cep"=>"ss", "area"=>"222"}, "commit"=>"Enviar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "sssss"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "sssss"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 7525)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 10449)
+Completed 200 OK in 38ms (Views: 18.7ms | ActiveRecord: 0.7ms | Allocations: 36168)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 15:26:21 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"sssss", "code"=>"s", "address"=>"sss", "city"=>"ss", "cep"=>"ss", "area"=>"222"}, "commit"=>"Enviar"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "s"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "s"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 2240)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3436)
+Completed 200 OK in 28ms (Views: 11.0ms | ActiveRecord: 1.2ms | Allocations: 7076)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-20 15:26:27 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"sssss", "code"=>"sss", "address"=>"sss", "city"=>"ss", "cep"=>"ss", "area"=>"222"}, "commit"=>"Enviar"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "sss"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Create (0.5ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Recife"], ["code", "sss"], ["city", "ss"], ["area", 222], ["created_at", "2022-09-20 18:26:27.062780"], ["updated_at", "2022-09-20 18:26:27.062780"], ["address", "sss"], ["cep", "ss"], ["description", "sssss"]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? AND "warehouses"."id" != ? LIMIT ?[0m  [["code", "sss"], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 3.0ms | Allocations: 3968)
+
+
+Started GET "/" for ::1 at 2022-09-20 15:26:27 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1181)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 2368)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 3166)
+
+
