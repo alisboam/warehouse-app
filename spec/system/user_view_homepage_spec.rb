@@ -15,10 +15,10 @@ describe 'usuário visita tela inicial' do
         #Arrange
         #cadastrar 2 galpoes
         Warehouse.create(name: 'Aeroporto RJ', code: 'SDU', city: 'Rio de Janeiro', area: 60_000,
-                        address: 'Praça Sen. Salgado Filho', cep: '20021-340',
+                        address: 'Praça Sen. Salgado Filho', cep: '20021340',
                         description: 'Galpão destinado a cargas pequenas')
         Warehouse.create(name: 'Maceio', code: 'MCZ', city: 'Maceio', area: 50_000,
-            						address: 'Avenida Maceió', cep: '20021-340',
+            						address: 'Avenida Maceió', cep: '20021340',
                         description: 'Galpão destinado a cargas pequenas')
         
 

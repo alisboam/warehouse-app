@@ -667,3 +667,77 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.2ms | Allocations: 3166)
 
 
+Started GET "/" for ::1 at 2022-09-20 16:38:13 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 34.6ms | Allocations: 19112)
+  Rendered layout layouts/application.html.erb (Duration: 51.1ms | Allocations: 22395)
+Completed 200 OK in 67ms (Views: 55.5ms | ActiveRecord: 1.9ms | Allocations: 26303)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 16:38:15 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 4243)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 5244)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 6065)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 16:39:39 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 1737)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 2946)
+Completed 200 OK in 27ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 3824)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 16:44:36 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1733)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 2943)
+Completed 200 OK in 16ms (Views: 13.5ms | Allocations: 3831)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 16:45:47 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1739)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 2948)
+Completed 200 OK in 18ms (Views: 15.0ms | Allocations: 3827)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 16:46:18 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1738)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 2948)
+Completed 200 OK in 12ms (Views: 10.5ms | Allocations: 3836)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 16:48:13 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 6.8ms | Allocations: 2979)
+Completed 200 OK in 11ms (Views: 9.7ms | Allocations: 3867)
+
+
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  [1m[36mWarehouse Delete All (16.4ms)[0m  [1m[31mDELETE FROM "warehouses"[0m
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "SDU"], ["LIMIT", 1]]
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "Aeroporto RJ"], ["LIMIT", 1]]
+  [1m[36mWarehouse Create (0.2ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Aeroporto RJ"], ["code", "SDU"], ["city", "Rio de Janeiro"], ["area", 60000], ["created_at", "2022-09-20 22:36:50.316713"], ["updated_at", "2022-09-20 22:36:50.316713"], ["address", "Praça Sen. Salgado Filho"], ["cep", "20021340"], ["description", "Galpão destinado a cargas pequenas"]]
+  [1m[36mTRANSACTION (15.5ms)[0m  [1m[36mcommit transaction[0m

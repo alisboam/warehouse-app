@@ -3,15 +3,15 @@
 <%= form_with(model: @warehouse) do |form| %>
   <div>
 		<%= form.label :name, 'Nome'%>
-		<%= form.text_field :name %>
+		<%= form.text_field :name, required: true %>
 	</div>
 	<div>
 		<%= form.label :description, 'Descrição'%>
-  	<%= form.text_field :description %>
+  	<%= form.text_field :description, required: true %>
 	</div>
 	<div>
 		<%= form.label :code, 'Código'%>
-  	<%= form.text_field :code %>
+  	<%= form.text_field :code, maxlength:3 %>
 	</div>
 	<div>
 		<%= form.label :address, 'Endereço'%>
@@ -23,7 +23,7 @@
 	</div>
 	<div>
   	<%= form.label :cep, 'CEP'%>
-  	<%= form.text_field :cep %>
+  	<%= form.text_field :cep, maxlength:8 %>
 	</div>
   <div>
   	<%= form.label :area, 'Área'%>

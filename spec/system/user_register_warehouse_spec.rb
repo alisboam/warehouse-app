@@ -27,7 +27,7 @@ describe 'Usuário cadastra um galpão' do
         fill_in 'Código', with: 'RIO'
         fill_in 'Endereço', with: 'Avenida Rio de Janeiro, 1000'
         fill_in 'Cidade', with: 'Rio de Janeiro'
-        fill_in 'CEP', with: '20900-000'
+        fill_in 'CEP', with: '20900000'
         fill_in 'Área', with: '32000'
         click_on 'Enviar'
 
