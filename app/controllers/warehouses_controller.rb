@@ -12,6 +12,7 @@ class WarehousesController < ApplicationController
     
     warehouse_params = params.require(:warehouse)
                       .permit(:name, :code, :description, :city, :address, :cep, :area)
+    warehouse_params[:cep] = warehouse_params[:cep].gsub("-", "")
     @warehouse = Warehouse.create(warehouse_params)
 
     if @warehouse.valid?

@@ -4,5 +4,6 @@ class Warehouse < ApplicationRecord
 	validates :code, uniqueness: true
 	validates :name, uniqueness: true
 	validates :cep, length: { is: 8 }
+	validates :cep, numericality: { only_integer: true }
 	
 end

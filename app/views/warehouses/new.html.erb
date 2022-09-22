@@ -1,33 +1,41 @@
 <h1>Novo Galpão</h1>
 
+<% if(@warehouse.errors.any?) %>
+	<ul>
+		<% @warehouse.errors.full_messages.each do |message| %>
+		<li> <%= message %> </li>
+		<% end %>
+	</ul>
+<% end %>
+
 <%= form_with(model: @warehouse) do |form| %>
   <div>
-		<%= form.label :name, 'Nome'%>
+		<%= form.label :name%>
 		<%= form.text_field :name, required: true %>
 	</div>
 	<div>
-		<%= form.label :description, 'Descrição'%>
+		<%= form.label :description %>
   	<%= form.text_field :description, required: true %>
 	</div>
 	<div>
-		<%= form.label :code, 'Código'%>
+		<%= form.label :code %>
   	<%= form.text_field :code, maxlength:3 %>
 	</div>
 	<div>
-		<%= form.label :address, 'Endereço'%>
-  	<%= form.text_field :address %>
+		<%= form.label :address %>
+  	<%= form.text_field :address, required: true %>
 	</div>
 	<div>
-  	<%= form.label :city, 'Cidade'%>
-  	<%= form.text_field :city %>
+  	<%= form.label :city %>
+  	<%= form.text_field :city, required: true %>
 	</div>
 	<div>
-  	<%= form.label :cep, 'CEP'%>
-  	<%= form.text_field :cep, maxlength:8 %>
+  	<%= form.label :cep, 'CEP' %>
+  	<%= form.text_field :cep, maxlength:9, placeholder:"00000-000" %>
 	</div>
   <div>
-  	<%= form.label :area, 'Área'%>
-  	<%= form.number_field :area %>
+  	<%= form.label :area %>
+  	<%= form.number_field :area, required: true %>
 	</div>
   
   <div> 
@@ -35,3 +43,5 @@
 	</div>
 
 <% end %>
+
+<script src="/assets/application.js"></script>

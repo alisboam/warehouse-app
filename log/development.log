@@ -741,3 +741,1438 @@ Completed 200 OK in 11ms (Views: 9.7ms | Allocations: 3867)
   [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "Aeroporto RJ"], ["LIMIT", 1]]
   [1m[36mWarehouse Create (0.2ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Aeroporto RJ"], ["code", "SDU"], ["city", "Rio de Janeiro"], ["area", 60000], ["created_at", "2022-09-20 22:36:50.316713"], ["updated_at", "2022-09-20 22:36:50.316713"], ["address", "Praça Sen. Salgado Filho"], ["cep", "20021340"], ["description", "Galpão destinado a cargas pequenas"]]
   [1m[36mTRANSACTION (15.5ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/warehouses/new" for ::1 at 2022-09-20 19:52:22 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 4831)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 7792)
+Completed 200 OK in 37ms (Views: 22.7ms | ActiveRecord: 0.4ms | Allocations: 29246)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 19:54:41 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 1809)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 3019)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 3908)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 19:54:59 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 1804)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3014)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms | Allocations: 3902)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 19:56:13 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1805)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 3015)
+Completed 200 OK in 24ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 3903)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 19:58:01 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 1437)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1510)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2383)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Novo Galpão</h1>
+
+<%= form_with(model: @warehouse) do |form| %>
+  <div>
+		<%= form.label :name, 'Nome'%>
+		<%= form.text_field :name, required: true %>
+	</div>
+	<div>
+		<%= form.label :description, 'Descrição'%>
+  	<%= form.text_field :description, required: true %>
+	</div>
+	<div>
+		<%= form.label :code, 'Código'%>
+  	<%= form.text_field :code, maxlength:3 %>
+	</div>
+	<div>
+		<%= form.label :address, 'Endereço'%>
+  	<%= form.text_field :address, required: true %>
+	</div>
+	<div>
+  	<%= form.label :city, 'Cidade'%>
+  	<%= form.text_field :city, required: true %>
+	</div>
+	<div>
+  	<%= form.label :cep, 'CEP'%>
+  	<%= form.text_field :cep, maxlength:9, placeholder:"00000-000", pattern:"/^(\d{5})(\d)/,"$1-$2"" %>
+	</div>
+  <div>
+  	<%= form.label :area, 'Área'%>
+  	<%= form.number_field :area, required: true %>
+	</div>
+  
+  <div> 
+		<%= form.submit 'Enviar' %>
+	</div>
+
+<% end %>
+):
+1:    <h1>Novo Galpão</h1>
+2:    
+3:    <%= form_with(model: @warehouse) do |form| %>
+4:      <div>
+5:    		<%= form.label :name, 'Nome'%>
+6:    		<%= form.text_field :name, required: true %>
+7:    	</div>
+8:    	<div>
+9:    		<%= form.label :description, 'Descrição'%>
+10:      	<%= form.text_field :description, required: true %>
+11:    	</div>
+12:    	<div>
+13:    		<%= form.label :code, 'Código'%>
+14:      	<%= form.text_field :code, maxlength:3 %>
+15:    	</div>
+16:    	<div>
+17:    		<%= form.label :address, 'Endereço'%>
+18:      	<%= form.text_field :address, required: true %>
+19:    	</div>
+20:    	<div>
+21:      	<%= form.label :city, 'Cidade'%>
+22:      	<%= form.text_field :city, required: true %>
+23:    	</div>
+24:    	<div>
+25:      	<%= form.label :cep, 'CEP'%>
+26:      	<%= form.text_field :cep, maxlength:9, placeholder:"00000-000", pattern:"/^(\d{5})(\d)/,"$1-$2"" %>
+27:    	</div>
+28:      <div>
+29:      	<%= form.label :area, 'Área'%>
+30:      	<%= form.number_field :area, required: true %>
+31:    	</div>
+32:      
+33:      <div> 
+34:    		<%= form.submit 'Enviar' %>
+35:    	</div>
+36:    
+37:    <% end %>
+  
+app/views/warehouses/new.html.erb:26: syntax error, unexpected numbered reference, expecting ')'
+app/views/warehouses/new.html.erb:26: syntax error, unexpected string literal, expecting ')'
+app/views/warehouses/new.html.erb:26: syntax error, unexpected numbered reference, expecting ')'
+app/views/warehouses/new.html.erb:26: syntax error, unexpected string literal, expecting ')'
+app/views/warehouses/new.html.erb:26: syntax error, unexpected numbered reference, expecting ')'
+app/views/warehouses/new.html.erb:26: syntax error, unexpected string literal, expecting ')'
+app/views/warehouses/new.html.erb:26: syntax error, unexpected numbered reference, expecting ')'
+app/views/warehouses/new.html.erb:26: syntax error, unexpected string literal, expecting ')'
+Started GET "/warehouses/new" for ::1 at 2022-09-20 19:58:21 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 489)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 563)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1429)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Novo Galpão</h1>
+
+<%= form_with(model: @warehouse) do |form| %>
+  <div>
+		<%= form.label :name, 'Nome'%>
+		<%= form.text_field :name, required: true %>
+	</div>
+	<div>
+		<%= form.label :description, 'Descrição'%>
+  	<%= form.text_field :description, required: true %>
+	</div>
+	<div>
+		<%= form.label :code, 'Código'%>
+  	<%= form.text_field :code, maxlength:3 %>
+	</div>
+	<div>
+		<%= form.label :address, 'Endereço'%>
+  	<%= form.text_field :address, required: true %>
+	</div>
+	<div>
+  	<%= form.label :city, 'Cidade'%>
+  	<%= form.text_field :city, required: true %>
+	</div>
+	<div>
+  	<%= form.label :cep, 'CEP'%>
+  	<%= form.text_field :cep, maxlength:9, placeholder:"00000-000", pattern:/^(\d{5})(\d)/,"$1-$2" %>
+	</div>
+  <div>
+  	<%= form.label :area, 'Área'%>
+  	<%= form.number_field :area, required: true %>
+	</div>
+  
+  <div> 
+		<%= form.submit 'Enviar' %>
+	</div>
+
+<% end %>
+):
+1:    <h1>Novo Galpão</h1>
+2:    
+3:    <%= form_with(model: @warehouse) do |form| %>
+4:      <div>
+5:    		<%= form.label :name, 'Nome'%>
+6:    		<%= form.text_field :name, required: true %>
+7:    	</div>
+8:    	<div>
+9:    		<%= form.label :description, 'Descrição'%>
+10:      	<%= form.text_field :description, required: true %>
+11:    	</div>
+12:    	<div>
+13:    		<%= form.label :code, 'Código'%>
+14:      	<%= form.text_field :code, maxlength:3 %>
+15:    	</div>
+16:    	<div>
+17:    		<%= form.label :address, 'Endereço'%>
+18:      	<%= form.text_field :address, required: true %>
+19:    	</div>
+20:    	<div>
+21:      	<%= form.label :city, 'Cidade'%>
+22:      	<%= form.text_field :city, required: true %>
+23:    	</div>
+24:    	<div>
+25:      	<%= form.label :cep, 'CEP'%>
+26:      	<%= form.text_field :cep, maxlength:9, placeholder:"00000-000", pattern:/^(\d{5})(\d)/,"$1-$2" %>
+27:    	</div>
+28:      <div>
+29:      	<%= form.label :area, 'Área'%>
+30:      	<%= form.number_field :area, required: true %>
+31:    	</div>
+32:      
+33:      <div> 
+34:    		<%= form.submit 'Enviar' %>
+35:    	</div>
+36:    
+37:    <% end %>
+  
+app/views/warehouses/new.html.erb:26: syntax error, unexpected ')', expecting =>
+app/views/warehouses/new.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/warehouses/new.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/warehouses/new.html.erb:26: syntax error, unexpected ')', expecting =>
+app/views/warehouses/new.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/warehouses/new.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/warehouses/new.html.erb:26: syntax error, unexpected ')', expecting =>
+app/views/warehouses/new.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/warehouses/new.html.erb:39: syntax error, unexpected `end', expecting ')'
+app/views/warehouses/new.html.erb:26: syntax error, unexpected ')', expecting =>
+app/views/warehouses/new.html.erb:37: syntax error, unexpected `end', expecting ')'
+app/views/warehouses/new.html.erb:39: syntax error, unexpected `end', expecting ')'
+Started GET "/warehouses/new" for ::1 at 2022-09-20 19:59:04 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 1795)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 3012)
+Completed 200 OK in 21ms (Views: 19.5ms | Allocations: 3892)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 20:03:52 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 524)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 597)
+Completed 500 Internal Server Error in 5ms (Allocations: 1453)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h1>Novo Galpão</h1>
+
+<%= form_with(model: @warehouse) do |form| %>
+  <div>
+		<%= form.label :name, 'Nome'%>
+		<%= form.text_field :name, required: true %>
+	</div>
+	<div>
+		<%= form.label :description, 'Descrição'%>
+  	<%= form.text_field :description, required: true %>
+	</div>
+	<div>
+		<%= form.label :code, 'Código'%>
+  	<%= form.text_field :code, maxlength:3 %>
+	</div>
+	<div>
+		<%= form.label :address, 'Endereço'%>
+  	<%= form.text_field :address, required: true %>
+	</div>
+	<div>
+  	<%= form.label :city, 'Cidade'%>
+  	<%= form.text_field :city, required: true %>
+	</div>
+	<div>
+  	<%= form.label :cep, 'CEP'%>
+  	<%= form.text_field :cep, maxlength:9, placeholder:"00000-000", form.id :cep %>
+	</div>
+  <div>
+  	<%= form.label :area, 'Área'%>
+  	<%= form.number_field :area, required: true %>
+	</div>
+  
+  <div> 
+		<%= form.submit 'Enviar' %>
+	</div>
+
+<% end %>
+
+<script>
+const cepInput = document.querySelector('#cep')
+
+function cepMask(cep){
+  return cep
+    .replace(/\D/g,"")
+    .replace(/^(\d{5})(\d)/,"$1-$2");
+    // .replace(/^(\d{2})(\d)/,"$1.$2")
+}
+
+cepInput.addEventListener('input', function () {
+  cepInput.value = cepMask(cepInput.value)
+};
+</script>
+):
+1:    <h1>Novo Galpão</h1>
+2:    
+3:    <%= form_with(model: @warehouse) do |form| %>
+4:      <div>
+5:    		<%= form.label :name, 'Nome'%>
+6:    		<%= form.text_field :name, required: true %>
+7:    	</div>
+8:    	<div>
+9:    		<%= form.label :description, 'Descrição'%>
+10:      	<%= form.text_field :description, required: true %>
+11:    	</div>
+12:    	<div>
+13:    		<%= form.label :code, 'Código'%>
+14:      	<%= form.text_field :code, maxlength:3 %>
+15:    	</div>
+16:    	<div>
+17:    		<%= form.label :address, 'Endereço'%>
+18:      	<%= form.text_field :address, required: true %>
+19:    	</div>
+20:    	<div>
+21:      	<%= form.label :city, 'Cidade'%>
+22:      	<%= form.text_field :city, required: true %>
+23:    	</div>
+24:    	<div>
+25:      	<%= form.label :cep, 'CEP'%>
+26:      	<%= form.text_field :cep, maxlength:9, placeholder:"00000-000", form.id :cep %>
+27:    	</div>
+28:      <div>
+29:      	<%= form.label :area, 'Área'%>
+30:      	<%= form.number_field :area, required: true %>
+31:    	</div>
+32:      
+33:      <div> 
+34:    		<%= form.submit 'Enviar' %>
+35:    	</div>
+36:    
+37:    <% end %>
+38:    
+39:    <script>
+40:    const cepInput = document.querySelector('#cep')
+41:    
+42:    function cepMask(cep){
+43:      return cep
+44:        .replace(/\D/g,"")
+45:        .replace(/^(\d{5})(\d)/,"$1-$2");
+46:        // .replace(/^(\d{2})(\d)/,"$1.$2")
+47:    }
+48:    
+49:    cepInput.addEventListener('input', function () {
+50:      cepInput.value = cepMask(cepInput.value)
+51:    };
+52:    </script>
+  
+app/views/warehouses/new.html.erb:26: syntax error, unexpected symbol literal, expecting =>
+app/views/warehouses/new.html.erb:26: syntax error, unexpected symbol literal, expecting =>
+app/views/warehouses/new.html.erb:26: syntax error, unexpected symbol literal, expecting =>
+app/views/warehouses/new.html.erb:26: syntax error, unexpected symbol literal, expecting =>
+Started GET "/warehouses/new" for ::1 at 2022-09-20 20:04:08 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 1847)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 3064)
+Completed 200 OK in 20ms (Views: 18.0ms | Allocations: 3944)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-20 20:05:03 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1850)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 3059)
+Completed 200 OK in 21ms (Views: 19.0ms | Allocations: 3938)
+
+
+  [1m[36mWarehouse Delete All (15.8ms)[0m  [1m[31mDELETE FROM "warehouses"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "SDU"], ["LIMIT", 1]]
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "Rio"], ["LIMIT", 1]]
+  [1m[36mWarehouse Create (0.2ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rio"], ["code", "SDU"], ["city", "Rio de Janeiro"], ["area", 60000], ["created_at", "2022-09-21 14:16:47.553208"], ["updated_at", "2022-09-21 14:16:47.553208"], ["address", "Praça Sen. Salgado Filho"], ["cep", "20021340"], ["description", "Galpão destinado a cargas pequenas"]]
+  [1m[36mTRANSACTION (10.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "GRU"], ["LIMIT", 1]]
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "São Paulo"], ["LIMIT", 1]]
+  [1m[36mWarehouse Create (0.2ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "São Paulo"], ["code", "GRU"], ["city", "São Paulo"], ["area", 100000], ["created_at", "2022-09-21 14:16:47.569116"], ["updated_at", "2022-09-21 14:16:47.569116"], ["address", "Av. São Paulo"], ["cep", "20021340"], ["description", "Galpão destinado a cargas grandes"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateWarehouses (20220914185657)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "warehouses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "code" varchar, "city" varchar, "area" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220914185657"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAddressToWarehouse (20220915171210)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "warehouses" ADD "address" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220915171210"]]
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAttributesToWarehouse (20220915171518)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "warehouses" ADD "cep" varchar[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "warehouses" ADD "description" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220915171518"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-09-21 14:19:04.748519"], ["updated_at", "2022-09-21 14:19:04.748519"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "SDU"], ["LIMIT", 1]]
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "Rio"], ["LIMIT", 1]]
+  [1m[36mWarehouse Create (0.2ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Rio"], ["code", "SDU"], ["city", "Rio de Janeiro"], ["area", 60000], ["created_at", "2022-09-21 14:19:18.278206"], ["updated_at", "2022-09-21 14:19:18.278206"], ["address", "Praça Sen. Salgado Filho"], ["cep", "20021340"], ["description", "Galpão destinado a cargas pequenas"]]
+  [1m[36mTRANSACTION (15.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mWarehouse Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "GRU"], ["LIMIT", 1]]
+  [1m[36mWarehouse Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "São Paulo"], ["LIMIT", 1]]
+  [1m[36mWarehouse Create (0.4ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "São Paulo"], ["code", "GRU"], ["city", "São Paulo"], ["area", 100000], ["created_at", "2022-09-21 14:19:18.302579"], ["updated_at", "2022-09-21 14:19:18.302579"], ["address", "Av. São Paulo"], ["cep", "20021340"], ["description", "Galpão destinado a cargas grandes"]]
+  [1m[36mTRANSACTION (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+Started GET "/warehouses/new" for ::1 at 2022-09-21 11:32:02 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 4874)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 7835)
+Completed 200 OK in 40ms (Views: 18.9ms | ActiveRecord: 0.5ms | Allocations: 29287)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 11:36:58 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 4876)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 7837)
+Completed 200 OK in 39ms (Views: 24.4ms | ActiveRecord: 0.4ms | Allocations: 29289)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 11:39:21 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1841)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3052)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 3941)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 11:44:45 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1846)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3056)
+Completed 200 OK in 17ms (Views: 15.4ms | Allocations: 3944)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 11:46:02 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1837)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 3047)
+Completed 200 OK in 8ms (Views: 7.7ms | Allocations: 3935)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 14:50:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 19.2ms | Allocations: 14011)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 14096)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.4ms | Allocations: 35496)
+
+
+  
+ActionView::Template::Error (Asset `application.js` was not declared to be precompiled in production.
+Declare links to your assets in `app/assets/config/manifest.js`.
+
+  //= link application.js
+
+and restart your server):
+    36: 
+    37: <% end %>
+    38: 
+    39: <% javascript_include_tag('application.js') %>
+  
+app/views/warehouses/new.html.erb:39
+Started GET "/warehouses/new" for ::1 at 2022-09-21 14:52:13 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1973)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 2045)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 2261)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+    36: 
+    37: <% end %>
+    38: 
+    39: <% javascript_include_tag('application.js') %>
+  
+app/views/warehouses/new.html.erb:39
+Started GET "/warehouses/new" for ::1 at 2022-09-21 14:53:16 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 28.0ms | Allocations: 4576)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 4649)
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms | Allocations: 5515)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x00000000004808>
+Did you mean?  javascript_path
+               javascript_tag):
+    36: 
+    37: <% end %>
+    38: 
+    39: <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+app/views/warehouses/new.html.erb:39
+Started GET "/warehouses/new" for ::1 at 2022-09-21 14:56:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 18.2ms | Allocations: 8561)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 8646)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.4ms | Allocations: 30046)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x00000000004330>
+Did you mean?  javascript_path
+               javascript_tag):
+    36: 
+    37: <% end %>
+    38: 
+    39: <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+app/views/warehouses/new.html.erb:39
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:07:28 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 6546)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 6631)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.4ms | Allocations: 28031)
+
+
+  
+ActionView::Template::Error (The asset "application.js" is not present in the asset pipeline.
+):
+    36: 
+    37: <% end %>
+    38: 
+    39: <%= javascript_include_tag "application" %>
+  
+app/views/warehouses/new.html.erb:39
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:09:34 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 28.5ms | Allocations: 8563)
+  Rendered layout layouts/application.html.erb (Duration: 29.7ms | Allocations: 8648)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 1.6ms | Allocations: 30051)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x00000000004308>
+Did you mean?  javascript_path
+               javascript_tag):
+    36: 
+    37: <% end %>
+    38: 
+    39: <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  
+app/views/warehouses/new.html.erb:39
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:09:56 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1848)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5305)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 6231)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:11:37 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1849)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3071)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 3960)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:11:43 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1328)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 2275)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 2511)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:12:27 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1842)
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 3053)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 0.0ms | Allocations: 3931)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:14:23 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 1317)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2263)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 2490)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:17:00 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1800)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 3011)
+Completed 200 OK in 8ms (Views: 7.9ms | Allocations: 3890)
+
+
+Started GET "/warehouses/app/javascript/application.js" for ::1 at 2022-09-21 15:17:00 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/warehouses/app/javascript/application.js"):
+  
+Started GET "/warehouses/app/javascript/application.js" for ::1 at 2022-09-21 15:17:00 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/warehouses/app/javascript/application.js"):
+  
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:17:23 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1804)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3015)
+Completed 200 OK in 11ms (Views: 10.3ms | Allocations: 3894)
+
+
+Started GET "/app/javascript/application.js" for ::1 at 2022-09-21 15:17:23 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/app/javascript/application.js"):
+  
+Started GET "/app/javascript/application.js" for ::1 at 2022-09-21 15:17:23 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/app/javascript/application.js"):
+  
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:17:40 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1304)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 2251)
+Completed 200 OK in 13ms (Views: 11.9ms | Allocations: 2486)
+
+
+Started GET "/app/javascript/application.js" for ::1 at 2022-09-21 15:17:40 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/app/javascript/application.js"):
+  
+Started GET "/app/javascript/application.js" for ::1 at 2022-09-21 15:17:41 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/app/javascript/application.js"):
+  
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:18:49 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 1801)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 3020)
+Completed 200 OK in 7ms (Views: 6.8ms | Allocations: 3898)
+
+
+Started GET "/warehouses/javascript/application.js" for ::1 at 2022-09-21 15:18:49 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/warehouses/javascript/application.js"):
+  
+Started GET "/warehouses/javascript/application.js" for ::1 at 2022-09-21 15:18:49 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/warehouses/javascript/application.js"):
+  
+Started GET "/" for ::1 at 2022-09-21 15:19:14 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:6
+  Rendered home/index.html.erb within layouts/application (Duration: 13.6ms | Allocations: 19009)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 23210)
+Completed 200 OK in 27ms (Views: 23.4ms | ActiveRecord: 0.5ms | Allocations: 27166)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:19:16 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 4299)
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 5420)
+Completed 200 OK in 22ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 6241)
+
+
+Started GET "/warehouses/javascript/application.js" for ::1 at 2022-09-21 15:19:16 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/warehouses/javascript/application.js"):
+  
+Started GET "/warehouses/javascript/application.js" for ::1 at 2022-09-21 15:19:43 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/warehouses/javascript/application.js"):
+  
+Started GET "/javascript/application.js" for ::1 at 2022-09-21 15:19:50 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/javascript/application.js"):
+  
+Started GET "/warehouses/assets/javascript/application.js" for ::1 at 2022-09-21 15:20:00 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/warehouses/assets/javascript/application.js"):
+  
+Started GET "/warehouses/public/javascript/application.js" for ::1 at 2022-09-21 15:20:05 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/warehouses/public/javascript/application.js"):
+  
+Started GET "/public/javascript/application.js" for ::1 at 2022-09-21 15:20:44 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/public/javascript/application.js"):
+  
+Started GET "/public/assets/javascript/application.js" for ::1 at 2022-09-21 15:20:57 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/public/assets/javascript/application.js"):
+  
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:23:44 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 4839)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 8725)
+Completed 200 OK in 42ms (Views: 23.7ms | ActiveRecord: 0.4ms | Allocations: 30177)
+
+
+Started GET "/warehouses/assets/application.js" for ::1 at 2022-09-21 15:23:44 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/warehouses/assets/application.js"):
+  
+Started GET "/warehouses/assets/application.js" for ::1 at 2022-09-21 15:23:45 -0300
+  
+ActionController::RoutingError (No route matches [GET] "/warehouses/assets/application.js"):
+  
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:24:36 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 4839)
+  Rendered layout layouts/application.html.erb (Duration: 24.5ms | Allocations: 8725)
+Completed 200 OK in 43ms (Views: 27.1ms | ActiveRecord: 0.4ms | Allocations: 30177)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:27:04 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1794)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3124)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 4013)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:27:53 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1292)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 2357)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 2593)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:28:07 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 4837)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 8717)
+Completed 200 OK in 32ms (Views: 17.8ms | ActiveRecord: 0.4ms | Allocations: 30169)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:29:11 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 4837)
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 10236)
+Completed 200 OK in 63ms (Views: 43.4ms | ActiveRecord: 0.9ms | Allocations: 31687)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:40:40 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 15.6ms | Allocations: 4839)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 10271)
+Completed 200 OK in 43ms (Views: 26.9ms | ActiveRecord: 0.4ms | Allocations: 31722)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:41:53 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 4837)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 10295)
+Completed 200 OK in 42ms (Views: 23.6ms | ActiveRecord: 0.6ms | Allocations: 31746)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 15:45:41 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 4827)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 10331)
+Completed 200 OK in 37ms (Views: 19.1ms | ActiveRecord: 0.6ms | Allocations: 31785)
+
+
+Started GET "/" for ::1 at 2022-09-21 17:47:38 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 5192)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 5277)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 9181)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_object' for "Olá mundo":String):
+    1: <%=I18n.translate('hello')%>
+    2: 
+    3: <section>
+    4:   <h2>Galpões</h2>
+  
+app/views/home/index.html.erb:1
+Started GET "/" for ::1 at 2022-09-21 17:50:35 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 3809)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 3882)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 4741)
+
+
+  
+ActionView::Template::Error (undefined method `each_with_object' for "Olá mundo":String):
+    1: <%=I18n.translate('hello')%>
+    2: <%=I18n.localize(Date.today)%>
+    3: 
+    4: <section>
+  
+app/views/home/index.html.erb:1
+Started GET "/" for ::1 at 2022-09-21 17:52:14 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:9
+  Rendered home/index.html.erb within layouts/application (Duration: 25.4ms | Allocations: 20823)
+  Rendered layout layouts/application.html.erb (Duration: 37.1ms | Allocations: 26680)
+Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 1.2ms | Allocations: 28235)
+
+
+Started GET "/" for ::1 at 2022-09-21 17:53:49 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:9
+  Rendered home/index.html.erb within layouts/application (Duration: 17.7ms | Allocations: 21459)
+  Rendered layout layouts/application.html.erb (Duration: 41.8ms | Allocations: 25668)
+Completed 200 OK in 49ms (Views: 44.6ms | ActiveRecord: 0.8ms | Allocations: 29624)
+
+
+Started GET "/" for ::1 at 2022-09-21 18:02:34 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 6.5ms | Allocations: 4145)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 4230)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 8135)
+
+
+  
+ActionView::Template::Error (translation missing: pt-BR.date.formats.default):
+    1: <%=I18n.translate('hello')%>
+    2: <%=I18n.localize(Date.today)%>
+    3: 
+    4: <section>
+    5:   <h2>Galpões</h2>
+  
+app/views/home/index.html.erb:2
+Started GET "/" for ::1 at 2022-09-21 18:02:58 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.5ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:9
+  Rendered home/index.html.erb within layouts/application (Duration: 31.6ms | Allocations: 18722)
+  Rendered layout layouts/application.html.erb (Duration: 50.1ms | Allocations: 22774)
+Completed 200 OK in 55ms (Views: 51.5ms | ActiveRecord: 2.0ms | Allocations: 23697)
+
+
+Started GET "/" for ::1 at 2022-09-21 18:13:01 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 32.8ms | Allocations: 23265)
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 27484)
+Completed 200 OK in 54ms (Views: 47.7ms | ActiveRecord: 1.1ms | Allocations: 31441)
+
+
+Started GET "/" for ::1 at 2022-09-21 18:17:00 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 19.4ms | Allocations: 23251)
+  Rendered layout layouts/application.html.erb (Duration: 27.8ms | Allocations: 27453)
+Completed 200 OK in 36ms (Views: 30.5ms | ActiveRecord: 0.6ms | Allocations: 31410)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-21 18:17:17 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 0.8ms | Allocations: 317)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1595)
+Completed 200 OK in 12ms (Views: 5.8ms | ActiveRecord: 0.3ms | Allocations: 3816)
+
+
+  [1m[36mWarehouse Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mWarehouse Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/warehouses/1" for ::1 at 2022-09-21 18:32:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:4:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 701)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 4887)
+Completed 200 OK in 35ms (Views: 19.3ms | ActiveRecord: 0.5ms | Allocations: 27860)
+
+
+Started GET "/" for ::1 at 2022-09-21 18:32:52 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 3739)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 3812)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 4587)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/alinemoraes/Documentos/warehouse-app/config/locales/models.yml: #<Psych::SyntaxError: (/home/alinemoraes/Documentos/warehouse-app/config/locales/models.yml): found character that cannot start any token while scanning for the next token at line 8 column 1>):
+    1: <%=I18n.translate('hello')%>
+    2: <%=I18n.localize(Date.today)%>
+    3: 
+    4: 
+  
+app/views/home/index.html.erb:1
+Started GET "/" for ::1 at 2022-09-21 18:34:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 4034)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 4119)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 8029)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/alinemoraes/Documentos/warehouse-app/config/locales/models.yml: #<Psych::SyntaxError: (/home/alinemoraes/Documentos/warehouse-app/config/locales/models.yml): found character that cannot start any token while scanning for the next token at line 8 column 1>):
+    1: <%=I18n.translate('hello')%>
+    2: <%=I18n.localize(Date.today)%>
+    3: 
+    4: 
+  
+app/views/home/index.html.erb:1
+Started GET "/" for ::1 at 2022-09-21 18:36:51 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2323)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 2396)
+Completed 500 Internal Server Error in 9ms (Allocations: 3899)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/alinemoraes/Documentos/warehouse-app/config/locales/models.yml: #<Psych::SyntaxError: (/home/alinemoraes/Documentos/warehouse-app/config/locales/models.yml): found character that cannot start any token while scanning for the next token at line 8 column 1>):
+    1: <%=I18n.translate('hello')%>
+    2: <%=I18n.localize(Date.today)%>
+    3: 
+    4: 
+  
+app/views/home/index.html.erb:1
+Started GET "/" for ::1 at 2022-09-21 18:37:13 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 4046)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 4131)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 8041)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/alinemoraes/Documentos/warehouse-app/config/locales/models.yml: #<Psych::SyntaxError: (/home/alinemoraes/Documentos/warehouse-app/config/locales/models.yml): found character that cannot start any token while scanning for the next token at line 8 column 1>):
+    1: 
+    2: <%=I18n.localize(Date.today)%>
+    3: 
+    4: 
+    5: <section>
+  
+app/views/home/index.html.erb:2
+Started GET "/" for ::1 at 2022-09-21 18:39:19 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 17.0ms | Allocations: 23407)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 27607)
+Completed 200 OK in 40ms (Views: 35.2ms | ActiveRecord: 0.5ms | Allocations: 31564)
+
+
+  [1m[36mWarehouse Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mWarehouse Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2022-09-21 18:56:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 31.5ms | Allocations: 23416)
+  Rendered layout layouts/application.html.erb (Duration: 41.8ms | Allocations: 27631)
+Completed 200 OK in 50ms (Views: 44.6ms | ActiveRecord: 0.7ms | Allocations: 31588)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 18:56:11 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 4413)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 5534)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.0ms | Allocations: 6355)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-21 18:56:27 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"q", "code"=>"q", "address"=>"q", "city"=>"q", "cep"=>"qqq", "area"=>"20"}, "commit"=>"Enviar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "q"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "Recife"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "q"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "Recife"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 6.1ms | Allocations: 3390)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4482)
+Completed 200 OK in 18ms (Views: 8.7ms | ActiveRecord: 0.6ms | Allocations: 10078)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 19:02:20 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 18.7ms | Allocations: 10126)
+  Rendered layout layouts/application.html.erb (Duration: 25.4ms | Allocations: 14013)
+Completed 200 OK in 46ms (Views: 28.1ms | ActiveRecord: 0.6ms | Allocations: 35466)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 19:04:54 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 1805)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 2869)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 3096)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-21 19:05:33 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 26.2ms | Allocations: 1794)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 2870)
+Completed 200 OK in 31ms (Views: 30.4ms | ActiveRecord: 0.0ms | Allocations: 3107)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-21 19:06:34 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"rj", "code"=>"rj2", "address"=>"rj3", "city"=>"rj4", "cep"=>"11111-111", "area"=>"6"}, "commit"=>"Enviar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "rj2"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "Recife"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "rj2"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  [1m[36mWarehouse Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "Recife"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2872)
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3964)
+Completed 200 OK in 24ms (Views: 9.5ms | ActiveRecord: 1.1ms | Allocations: 9612)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-22 09:56:11 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"rj", "code"=>"rj2", "address"=>"rj3", "city"=>"rj4", "cep"=>"11111-111", "area"=>"6"}, "commit"=>"Enviar"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "rj2"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "Recife"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "rj2"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  [1m[36mWarehouse Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "Recife"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2747)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3849)
+Completed 200 OK in 34ms (Views: 8.8ms | ActiveRecord: 2.4ms | Allocations: 8191)
+
+
+  [1m[36mWarehouse Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mWarehouse Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/warehouses" for ::1 at 2022-09-22 10:09:36 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recife", "description"=>"rj", "code"=>"rj2", "address"=>"rj3", "city"=>"rj4", "cep"=>"11111-111", "area"=>"6"}, "commit"=>"Enviar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "rj2"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "Recife"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "rj2"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "Recife"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 20.4ms | Allocations: 11945)
+  Rendered layout layouts/application.html.erb (Duration: 30.8ms | Allocations: 17650)
+Completed 200 OK in 70ms (Views: 48.7ms | ActiveRecord: 0.9ms | Allocations: 44867)
+
+
+Started GET "/" for ::1 at 2022-09-22 10:09:48 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1185)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2698)
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.2ms | Allocations: 3680)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-22 10:09:50 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 2397)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 3514)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms | Allocations: 4234)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-22 10:14:37 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 26.5ms | Allocations: 10185)
+  Rendered layout layouts/application.html.erb (Duration: 41.3ms | Allocations: 15965)
+Completed 200 OK in 61ms (Views: 45.5ms | ActiveRecord: 0.4ms | Allocations: 37477)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-22 10:15:51 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 28.4ms | Allocations: 10170)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 14052)
+Completed 200 OK in 53ms (Views: 36.7ms | ActiveRecord: 0.4ms | Allocations: 35565)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-22 10:16:47 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 24.8ms | Allocations: 10177)
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 15999)
+Completed 200 OK in 52ms (Views: 37.3ms | ActiveRecord: 0.4ms | Allocations: 37511)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-22 10:17:42 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 1809)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 2874)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.0ms | Allocations: 3111)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-22 10:19:03 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 28.8ms | Allocations: 10180)
+  Rendered layout layouts/application.html.erb (Duration: 40.2ms | Allocations: 16061)
+Completed 200 OK in 58ms (Views: 42.7ms | ActiveRecord: 0.4ms | Allocations: 37573)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-22 10:19:23 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"aa", "description"=>"aaa", "code"=>"aaa", "address"=>"aaa", "city"=>"aa", "cep"=>"09080-320", "area"=>"20"}, "commit"=>"Enviar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "aaa"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "aaa"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "aa"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 3857)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4949)
+Completed 200 OK in 24ms (Views: 12.5ms | ActiveRecord: 0.6ms | Allocations: 10690)
+
+
+Started GET "/" for ::1 at 2022-09-22 10:37:32 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 28.7ms | Allocations: 23407)
+  Rendered layout layouts/application.html.erb (Duration: 44.6ms | Allocations: 29706)
+Completed 200 OK in 51ms (Views: 47.0ms | ActiveRecord: 0.5ms | Allocations: 33722)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-22 10:37:35 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 22.9ms | Allocations: 5285)
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 6406)
+Completed 200 OK in 32ms (Views: 30.1ms | ActiveRecord: 0.0ms | Allocations: 7227)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-22 10:40:44 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 32.8ms | Allocations: 10186)
+  Rendered layout layouts/application.html.erb (Duration: 46.1ms | Allocations: 16192)
+Completed 200 OK in 69ms (Views: 49.8ms | ActiveRecord: 0.7ms | Allocations: 37704)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-22 10:43:29 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 17.4ms | Allocations: 10125)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 16167)
+Completed 200 OK in 52ms (Views: 34.1ms | ActiveRecord: 0.4ms | Allocations: 37682)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-22 10:47:11 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 22.9ms | Allocations: 10171)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 16258)
+Completed 200 OK in 57ms (Views: 38.0ms | ActiveRecord: 0.8ms | Allocations: 37770)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-22 10:51:03 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1797)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2862)
+Completed 200 OK in 11ms (Views: 10.4ms | ActiveRecord: 0.0ms | Allocations: 3099)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-22 10:51:57 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 27.0ms | Allocations: 10185)
+  Rendered layout layouts/application.html.erb (Duration: 39.4ms | Allocations: 16338)
+Completed 200 OK in 59ms (Views: 41.9ms | ActiveRecord: 0.4ms | Allocations: 37850)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-22 10:52:11 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"222", "description"=>"222", "code"=>"222", "address"=>"2222", "city"=>"2222", "cep"=>"22222-222", "area"=>"222"}, "commit"=>"Enviar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "222"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "222"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:15:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "222"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "222"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 3857)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 4949)
+Completed 200 OK in 24ms (Views: 11.1ms | ActiveRecord: 0.7ms | Allocations: 10690)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-22 11:30:13 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"222", "description"=>"222", "code"=>"222", "address"=>"2222", "city"=>"2222", "cep"=>"22222-222", "area"=>"222"}, "commit"=>"Enviar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:16:in `create'
+  [1m[36mWarehouse Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "222"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:16:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "222"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:16:in `create'
+  [1m[36mWarehouse Create (0.2ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "222"], ["code", "222"], ["city", "2222"], ["area", 222], ["created_at", "2022-09-22 14:30:13.789979"], ["updated_at", "2022-09-22 14:30:13.789979"], ["address", "2222"], ["cep", "22222222"], ["description", "222"]]
+  ↳ app/controllers/warehouses_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:16:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? AND "warehouses"."id" != ? LIMIT ?[0m  [["code", "222"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:18:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? AND "warehouses"."id" != ? LIMIT ?[0m  [["name", "222"], ["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:18:in `create'
+Redirected to http://localhost:3000/
+Completed 302 Found in 37ms (ActiveRecord: 3.2ms | Allocations: 25509)
+
+
+Started GET "/" for ::1 at 2022-09-22 11:30:13 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 7.3ms | Allocations: 5853)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 12205)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 0.1ms | Allocations: 15190)
+
+

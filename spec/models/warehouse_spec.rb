@@ -120,6 +120,17 @@ RSpec.describe Warehouse, type: :model do
 				# assert
 				expect(result).to eq false
 			end
+
+			it 'false when cep is not a number' do
+				# arrange
+				warehouse = Warehouse.new(name: 'Rio', code: 'SDU', city: 'Rio de Janeiro', area: 60_000,
+					address: 'Praça Sen. Salgado Filho', cep: '20021-340',
+					description: 'Galpão destinado a cargas pequenas')
+				# act
+				result = warehouse.valid?
+				# assert
+				expect(result).to eq false
+			end
 		end
 	end
 end
