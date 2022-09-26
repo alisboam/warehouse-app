@@ -1,0 +1,10 @@
+<% @supplier. each do |field|%>
+  <ul>
+    <li>
+      <%= link_to(field.name, supplier_path(field.id)) %>
+    </li>
+  </ul>
+<% end %>
+
+
+<%= link_to('Página Inicial', root_path)%>

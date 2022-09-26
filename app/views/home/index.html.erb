@@ -7,6 +7,12 @@
   <div>
     <span><%= link_to('Cadastrar Galpão', new_warehouse_path) %></span>
   </div>
+  <div>
+    <span><%= link_to('Cadastrar Fornecedor', new_supplier_path) %></span>
+  </div>
+  <div>
+    <span><%= link_to('Fornecedores', suppliers_path) %></span>
+  </div>
   <% @warehouses.each do |w| %>
     <div>
       <h3><%= link_to(w.name, warehouse_path(w.id)) %></h3>

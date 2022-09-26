@@ -13,3 +13,8 @@ Warehouse.create(name: 'Rio', code: 'SDU', city: 'Rio de Janeiro', area: 60_000,
 Warehouse.create(name: 'São Paulo', code: 'GRU', city: 'São Paulo', area: 100_000,
 								address: 'Av. São Paulo', cep: '20021340',
 								description: 'Galpão destinado a cargas grandes')
+
+
+Supplier.create(name: 'Magalu', company_name: 'MAGAZINE LUIZA S/A',
+                cnpj:'47960950000121',address: 'VOLUNTARIOS DA FRANCA, 28',
+                email: 'magalu@email.com', telephone: '08007733838')
