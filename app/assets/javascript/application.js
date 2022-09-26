@@ -11,7 +11,4 @@ cepInput.addEventListener('input', function () {
   cepInput.value = cepMask(cepInput.value)
 })
 
-function cepUnmask(cep) {
-  return cep
-    .replace("-", "")
-}
+

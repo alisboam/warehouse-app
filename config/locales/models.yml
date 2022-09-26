@@ -10,5 +10,6 @@ pt-BR:
         city: 'Cidade'
         address: 'Endereço'
         area: 'Área'
+        cep: 'CEP'
 
       

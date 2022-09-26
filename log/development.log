@@ -2176,3 +2176,149 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 0.1ms | Allocations: 15190)
 
 
+Started GET "/" for ::1 at 2022-09-22 15:13:51 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 23.4ms | Allocations: 23465)
+  Rendered layout layouts/application.html.erb (Duration: 31.1ms | Allocations: 27670)
+Completed 200 OK in 37ms (Views: 32.9ms | ActiveRecord: 0.5ms | Allocations: 31687)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-22 15:13:55 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.7ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 368)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 1636)
+Completed 200 OK in 23ms (Views: 10.4ms | ActiveRecord: 0.7ms | Allocations: 3857)
+
+
+Started GET "/warehouses/1/edit" for ::1 at 2022-09-22 15:13:58 -0300
+Processing by WarehousesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.4ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:28:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/edit.html.erb within layouts/application
+  Rendered warehouses/edit.html.erb within layouts/application (Duration: 21.3ms | Allocations: 5369)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 6426)
+Completed 200 OK in 29ms (Views: 24.1ms | ActiveRecord: 0.4ms | Allocations: 7135)
+
+
+Started GET "/" for ::1 at 2022-09-22 15:42:59 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/home/index.html.erb:10
+  Rendered home/index.html.erb within layouts/application (Duration: 17.5ms | Allocations: 23468)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 27678)
+Completed 200 OK in 32ms (Views: 28.3ms | ActiveRecord: 0.5ms | Allocations: 31695)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-22 15:43:01 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.4ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 1.3ms | Allocations: 368)
+  Rendered layout layouts/application.html.erb (Duration: 4.4ms | Allocations: 1660)
+Completed 200 OK in 17ms (Views: 6.5ms | ActiveRecord: 0.4ms | Allocations: 3881)
+
+
+Started GET "/warehouses/1/edit" for ::1 at 2022-09-22 15:43:02 -0300
+Processing by WarehousesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/edit.html.erb within layouts/application
+  Rendered warehouses/edit.html.erb within layouts/application (Duration: 24.1ms | Allocations: 5377)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 6434)
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 0.3ms | Allocations: 7143)
+
+
+Started PATCH "/warehouses/1" for ::1 at 2022-09-22 15:43:18 -0300
+Processing by WarehousesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Rio", "description"=>"Galeão", "code"=>"SDU", "address"=>"Praça Sen. Salgado Filho", "city"=>"Rio de Janeiro", "cep"=>"20021340", "area"=>"80000"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:34:in `update'
+  [1m[36mWarehouse Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? AND "warehouses"."id" != ? LIMIT ?[0m  [["code", "SDU"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:34:in `update'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? AND "warehouses"."id" != ? LIMIT ?[0m  [["name", "Rio"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:34:in `update'
+  [1m[36mWarehouse Update (0.2ms)[0m  [1m[33mUPDATE "warehouses" SET "area" = ?, "updated_at" = ?, "description" = ? WHERE "warehouses"."id" = ?[0m  [["area", 80000], ["updated_at", "2022-09-22 18:43:18.480480"], ["description", "Galeão"], ["id", 1]]
+  ↳ app/controllers/warehouses_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:34:in `update'
+Redirected to http://localhost:3000/warehouses/1
+Completed 302 Found in 13ms (ActiveRecord: 2.8ms | Allocations: 5169)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-22 15:43:18 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 86)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1322)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.2ms | Allocations: 1965)
+
+
+Started GET "/warehouses/1/edit" for ::1 at 2022-09-22 15:43:39 -0300
+Processing by WarehousesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:27:in `edit'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/edit.html.erb within layouts/application
+  Rendered warehouses/edit.html.erb within layouts/application (Duration: 12.6ms | Allocations: 2004)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 3060)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.3ms | Allocations: 3699)
+
+
+Started PATCH "/warehouses/1" for ::1 at 2022-09-22 15:43:51 -0300
+Processing by WarehousesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Rio Galeão", "description"=>"Galeão", "code"=>"SDU", "address"=>"Praça Sen. Salgado Filho", "city"=>"Rio de Janeiro", "cep"=>"20021340", "area"=>"80000"}, "commit"=>"Enviar", "id"=>"1"}
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:31:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:34:in `update'
+  [1m[36mWarehouse Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? AND "warehouses"."id" != ? LIMIT ?[0m  [["code", "SDU"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:34:in `update'
+  [1m[36mWarehouse Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? AND "warehouses"."id" != ? LIMIT ?[0m  [["name", "Rio Galeão"], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:34:in `update'
+  [1m[36mWarehouse Update (0.4ms)[0m  [1m[33mUPDATE "warehouses" SET "name" = ?, "updated_at" = ? WHERE "warehouses"."id" = ?[0m  [["name", "Rio Galeão"], ["updated_at", "2022-09-22 18:43:51.768642"], ["id", 1]]
+  ↳ app/controllers/warehouses_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:34:in `update'
+Redirected to http://localhost:3000/warehouses/1
+Completed 302 Found in 21ms (ActiveRecord: 3.5ms | Allocations: 4109)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-22 15:43:51 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:5:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 0.2ms | Allocations: 86)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1316)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.1ms | Allocations: 1956)
+
+
