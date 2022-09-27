@@ -1,17 +1,28 @@
-<%=I18n.translate('hello')%>
-<%=I18n.localize(Date.today)%>
-
-
 <section>
-  <h2>Galpões</h2>
-  <% @warehouses.each do |field|%>
-    <ul>
-      <li>
-        <%= link_to(field.name, warehouse_path(field.id)) %>
-      </li>
-    </ul>
-  <% end %>
 
+
+
+<h2>Galpões</h2>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+      <th>Nome</th>
+      <th>Código</th>
+      <th>Cidade</th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @warehouses.each do |field|%>
+        <tr>
+          <td><%= link_to(field.name, warehouse_path(field.id)) %></td>
+          <td><%= link_to(field.code, warehouse_path(field.id)) %></td>
+          <td><%= link_to(field.city, warehouse_path(field.id)) %></td>
+        </tr>
+      <% end %>
+      </tbody>
+  </table>
+</div>
   <% if @warehouses.empty? %>
       <p>Não existem galpões cadastrados</p>
   <% end %>
