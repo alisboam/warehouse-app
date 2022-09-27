@@ -27,6 +27,7 @@ group :development, :test do
   gem "capybara"
   gem 'email_validator'
   gem 'bootstrap'
+  gem "bootstrap_form"
 end
 
 group :development do

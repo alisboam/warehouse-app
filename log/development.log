@@ -38797,3 +38797,1142 @@ Processing by WarehousesController#show as HTML
 Completed 200 OK in 19ms (Views: 17.1ms | ActiveRecord: 0.1ms | Allocations: 6886)
 
 
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:05:33 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1338)
+  Rendered layout layouts/application.html.erb (Duration: 27.5ms | Allocations: 16209)
+Completed 200 OK in 54ms (Views: 30.6ms | ActiveRecord: 1.0ms | Allocations: 39266)
+
+
+Started GET "/" for ::1 at 2022-09-27 14:05:34 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 105)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 4839)
+Completed 200 OK in 24ms (Views: 22.8ms | ActiveRecord: 0.0ms | Allocations: 5648)
+
+
+Started GET "/warehouses" for ::1 at 2022-09-27 14:05:38 -0300
+Processing by WarehousesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/warehouses/index.html.erb:7
+  Rendered warehouses/index.html.erb within layouts/application (Duration: 11.0ms | Allocations: 5459)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 10065)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.2ms | Allocations: 10348)
+
+
+Started GET "/suppliers" for ::1 at 2022-09-27 14:05:39 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.5ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:1
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 30.8ms | Allocations: 15919)
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 20629)
+Completed 200 OK in 50ms (Views: 40.6ms | ActiveRecord: 2.2ms | Allocations: 22080)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:05:40 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 35.2ms | Allocations: 5216)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 38.0ms | Allocations: 5572)
+  Rendered layout layouts/application.html.erb (Duration: 45.8ms | Allocations: 10134)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.0ms | Allocations: 10450)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 14:05:41 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 14.9ms | Allocations: 2290)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 19.1ms | Allocations: 2734)
+  Rendered layout layouts/application.html.erb (Duration: 29.2ms | Allocations: 7188)
+Completed 200 OK in 32ms (Views: 30.7ms | ActiveRecord: 0.0ms | Allocations: 7477)
+
+
+Started GET "/suppliers" for ::1 at 2022-09-27 14:05:43 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:1
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 666)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 5291)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.3ms | Allocations: 5510)
+
+
+Started GET "/suppliers/3" for ::1 at 2022-09-27 14:05:45 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mSupplier Load (0.7ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:38:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 3.5ms | Allocations: 343)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 4966)
+Completed 200 OK in 27ms (Views: 20.9ms | ActiveRecord: 0.7ms | Allocations: 5838)
+
+
+Started GET "/warehouses" for ::1 at 2022-09-27 14:05:48 -0300
+Processing by WarehousesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/warehouses/index.html.erb:7
+  Rendered warehouses/index.html.erb within layouts/application (Duration: 4.4ms | Allocations: 718)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 5415)
+Completed 200 OK in 26ms (Views: 25.5ms | ActiveRecord: 0.3ms | Allocations: 5634)
+
+
+Started GET "/warehouses/4" for ::1 at 2022-09-27 14:05:50 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 2.2ms | Allocations: 444)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 4913)
+Completed 200 OK in 27ms (Views: 23.8ms | ActiveRecord: 0.3ms | Allocations: 5565)
+
+
+Started DELETE "/warehouses/4" for ::1 at 2022-09-27 14:05:52 -0300
+Processing by WarehousesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "id"=>"4"}
+  [1m[36mWarehouse Load (0.7ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:37:in `destroy'
+  [1m[36mWarehouse Destroy (0.7ms)[0m  [1m[31mDELETE FROM "warehouses" WHERE "warehouses"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/warehouses_controller.rb:37:in `destroy'
+  [1m[36mTRANSACTION (12.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:37:in `destroy'
+Redirected to http://localhost:3000/warehouses
+Completed 302 Found in 26ms (ActiveRecord: 14.3ms | Allocations: 2353)
+
+
+Started GET "/warehouses" for ::1 at 2022-09-27 14:05:52 -0300
+Processing by WarehousesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/warehouses/index.html.erb:7
+  Rendered warehouses/index.html.erb within layouts/application (Duration: 2.3ms | Allocations: 671)
+  Rendered layout layouts/application.html.erb (Duration: 9.4ms | Allocations: 5315)
+Completed 200 OK in 10ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 5535)
+
+
+Started GET "/warehouses" for ::1 at 2022-09-27 14:12:16 -0300
+Processing by WarehousesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/warehouses/index.html.erb:7
+  Rendered warehouses/index.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1103)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 6151)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.8ms | Allocations: 7023)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:12:18 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.4ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1285)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 1357)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.4ms | Allocations: 2094)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check 
+<h1>Galpão <%= @warehouse.code %> </h1>
+<h2> <%= @warehouse.description %> </h2>
+<div>
+    Nome: <%= @warehouse.name %>
+    Cidade: <%= @warehouse.city %>
+    Area: <%= @warehouse.area %> m2
+    Endereço: <%= @warehouse.address %>, CEP: <%= @warehouse.cep %>
+</div>
+
+<%= link_to('Editar', edit_warehouse_path(@warehouse.id))%>
+<%= button_to('Excluir', warehouse_path(@warehouse.id), method: :delete, class:"btn btn-link)%>
+
+<%= link_to('Voltar', root_path)%>
+):
+1:    
+2:    <h1>Galpão <%= @warehouse.code %> </h1>
+3:    <h2> <%= @warehouse.description %> </h2>
+4:    <div>
+5:        Nome: <%= @warehouse.name %>
+6:        Cidade: <%= @warehouse.city %>
+7:        Area: <%= @warehouse.area %> m2
+8:        Endereço: <%= @warehouse.address %>, CEP: <%= @warehouse.cep %>
+9:    </div>
+10:    
+11:    <%= link_to('Editar', edit_warehouse_path(@warehouse.id))%>
+12:    <%= button_to('Excluir', warehouse_path(@warehouse.id), method: :delete, class:"btn btn-link)%>
+13:    
+14:    <%= link_to('Voltar', root_path)%>
+  
+app/views/warehouses/show.html.erb:16: unterminated string meets end of file
+app/views/warehouses/show.html.erb:16: syntax error, unexpected end-of-input, expecting ')'
+app/views/warehouses/show.html.erb:16: unterminated string meets end of file
+app/views/warehouses/show.html.erb:16: syntax error, unexpected end-of-input, expecting ')'
+app/views/warehouses/show.html.erb:16: unterminated string meets end of file
+app/views/warehouses/show.html.erb:16: syntax error, unexpected end-of-input, expecting ')'
+app/views/warehouses/show.html.erb:16: unterminated string meets end of file
+app/views/warehouses/show.html.erb:16: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:12:56 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 752)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 5732)
+Completed 200 OK in 14ms (Views: 11.1ms | ActiveRecord: 0.2ms | Allocations: 7030)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:14:17 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 2.6ms | Allocations: 458)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 4914)
+Completed 200 OK in 19ms (Views: 15.7ms | ActiveRecord: 0.2ms | Allocations: 5559)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:15:59 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 10.4ms | Allocations: 4906)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 6127)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.1ms | Allocations: 7425)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:16:01 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 11.4ms | Allocations: 4561)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 5391)
+Completed 200 OK in 16ms (Views: 13.5ms | ActiveRecord: 0.2ms | Allocations: 6036)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:18:03 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 13.0ms | Allocations: 4881)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 6098)
+Completed 200 OK in 25ms (Views: 21.4ms | ActiveRecord: 0.2ms | Allocations: 7395)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:21:57 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 354)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 427)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms | Allocations: 1702)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= stylesheet_link_tag "application" %>
+<h1>Galpão <%= @warehouse.code %> </h1>
+<h2> <%= @warehouse.description %> </h2>
+<div>
+    Nome: <%= @warehouse.name %>
+    Cidade: <%= @warehouse.city %>
+    Area: <%= @warehouse.area %> m2
+    Endereço: <%= @warehouse.address %>, CEP: <%= @warehouse.cep %>
+</div>
+
+<%= link_to('Editar', edit_warehouse_path(@warehouse.id))%>
+<%= button_to('Excluir', warehouse_path(@warehouse.id), method: :delete, :class => “btn btn-outline-warning”)%>
+
+
+<%= link_to('Voltar', root_path)%>
+):
+1:    <%= stylesheet_link_tag "application" %>
+2:    <h1>Galpão <%= @warehouse.code %> </h1>
+3:    <h2> <%= @warehouse.description %> </h2>
+4:    <div>
+5:        Nome: <%= @warehouse.name %>
+6:        Cidade: <%= @warehouse.city %>
+7:        Area: <%= @warehouse.area %> m2
+8:        Endereço: <%= @warehouse.address %>, CEP: <%= @warehouse.cep %>
+9:    </div>
+10:    
+11:    <%= link_to('Editar', edit_warehouse_path(@warehouse.id))%>
+12:    <%= button_to('Excluir', warehouse_path(@warehouse.id), method: :delete, :class => “btn btn-outline-warning”)%>
+13:    
+14:    
+15:    <%= link_to('Voltar', root_path)%>
+  
+app/views/warehouses/show.html.erb:12: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/warehouses/show.html.erb:12: syntax error, unexpected ')', expecting `end'
+app/views/warehouses/show.html.erb:12: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/warehouses/show.html.erb:12: syntax error, unexpected ')', expecting `end'
+app/views/warehouses/show.html.erb:12: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/warehouses/show.html.erb:12: syntax error, unexpected ')', expecting `end'
+app/views/warehouses/show.html.erb:12: syntax error, unexpected local variable or method, expecting `do' or '{' or '('
+app/views/warehouses/show.html.erb:12: syntax error, unexpected ')', expecting `end'
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:22:36 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 9.1ms | Allocations: 4994)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 6211)
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.2ms | Allocations: 7509)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:23:09 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 7.1ms | Allocations: 4892)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 6109)
+Completed 200 OK in 13ms (Views: 11.5ms | ActiveRecord: 0.1ms | Allocations: 7407)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:24:01 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 10.0ms | Allocations: 4911)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 6128)
+Completed 200 OK in 23ms (Views: 19.3ms | ActiveRecord: 0.3ms | Allocations: 7426)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:24:52 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 807)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5692)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 6990)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:25:38 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.4ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 6.6ms | Allocations: 798)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 5781)
+Completed 200 OK in 27ms (Views: 21.8ms | ActiveRecord: 0.4ms | Allocations: 7080)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:25:53 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 2.7ms | Allocations: 809)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 5694)
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.1ms | Allocations: 6992)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:25:55 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 1.9ms | Allocations: 485)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 4941)
+Completed 200 OK in 22ms (Views: 18.5ms | ActiveRecord: 0.3ms | Allocations: 5586)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:25:56 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 491)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 4947)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.3ms | Allocations: 5591)
+
+
+Started GET "/warehouses/1" for ::1 at 2022-09-27 14:26:05 -0300
+Processing by WarehousesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWarehouse Load (0.4ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:44:in `set_warehouse'
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/show.html.erb within layouts/application
+  Rendered warehouses/show.html.erb within layouts/application (Duration: 4.2ms | Allocations: 807)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 5692)
+Completed 200 OK in 23ms (Views: 18.5ms | ActiveRecord: 0.4ms | Allocations: 6989)
+
+
+Started GET "/" for ::1 at 2022-09-27 14:26:15 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 4824)
+Completed 200 OK in 16ms (Views: 15.6ms | ActiveRecord: 0.0ms | Allocations: 5521)
+
+
+Started GET "/" for ::1 at 2022-09-27 14:26:17 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 21.0ms | Allocations: 4628)
+Completed 200 OK in 23ms (Views: 22.1ms | ActiveRecord: 0.0ms | Allocations: 4848)
+
+
+Started GET "/warehouses" for ::1 at 2022-09-27 14:26:18 -0300
+Processing by WarehousesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.4ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/warehouses/index.html.erb:7
+  Rendered warehouses/index.html.erb within layouts/application (Duration: 7.4ms | Allocations: 911)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 5523)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.4ms | Allocations: 5798)
+
+
+Started GET "/suppliers" for ::1 at 2022-09-27 14:26:19 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.6ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:1
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 937)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 5724)
+Completed 200 OK in 28ms (Views: 26.1ms | ActiveRecord: 0.6ms | Allocations: 6421)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:26:20 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 13.2ms | Allocations: 2341)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 16.6ms | Allocations: 2669)
+  Rendered layout layouts/application.html.erb (Duration: 30.2ms | Allocations: 7133)
+Completed 200 OK in 33ms (Views: 31.3ms | ActiveRecord: 0.0ms | Allocations: 7413)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 14:26:23 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 9.4ms | Allocations: 2017)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 2467)
+  Rendered layout layouts/application.html.erb (Duration: 22.7ms | Allocations: 6921)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.0ms | Allocations: 7200)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 14:27:21 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 9.2ms | Allocations: 2023)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 11.8ms | Allocations: 2461)
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 7434)
+Completed 200 OK in 40ms (Views: 38.3ms | ActiveRecord: 0.0ms | Allocations: 8313)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 14:27:23 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 10.6ms | Allocations: 1499)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 1722)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 6264)
+Completed 200 OK in 26ms (Views: 25.2ms | ActiveRecord: 0.0ms | Allocations: 6491)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 14:27:36 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 4.2ms | Allocations: 1493)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1706)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 6160)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 6385)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 14:27:44 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 7.5ms | Allocations: 2023)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 2486)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 7374)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.0ms | Allocations: 8252)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 14:30:36 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 5.2ms | Allocations: 2023)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 2473)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 7361)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.0ms | Allocations: 8240)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 14:30:59 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 9.5ms | Allocations: 2023)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 2477)
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 7365)
+Completed 200 OK in 29ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 8245)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 14:35:09 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 11.2ms | Allocations: 2023)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 14.2ms | Allocations: 2468)
+  Rendered layout layouts/application.html.erb (Duration: 394.6ms | Allocations: 19523)
+Completed 500 Internal Server Error in 399ms (Allocations: 20389)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: rails_bootstrap_forms.
+        on line 17:2 of app/assets/stylesheets/application.scss
+>>  @import "rails_bootstrap_forms";
+
+   -^
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:    
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/application.scss:17
+app/views/layouts/application.html.erb:9
+Started GET "/suppliers/new" for ::1 at 2022-09-27 14:36:11 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 3.8ms | Allocations: 1505)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1720)
+  Rendered layout layouts/application.html.erb (Duration: 403.3ms | Allocations: 13849)
+Completed 500 Internal Server Error in 405ms (Allocations: 14052)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: rails_bootstrap_forms.
+        on line 17:2 of app/assets/stylesheets/application.scss
+>>  @import "rails_bootstrap_forms";
+
+   -^
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:    
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/application.scss:17
+app/views/layouts/application.html.erb:9
+Started GET "/suppliers/new" for ::1 at 2022-09-27 14:37:09 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 9.0ms | Allocations: 2035)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 2479)
+  Rendered layout layouts/application.html.erb (Duration: 379.5ms | Allocations: 15006)
+Completed 500 Internal Server Error in 383ms (Allocations: 15861)
+
+
+  
+ActionView::Template::Error (Error: File to import not found or unreadable: rails_bootstrap_forms.
+        on line 17:2 of app/assets/stylesheets/application.scss
+>>  @import "rails_bootstrap_forms";
+
+   -^
+):
+     6:     <%= csrf_meta_tags %>
+     7:     <%= csp_meta_tag %>
+     8: 
+     9:     <%= stylesheet_link_tag "application" %>
+    10:    
+    11:   </head>
+    12: 
+  
+app/assets/stylesheets/application.scss:17
+app/views/layouts/application.html.erb:9
+Started GET "/suppliers/new" for ::1 at 2022-09-27 14:37:45 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 9.7ms | Allocations: 1505)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 10.7ms | Allocations: 1720)
+  Rendered layout layouts/application.html.erb (Duration: 5581.3ms | Allocations: 33871)
+Completed 200 OK in 5583ms (Views: 5582.2ms | Allocations: 34099)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:37:53 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 25.3ms | Allocations: 3169)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 27.7ms | Allocations: 3508)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 3580)
+Completed 500 Internal Server Error in 32ms (Allocations: 4262)
+
+
+  
+ActionView::Template::Error (undefined method `bootstrap_form_with' for #<ActionView::Base:0x00000000007d78>):
+    1: <%= bootstrap_form_with(model: @warehouse) do |form| %>
+    2:  <div class="form-group">
+    3:   <div>
+    4: 		<%= form.label :name%>
+  
+app/views/warehouses/_form.html.erb:1
+app/views/warehouses/new.html.erb:11
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:39:06 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 32.1ms | Allocations: 19527)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 33.6ms | Allocations: 20194)
+  Rendered layout layouts/application.html.erb (Duration: 5694.6ms | Allocations: 75720)
+Completed 200 OK in 5718ms (Views: 5698.5ms | ActiveRecord: 0.5ms | Allocations: 97247)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:39:43 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 16.2ms | Allocations: 4646)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 17.7ms | Allocations: 4983)
+  Rendered layout layouts/application.html.erb (Duration: 4801.5ms | Allocations: 40813)
+Completed 200 OK in 4806ms (Views: 4804.4ms | ActiveRecord: 0.0ms | Allocations: 41704)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:40:34 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 10.9ms | Allocations: 3728)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 4065)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 8981)
+Completed 200 OK in 30ms (Views: 28.2ms | ActiveRecord: 0.0ms | Allocations: 9870)
+
+
+Started POST "/warehouses" for ::1 at 2022-09-27 14:40:54 -0300
+Processing by WarehousesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "warehouse"=>{"name"=>"Recifeww", "description"=>"www", "code"=>"www", "address"=>"wwww", "city"=>"www", "cep"=>"00000-000", "area"=>"22"}, "commit"=>"Enviar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:16:in `create'
+  [1m[36mWarehouse Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? LIMIT ?[0m  [["code", "www"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:16:in `create'
+  [1m[36mWarehouse Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? LIMIT ?[0m  [["name", "Recifeww"], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:16:in `create'
+  [1m[36mWarehouse Create (0.4ms)[0m  [1m[32mINSERT INTO "warehouses" ("name", "code", "city", "area", "created_at", "updated_at", "address", "cep", "description") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Recifeww"], ["code", "www"], ["city", "www"], ["area", 22], ["created_at", "2022-09-27 17:40:54.649233"], ["updated_at", "2022-09-27 17:40:54.649233"], ["address", "wwww"], ["cep", "00000000"], ["description", "www"]]
+  ↳ app/controllers/warehouses_controller.rb:16:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/warehouses_controller.rb:16:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."code" = ? AND "warehouses"."id" != ? LIMIT ?[0m  [["code", "www"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+  [1m[36mWarehouse Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "warehouses" WHERE "warehouses"."name" = ? AND "warehouses"."id" != ? LIMIT ?[0m  [["name", "Recifeww"], ["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/warehouses_controller.rb:17:in `create'
+Redirected to http://localhost:3000/warehouses
+Completed 302 Found in 18ms (ActiveRecord: 3.1ms | Allocations: 6705)
+
+
+Started GET "/warehouses" for ::1 at 2022-09-27 14:40:54 -0300
+Processing by WarehousesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/warehouses/index.html.erb:7
+  Rendered warehouses/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1113)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 5744)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.2ms | Allocations: 6036)
+
+
+Started GET "/warehouses" for ::1 at 2022-09-27 14:41:02 -0300
+Processing by WarehousesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/index.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/warehouses/index.html.erb:7
+  Rendered warehouses/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 723)
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 5348)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.3ms | Allocations: 5567)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:41:04 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 21.3ms | Allocations: 3352)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 21.9ms | Allocations: 3413)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 7884)
+Completed 200 OK in 32ms (Views: 31.3ms | ActiveRecord: 0.0ms | Allocations: 8118)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:44:02 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 15.4ms | Allocations: 3724)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 17.4ms | Allocations: 4056)
+  Rendered layout layouts/application.html.erb (Duration: 29.8ms | Allocations: 8959)
+Completed 200 OK in 35ms (Views: 33.1ms | ActiveRecord: 0.0ms | Allocations: 9838)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:45:04 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 9.3ms | Allocations: 3721)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 4053)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 8956)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 9836)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:46:28 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 10.9ms | Allocations: 3734)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 12.1ms | Allocations: 4073)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 8976)
+Completed 200 OK in 24ms (Views: 23.3ms | Allocations: 9857)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:46:40 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 29.4ms | Allocations: 3724)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 31.4ms | Allocations: 4061)
+  Rendered layout layouts/application.html.erb (Duration: 69.5ms | Allocations: 8964)
+Completed 200 OK in 73ms (Views: 71.5ms | Allocations: 9844)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:47:47 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 7.9ms | Allocations: 4094)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 4434)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 9338)
+Completed 200 OK in 17ms (Views: 16.4ms | Allocations: 10219)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:48:48 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 8.9ms | Allocations: 4088)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 4426)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 9329)
+Completed 200 OK in 20ms (Views: 19.0ms | Allocations: 10209)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:48:50 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 18.0ms | Allocations: 3693)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 18.5ms | Allocations: 3754)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 8222)
+Completed 200 OK in 30ms (Views: 29.4ms | Allocations: 8449)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:51:59 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 9.2ms | Allocations: 4087)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.2ms | Allocations: 4424)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 9327)
+Completed 200 OK in 21ms (Views: 19.8ms | Allocations: 10206)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:52:07 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 12.5ms | Allocations: 4078)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 4415)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 9318)
+Completed 200 OK in 26ms (Views: 24.5ms | Allocations: 10198)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:52:18 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 16.1ms | Allocations: 4076)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 18.4ms | Allocations: 4413)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 9316)
+Completed 200 OK in 33ms (Views: 31.8ms | Allocations: 10196)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:52:25 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 17.4ms | Allocations: 4083)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 21.0ms | Allocations: 4420)
+  Rendered layout layouts/application.html.erb (Duration: 30.4ms | Allocations: 9323)
+Completed 200 OK in 36ms (Views: 33.9ms | Allocations: 10203)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:52:35 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 6.5ms | Allocations: 4083)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 4420)
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 9324)
+Completed 200 OK in 22ms (Views: 21.2ms | Allocations: 10205)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:52:46 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 8.2ms | Allocations: 4095)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 4437)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 9341)
+Completed 200 OK in 19ms (Views: 18.3ms | Allocations: 10222)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:52:47 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 17.4ms | Allocations: 3689)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 17.9ms | Allocations: 3750)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 8218)
+Completed 200 OK in 34ms (Views: 33.1ms | Allocations: 8445)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:52:56 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 24.7ms | Allocations: 4081)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 28.5ms | Allocations: 4418)
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | Allocations: 9321)
+Completed 200 OK in 59ms (Views: 57.1ms | Allocations: 10200)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:52:57 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 14.1ms | Allocations: 3687)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 3748)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 8216)
+Completed 200 OK in 25ms (Views: 23.9ms | Allocations: 8443)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:53:06 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 7.7ms | Allocations: 4082)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 4419)
+  Rendered layout layouts/application.html.erb (Duration: 18.5ms | Allocations: 9322)
+Completed 200 OK in 21ms (Views: 20.0ms | Allocations: 10201)
+
+
+Started GET "/suppliers" for ::1 at 2022-09-27 14:56:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:1
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 13.0ms | Allocations: 18500)
+  Rendered layout layouts/application.html.erb (Duration: 52.7ms | Allocations: 43016)
+Completed 200 OK in 59ms (Views: 54.6ms | ActiveRecord: 0.5ms | Allocations: 47030)
+
+
+Started GET "/" for ::1 at 2022-09-27 14:56:20 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 105)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 4854)
+Completed 200 OK in 28ms (Views: 20.9ms | ActiveRecord: 0.0ms | Allocations: 6312)
+
+
+Started GET "/suppliers" for ::1 at 2022-09-27 14:56:22 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:1
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 669)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 5283)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms | Allocations: 5512)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:56:23 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 36.0ms | Allocations: 18330)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 37.1ms | Allocations: 18698)
+  Rendered layout layouts/application.html.erb (Duration: 41.9ms | Allocations: 23340)
+Completed 200 OK in 75ms (Views: 43.0ms | ActiveRecord: 1.5ms | Allocations: 39564)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:58:19 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 10.5ms | Allocations: 4070)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 13.1ms | Allocations: 4408)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 9311)
+Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 0.0ms | Allocations: 10191)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 14:58:30 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 10.4ms | Allocations: 4096)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 4433)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 9426)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms | Allocations: 10308)
+
+
+Started GET "/suppliers" for ::1 at 2022-09-27 14:59:01 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.5ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:1
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 8.4ms | Allocations: 901)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 5593)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.5ms | Allocations: 6298)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 14:59:05 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 17.5ms | Allocations: 2518)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 20.5ms | Allocations: 2969)
+  Rendered layout layouts/application.html.erb (Duration: 31.6ms | Allocations: 7427)
+Completed 200 OK in 34ms (Views: 33.1ms | ActiveRecord: 0.0ms | Allocations: 7717)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 14:59:46 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 19.8ms | Allocations: 4480)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 23.6ms | Allocations: 4938)
+  Rendered layout layouts/application.html.erb (Duration: 36.4ms | Allocations: 9848)
+Completed 200 OK in 42ms (Views: 40.6ms | ActiveRecord: 0.0ms | Allocations: 10727)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 15:00:14 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 10.8ms | Allocations: 3499)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 12.8ms | Allocations: 3946)
+  Rendered layout layouts/application.html.erb (Duration: 20.4ms | Allocations: 8839)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 9718)
+
+
+Started POST "/suppliers" for ::1 at 2022-09-27 15:00:28 -0300
+Processing by SuppliersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "supplier"=>{"name"=>"aaaaa", "company_name"=>"aaaa", "cnpj"=>"33.333.333/3333-35", "address"=>"aaaa", "email"=>"aa@email.com", "telephone"=>"0800773383"}, "commit"=>"Enviar"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/suppliers_controller.rb:11:in `create'
+  [1m[36mSupplier Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "suppliers" WHERE "suppliers"."cnpj" = ? LIMIT ?[0m  [["cnpj", 33333333333335], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:11:in `create'
+  [1m[36mSupplier Create (0.3ms)[0m  [1m[32mINSERT INTO "suppliers" ("name", "company_name", "cnpj", "address", "email", "telephone", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "aaaaa"], ["company_name", "aaaa"], ["cnpj", 33333333333335], ["address", "aaaa"], ["email", "aa@email.com"], ["telephone", "0800773383"], ["created_at", "2022-09-27 18:00:28.922953"], ["updated_at", "2022-09-27 18:00:28.922953"]]
+  ↳ app/controllers/suppliers_controller.rb:11:in `create'
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/suppliers_controller.rb:11:in `create'
+  [1m[36mSupplier Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "suppliers" WHERE "suppliers"."cnpj" = ? AND "suppliers"."id" != ? LIMIT ?[0m  [["cnpj", 33333333333335], ["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:13:in `create'
+Redirected to http://localhost:3000/suppliers
+Completed 302 Found in 15ms (ActiveRecord: 2.8ms | Allocations: 5378)
+
+
+Started GET "/suppliers" for ::1 at 2022-09-27 15:00:28 -0300
+Processing by SuppliersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:1
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 920)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 5653)
+Completed 200 OK in 10ms (Views: 9.7ms | ActiveRecord: 0.1ms | Allocations: 5927)
+
+
+Started GET "/suppliers/4" for ::1 at 2022-09-27 15:00:32 -0300
+Processing by SuppliersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:38:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/show.html.erb within layouts/application
+  Rendered suppliers/show.html.erb within layouts/application (Duration: 3.0ms | Allocations: 347)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 4962)
+Completed 200 OK in 29ms (Views: 23.4ms | ActiveRecord: 0.4ms | Allocations: 5854)
+
+
+Started GET "/suppliers/4/edit" for ::1 at 2022-09-27 15:00:37 -0300
+Processing by SuppliersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/suppliers_controller.rb:38:in `set_supplier'
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/edit.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 8.7ms | Allocations: 3333)
+  Rendered suppliers/edit.html.erb within layouts/application (Duration: 10.0ms | Allocations: 3495)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 7974)
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 0.3ms | Allocations: 8672)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 15:00:57 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 12.6ms | Allocations: 3498)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 3952)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 8844)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms | Allocations: 9722)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 15:01:07 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 22.2ms | Allocations: 4090)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 24.9ms | Allocations: 4426)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 8966)
+Completed 200 OK in 37ms (Views: 35.7ms | ActiveRecord: 0.0ms | Allocations: 9671)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 15:01:10 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 16.2ms | Allocations: 3052)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 25.2ms | Allocations: 3279)
+  Rendered layout layouts/application.html.erb (Duration: 59.8ms | Allocations: 7794)
+Completed 200 OK in 61ms (Views: 60.5ms | ActiveRecord: 0.0ms | Allocations: 8022)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 15:01:12 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 21.6ms | Allocations: 3702)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 22.2ms | Allocations: 3763)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 8250)
+Completed 200 OK in 35ms (Views: 34.2ms | ActiveRecord: 0.0ms | Allocations: 8477)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 15:01:16 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 15.4ms | Allocations: 3060)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 16.7ms | Allocations: 3289)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 7750)
+Completed 200 OK in 30ms (Views: 29.1ms | ActiveRecord: 0.0ms | Allocations: 7975)
+
+
+Started GET "/warehouses/new" for ::1 at 2022-09-27 15:01:49 -0300
+Processing by WarehousesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering warehouses/new.html.erb within layouts/application
+  Rendered warehouses/_form.html.erb (Duration: 9.3ms | Allocations: 4059)
+  Rendered warehouses/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 4402)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 9324)
+Completed 200 OK in 21ms (Views: 20.8ms | ActiveRecord: 0.0ms | Allocations: 10204)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 15:01:51 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 4.6ms | Allocations: 3498)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 3943)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 8509)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.0ms | Allocations: 9212)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-27 15:02:42 -0300
+Processing by SuppliersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 8.2ms | Allocations: 3510)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 3965)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 8948)
+Completed 200 OK in 18ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 9828)
+
+
