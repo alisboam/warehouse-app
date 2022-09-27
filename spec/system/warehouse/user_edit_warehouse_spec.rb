@@ -36,12 +36,11 @@ describe 'Usuário edita um galpão' do
     click_on('Aeroporto RJ')
     click_on('Editar')
     fill_in 'Nome', with: 'Galeão'
-    # fill_in 'Área', with: '100000'
     fill_in 'CEP', with: '18021500'
     click_on 'Enviar'
 
-    expect(page).to have_content 'Nome: Galeão'
-    expect(page).to have_content 'CEP: 18021500'
+    expect(page).to have_content 'Galeão'
+    expect(page).to have_content '18021500'
     expect(page).to have_content 'Galpão atualizado com sucesso'
   end
 

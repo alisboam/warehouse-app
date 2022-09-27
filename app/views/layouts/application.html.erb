@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="collapse navbar-collapse" id="navbarNav">
       <span class="navbar-brand mb-0 h1">Galpões & Estoque</span>
-        <ul class="navbar-nav">
+        <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <%= link_to('Página Inicial', root_path, class:'nav-link') %>
           </li>
@@ -37,9 +37,12 @@
     </nav>
   </header>
   <main>
+    
     <div>
       <%= flash[:notice] %>
     </div>
+     
+    
     <%= yield %>
   </main>
   </body>

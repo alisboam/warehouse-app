@@ -1,13 +1,27 @@
+<h3>Fornecedor: <%= @supplier.name %> </h1>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+      <th>Nome Fantasia</th>
+      <th>Razão Social</th>
+      <th>CNPJ</th>
+      <th>Email</th>
+      <th>Telefone</th>
+      <th>Endereço</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><%= @supplier.name %></td>
+          <td><%= @supplier.company_name %></td>
+          <td><%= @supplier.cnpj %></td>
+          <td><%= @supplier.email %></td>
+          <td><%= @supplier.telephone %></td>
+          <td><%= @supplier.address %></td>
+        </tr>
+      </tbody>
+  </table>
 
-<h1>Fornecedor <%= @supplier.name %> </h1>
-
-<div>
-    Razão Social: <%= @supplier.company_name %>
-    CNPJ: <%= @supplier.cnpj %>
-    Email: <%= @supplier.email %>
-    Endereço: <%= @supplier.address %>
-    Telefone: <%= @supplier.telephone %>
-</div>
-
-<%= link_to('Voltar', suppliers_path)%>
-<%= link_to('Editar', edit_supplier_path)%>
+<%= link_to('Voltar', suppliers_path, class: "btn btn-success")%>
+<%= link_to('Editar', edit_supplier_path, class: "btn btn-primary")%>

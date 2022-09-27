@@ -1,12 +1,29 @@
 
 <h1>Galpão <%= @warehouse.code %> </h1>
-<h2> <%= @warehouse.description %> </h2>
-<div>
-    Nome: <%= @warehouse.name %>
-    Cidade: <%= @warehouse.city %>
-    Area: <%= @warehouse.area %> m2
-    Endereço: <%= @warehouse.address %>, CEP: <%= @warehouse.cep %>
-</div>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+      <th>Nome</th>
+      <th>Descrição</th>
+      <th>Cidade</th>
+      <th>Área</th>
+      <th>Endereço</th>
+      <th>Cep</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><%= @warehouse.name %></td>
+          <td><%= @warehouse.description %></td>
+          <td><%= @warehouse.city %></td>
+          <td><%= @warehouse.area %></td><span> m2</span>
+          <td><%= @warehouse.address %></td>
+          <td><%= @warehouse.cep %></td>
+        </tr>
+      </tbody>
+  </table>
 
 <div>
     <%= link_to('Voltar', root_path, class:"btn btn-secondary")%>
