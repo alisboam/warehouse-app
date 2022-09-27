@@ -9,7 +9,7 @@
 	</div>
 	<div>
 		<%= form.label :cnpj %>
-  	<%= form.text_field :cnpj, maxlength:14 %>
+  	<%= form.text_field :cnpj, maxlength:18 %>
 	</div>
 	<div>
 		<%= form.label :address %>
@@ -29,3 +29,15 @@
 	</div>
 
 <% end %>
+
+
+<% if(@supplier.errors.any?) %>
+<p> A validação falhou: </p>
+	<ul>
+		<% @supplier.errors.full_messages.each do |message| %>
+		<li> <%= message %> </li>
+		<% end %>
+	</ul>
+<% end %>
+
+<script src="/assets/cnpj_mask.js"></script>

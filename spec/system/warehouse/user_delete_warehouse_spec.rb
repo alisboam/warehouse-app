@@ -6,11 +6,11 @@ describe 'Usuário remove um galpão' do
       address: 'Praça Sen. Salgado Filho', cep: '20021340',
       description: 'Galpão destinado a cargas pequenas')
 
-    visit(root_path)
+    visit(warehouses_path)
     click_on('Aeroporto RJ')
     click_on('Excluir')
 
-    expect(current_path).to eq root_path
+    expect(current_path).to eq warehouses_path
     expect(page).to have_content 'Galpão excluído com sucesso'
     expect(page).not_to have_content 'Aeroporto RJ'
   end
@@ -23,11 +23,11 @@ describe 'Usuário remove um galpão' do
       address: 'Niteroi', cep: '20021000',
       description: 'Galpa de Niteroi')
 
-    visit(root_path)
+    visit(warehouses_path)
     click_on('Aeroporto RJ')
     click_on('Excluir')
 
-    expect(current_path).to eq root_path
+    expect(current_path).to eq warehouses_path
     expect(page).to have_content 'Galpão excluído com sucesso'
     expect(page).to have_content 'Niteroi'
     expect(page).not_to have_content 'Aeroporto RJ'

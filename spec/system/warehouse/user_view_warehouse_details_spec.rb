@@ -8,7 +8,7 @@ describe 'usuário vê detalhes de um galpão' do
                         description: 'Galpão destinado a cargas pequenas')
 
         #act
-        visit(root_path)
+        visit(warehouses_path)
         click_on('Aeroporto RJ')
 
         #assert
@@ -29,7 +29,7 @@ describe 'usuário vê detalhes de um galpão' do
                         description: 'Galpão destinado a cargas pequenas')
 
         #act - visitar a tela inicial
-        visit(root_path)
+        visit(warehouses_path)
         click_on('Aeroporto RJ')
         click_on('Voltar')
 

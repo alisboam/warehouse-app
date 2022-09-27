@@ -5,13 +5,6 @@
 
 <%= render 'form' %>
 
-<% if(@supplier.errors.any?) %>
-<p> A validação falhou: </p>
-	<ul>
-		<% @supplier.errors.full_messages.each do |message| %>
-		<li> <%= message %> </li>
-		<% end %>
-	</ul>
-<% end %>
+
 
 

@@ -1,33 +1,4 @@
-<%=I18n.translate('hello')%>
-<%=I18n.localize(Date.today)%>
-
 
 <section>
-  <h2>Galpões</h2>
-  <div>
-    <span><%= link_to('Cadastrar Galpão', new_warehouse_path) %></span>
-  </div>
-  <div>
-    <span><%= link_to('Cadastrar Fornecedor', new_supplier_path) %></span>
-  </div>
-  <div>
-    <span><%= link_to('Fornecedores', suppliers_path) %></span>
-  </div>
-  <% @warehouses.each do |w| %>
-    <div>
-      <h3><%= link_to(w.name, warehouse_path(w.id)) %></h3>
-        <dl>
-          <dt>Código: </dt>
-          <dd><%= w.code %></dd>
-          <dt>Cidade: </dt>
-          <dd><%= w.city %></dd>
-          <dt>Área: </dt>
-          <dd><%= w.area %> m2</dd>
-        </dl>
-    </div>
-  <% end %>
-
-  <% if @warehouses.empty? %>
-      <p>Não existem galpões cadastrados</p>
-  <% end %>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur placeat voluptatem, quas maxime doloribus quibusdam vitae, nihil eveniet qui iusto molestiae error ullam sequi unde rem repellendus cumque iste beatae?
 </section>

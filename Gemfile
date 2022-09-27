@@ -26,6 +26,7 @@ group :development, :test do
   gem "rspec-rails"
   gem "capybara"
   gem 'email_validator'
+  gem 'bootstrap'
 end
 
 group :development do

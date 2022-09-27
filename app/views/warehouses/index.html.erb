@@ -1,0 +1,18 @@
+<%=I18n.translate('hello')%>
+<%=I18n.localize(Date.today)%>
+
+
+<section>
+  <h2>Galpões</h2>
+  <% @warehouses.each do |field|%>
+    <ul>
+      <li>
+        <%= link_to(field.name, warehouse_path(field.id)) %>
+      </li>
+    </ul>
+  <% end %>
+
+  <% if @warehouses.empty? %>
+      <p>Não existem galpões cadastrados</p>
+  <% end %>
+</section>

@@ -1,4 +1,4 @@
-<% @supplier. each do |field|%>
+<% @supplier.each do |field|%>
   <ul>
     <li>
       <%= link_to(field.name, supplier_path(field.id)) %>
@@ -6,5 +6,10 @@
   </ul>
 <% end %>
 
+ <% if @supplier.empty? %>
+      <p>Não existem fornecedores cadastrados</p>
+  <% end %>
+</section>
 
 <%= link_to('Página Inicial', root_path)%>
+

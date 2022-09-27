@@ -21,21 +21,19 @@ describe 'usuário vê detalhes de um fornecedor' do
         
     end    
     
-    # it 'e volta a tela inicial' do
-    #     #Arrange - criar um galpão
-    
-    #     Warehouse.create(name: 'Aeroporto RJ', code: 'SDU', city: 'Rio de Janeiro', area: 60_000,
-    #                     address: 'Praça Sen. Salgado Filho', cep: '20021340',
-    #                     description: 'Galpão destinado a cargas pequenas')
+    it 'e volta a tela de fornecedores' do
+        Supplier.create(name: 'Magalu', company_name: 'MAGAZINE LUIZA S/A',
+            cnpj:'47960950000121',address: 'VOLUNTARIOS DA FRANCA, 28',
+            email: 'magalu@email.com', telephone: '08007733838')
 
-    #     #act - visitar a tela inicial
-    #     visit(root_path)
-    #     click_on('Aeroporto RJ')
-    #     click_on('Voltar')
+        visit(root_path)
+        click_on('Fornecedores')
+        click_on('Magalu')
+        click_on('Voltar')
 
-    #     #assert
-    #     expect(current_path).to eq(root_path)
-    # end
+        #assert
+        expect(current_path).to eq(suppliers_path)
+    end
 
 
 end

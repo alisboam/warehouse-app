@@ -1,5 +1,10 @@
 class WarehousesController < ApplicationController
   before_action :set_warehouse, only: [:show, :edit, :update, :destroy]
+
+  def index
+    @warehouses = Warehouse.all
+    
+  end
   
   def show; end
 
@@ -8,11 +13,9 @@ class WarehousesController < ApplicationController
   end
 
   def create
-    warehouse_params[:cep] = warehouse_params[:cep].gsub("-", "")
     @warehouse = Warehouse.create(warehouse_params)
-
     if @warehouse.valid?
-      redirect_to root_path, notice: 'Galpão cadastrado com sucesso'
+      redirect_to warehouses_path, notice: 'Galpão cadastrado com sucesso'
     else
       flash.now[:notice] = 'Galpão não cadastrado'
       render 'new'
@@ -32,7 +35,7 @@ class WarehousesController < ApplicationController
 
   def destroy
     @warehouse.destroy
-    redirect_to root_path, notice: 'Galpão excluído com sucesso'
+    redirect_to warehouses_path, notice: 'Galpão excluído com sucesso'
     
   end
 
@@ -43,8 +46,9 @@ class WarehousesController < ApplicationController
 
   def warehouse_params
     # Strong parameters
-    warehouse_params = params.require(:warehouse)
-                      .permit(:name, :code, :description, :city, :address, :cep, :area)
+    w_params = params.require(:warehouse).permit(:name, :code, :description, :city, :address, :cep, :area)
+    w_params[:cep] = w_params[:cep].gsub("-", "")
+    w_params          
   end
 end
 

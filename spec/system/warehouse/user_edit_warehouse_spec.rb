@@ -9,7 +9,7 @@ describe 'Usuário edita um galpão' do
       description: 'Galpão destinado a cargas pequenas')
 
     #act - visitar a tela inicial
-    visit(root_path)
+    visit(warehouses_path)
     click_on('Aeroporto RJ')
     click_on('Editar')
 
@@ -32,7 +32,7 @@ describe 'Usuário edita um galpão' do
       description: 'Galpão destinado a cargas pequenas')
 
     #act - visitar a tela inicial
-    visit(root_path)
+    visit(warehouses_path)
     click_on('Aeroporto RJ')
     click_on('Editar')
     fill_in 'Nome', with: 'Galeão'
@@ -41,7 +41,6 @@ describe 'Usuário edita um galpão' do
     click_on 'Enviar'
 
     expect(page).to have_content 'Nome: Galeão'
-    # expect(page).to have_content 'Área: 100000 m2'
     expect(page).to have_content 'CEP: 18021500'
     expect(page).to have_content 'Galpão atualizado com sucesso'
   end
@@ -52,11 +51,10 @@ describe 'Usuário edita um galpão' do
       description: 'Galpão destinado a cargas pequenas')
 
     #act - visitar a tela inicial
-    visit(root_path)
+    visit(warehouses_path)
     click_on('Aeroporto RJ')
     click_on('Editar')
     fill_in 'Nome', with: ''
-    # fill_in 'Área', with: '100000'
     fill_in 'CEP', with: ''
     click_on 'Enviar'
 
