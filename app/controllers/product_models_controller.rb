@@ -13,9 +13,10 @@ class ProductModelsController < ApplicationController
 
   def new
     @product_model = ProductModel.new
-    @suppliers =Supplier.all
+    @suppliers = Supplier.all.order(:name)
+    puts @suppliers
   end
-
+  
   def show
     @product_model = ProductModel.find(params[:id])
   end

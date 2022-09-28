@@ -42412,3 +42412,463 @@ Processing by ProductModelsController#show as HTML
 Completed 200 OK in 25ms (Views: 19.5ms | ActiveRecord: 0.8ms | Allocations: 6447)
 
 
+Started GET "/product_models" for ::1 at 2022-09-28 13:39:31 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProductModelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/index.html.erb within layouts/application
+  [1m[36mProductModel Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "product_models" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:2
+  [1m[36mProductModel Load (0.1ms)[0m  [1m[34mSELECT "product_models".* FROM "product_models"[0m
+  ↳ app/views/product_models/index.html.erb:13
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  Rendered product_models/index.html.erb within layouts/application (Duration: 32.5ms | Allocations: 40761)
+  Rendered layout layouts/application.html.erb (Duration: 53.7ms | Allocations: 56325)
+Completed 200 OK in 63ms (Views: 55.1ms | ActiveRecord: 1.1ms | Allocations: 62027)
+
+
+Started GET "/product_models/1" for ::1 at 2022-09-28 13:39:33 -0300
+Processing by ProductModelsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mProductModel Load (0.6ms)[0m  [1m[34mSELECT "product_models".* FROM "product_models" WHERE "product_models"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/product_models_controller.rb:20:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/show.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/product_models/show.html.erb:23
+  Rendered product_models/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 950)
+  Rendered layout layouts/application.html.erb (Duration: 30.3ms | Allocations: 5654)
+Completed 200 OK in 38ms (Views: 31.3ms | ActiveRecord: 0.9ms | Allocations: 6542)
+
+
+Started GET "/product_models" for ::1 at 2022-09-28 13:39:36 -0300
+Processing by ProductModelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/index.html.erb within layouts/application
+  [1m[36mProductModel Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "product_models" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:2
+  [1m[36mProductModel Load (0.2ms)[0m  [1m[34mSELECT "product_models".* FROM "product_models"[0m
+  ↳ app/views/product_models/index.html.erb:13
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  Rendered product_models/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 2406)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 7108)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 1.1ms | Allocations: 7335)
+
+
+Started GET "/product_models/2" for ::1 at 2022-09-28 13:39:37 -0300
+Processing by ProductModelsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mProductModel Load (0.4ms)[0m  [1m[34mSELECT "product_models".* FROM "product_models" WHERE "product_models"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/product_models_controller.rb:20:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/show.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/product_models/show.html.erb:23
+  Rendered product_models/show.html.erb within layouts/application (Duration: 4.6ms | Allocations: 671)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 5363)
+Completed 200 OK in 22ms (Views: 17.1ms | ActiveRecord: 0.6ms | Allocations: 6013)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:39:47 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/product_models/_form.html.erb:20
+  Rendered product_models/_form.html.erb (Duration: 54.2ms | Allocations: 19650)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 57.3ms | Allocations: 19905)
+  Rendered layout layouts/application.html.erb (Duration: 61.9ms | Allocations: 24452)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.2ms | Allocations: 24779)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:43:10 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/product_models/_form.html.erb:20
+  Rendered product_models/_form.html.erb (Duration: 15.9ms | Allocations: 5288)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 17.3ms | Allocations: 5528)
+  Rendered layout layouts/application.html.erb (Duration: 36.9ms | Allocations: 10630)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.2ms | Allocations: 11523)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:43:40 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  Rendered product_models/_form.html.erb (Duration: 11.1ms | Allocations: 4536)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 4783)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 4855)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms | Allocations: 5740)
+
+
+  
+ActionView::Template::Error (The method .order() must contain arguments.):
+    17: 	<div>
+    18:   	<%= form.text_field :sku, required: true %>
+    19: 	</div>
+    20: 	<%= form.collection_select :supplier_id, @suppliers.order, :id, :name, class: "selectpicker" %>
+    21:   
+    22:   <div> 
+    23: 		<%= form.submit 'Enviar', class: "btn btn-success" %>
+  
+app/views/product_models/_form.html.erb:20
+app/views/product_models/_form.html.erb:1
+app/views/product_models/new.html.erb:2
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:44:09 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/views/product_models/_form.html.erb:20
+  Rendered product_models/_form.html.erb (Duration: 14.0ms | Allocations: 5361)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 15.5ms | Allocations: 5601)
+  Rendered layout layouts/application.html.erb (Duration: 26.6ms | Allocations: 10740)
+Completed 200 OK in 33ms (Views: 30.6ms | ActiveRecord: 0.3ms | Allocations: 11633)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:48:09 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  Rendered product_models/_form.html.erb (Duration: 0.5ms | Allocations: 472)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 714)
+  Rendered layout layouts/application.html.erb (Duration: 1.2ms | Allocations: 787)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.7ms | Allocations: 6781)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= bootstrap_form_with(model: @product_model, layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-5") do |form| %>
+  <div>
+		<%= form.text_field :name, required: true %>
+	</div>
+	<div>
+  	<%= form.text_field :weight, required: true %>
+	</div>
+	<div>
+  	<%= form.text_field :width, required: true %>
+	</div>
+	<div>
+  	<%= form.text_field :height, required: true %>
+	</div>
+	<div>
+  	<%= form.text_field :depth, required: true %>
+	</div>
+	<div>
+  	<%= form.text_field :sku, required: true %>
+	</div>
+	<%= form.collection_select :supplier_id, @suppliers :id, :name, class: "selectpicker" %>
+  
+  <div> 
+		<%= form.submit 'Enviar', class: "btn btn-success" %>
+	</div>
+
+<% end %>
+
+
+<% if(@product_model.errors.any?) %>
+<p> A validação falhou: </p>
+	<ul>
+		<% @product_model.errors.full_messages.each do |message| %>
+		<li> <%= message %> </li>
+		<% end %>
+	</ul>
+<% end %>
+
+<script src="/assets/cnpj_mask.js"></script>
+):
+1:    <%= bootstrap_form_with(model: @product_model, layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-5") do |form| %>
+2:      <div>
+3:    		<%= form.text_field :name, required: true %>
+4:    	</div>
+5:    	<div>
+6:      	<%= form.text_field :weight, required: true %>
+7:    	</div>
+8:    	<div>
+9:      	<%= form.text_field :width, required: true %>
+10:    	</div>
+11:    	<div>
+12:      	<%= form.text_field :height, required: true %>
+13:    	</div>
+14:    	<div>
+15:      	<%= form.text_field :depth, required: true %>
+16:    	</div>
+17:    	<div>
+18:      	<%= form.text_field :sku, required: true %>
+19:    	</div>
+20:    	<%= form.collection_select :supplier_id, @suppliers :id, :name, class: "selectpicker" %>
+21:      
+22:      <div> 
+23:    		<%= form.submit 'Enviar', class: "btn btn-success" %>
+24:    	</div>
+25:    
+26:    <% end %>
+27:    
+28:    
+29:    <% if(@product_model.errors.any?) %>
+30:    <p> A validação falhou: </p>
+31:    	<ul>
+32:    		<% @product_model.errors.full_messages.each do |message| %>
+33:    		<li> <%= message %> </li>
+34:    		<% end %>
+35:    	</ul>
+36:    <% end %>
+37:    
+38:    <script src="/assets/cnpj_mask.js"></script>
+  
+app/views/product_models/_form.html.erb:20: syntax error, unexpected ':', expecting ')'
+app/views/product_models/_form.html.erb:20: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/product_models/_form.html.erb:20: syntax error, unexpected ':', expecting ')'
+app/views/product_models/_form.html.erb:20: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/product_models/_form.html.erb:20: syntax error, unexpected ':', expecting ')'
+app/views/product_models/_form.html.erb:20: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/product_models/_form.html.erb:20: syntax error, unexpected ':', expecting ')'
+app/views/product_models/_form.html.erb:20: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/views/product_models/new.html.erb:2
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:48:32 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/product_models/_form.html.erb:20
+  Rendered product_models/_form.html.erb (Duration: 29.0ms | Allocations: 7942)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 32.6ms | Allocations: 8182)
+  Rendered layout layouts/application.html.erb (Duration: 40.6ms | Allocations: 13333)
+Completed 200 OK in 46ms (Views: 43.0ms | ActiveRecord: 0.9ms | Allocations: 14237)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:49:09 -0300
+  
+SyntaxError (/home/alinemoraes/Documentos/warehouse-app/app/controllers/product_models_controller.rb:4: syntax error, unexpected ':', expecting ')'
+... ProductModel.all.order(:name :asc)
+...                              ^
+/home/alinemoraes/Documentos/warehouse-app/app/controllers/product_models_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'):
+  
+app/controllers/product_models_controller.rb:4: syntax error, unexpected ':', expecting ')'
+app/controllers/product_models_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+app/controllers/product_models_controller.rb:4: syntax error, unexpected ':', expecting ')'
+app/controllers/product_models_controller.rb:23: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:49:49 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/product_models/_form.html.erb:20
+  Rendered product_models/_form.html.erb (Duration: 9.3ms | Allocations: 7469)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 7529)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 12161)
+Completed 200 OK in 27ms (Views: 16.6ms | ActiveRecord: 1.3ms | Allocations: 17884)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:54:25 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/product_models/_form.html.erb:20
+  Rendered product_models/_form.html.erb (Duration: 9.4ms | Allocations: 7462)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 9.6ms | Allocations: 7522)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 12249)
+Completed 200 OK in 25ms (Views: 15.7ms | ActiveRecord: 1.1ms | Allocations: 17971)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:54:26 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/product_models/_form.html.erb:20
+  Rendered product_models/_form.html.erb (Duration: 19.3ms | Allocations: 4803)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 19.7ms | Allocations: 4859)
+  Rendered layout layouts/application.html.erb (Duration: 28.5ms | Allocations: 9403)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.2ms | Allocations: 9642)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:56:20 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/product_models/_form.html.erb:20
+  Rendered product_models/_form.html.erb (Duration: 9.5ms | Allocations: 7461)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 7521)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 12153)
+Completed 200 OK in 25ms (Views: 16.3ms | ActiveRecord: 1.2ms | Allocations: 17851)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:56:22 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/product_models/_form.html.erb:20
+  Rendered product_models/_form.html.erb (Duration: 16.7ms | Allocations: 4807)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 17.1ms | Allocations: 4863)
+  Rendered layout layouts/application.html.erb (Duration: 23.8ms | Allocations: 9407)
+Completed 200 OK in 26ms (Views: 24.5ms | ActiveRecord: 0.3ms | Allocations: 9646)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:57:25 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  Rendered product_models/_form.html.erb (Duration: 3.4ms | Allocations: 3006)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 3068)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3140)
+Completed 500 Internal Server Error in 5ms (Allocations: 3809)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    17: 	<div>
+    18:   	<%= form.text_field :sku, required: true %>
+    19: 	</div>
+    20: 	<%= form.collection_select :supplier_id, @suppliers, :id, :name, class: "selectpicker" %>
+    21:   
+    22:   <div> 
+    23: 		<%= form.submit 'Enviar', class: "btn btn-success" %>
+  
+app/views/product_models/_form.html.erb:20
+app/views/product_models/_form.html.erb:1
+app/views/product_models/new.html.erb:2
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:57:48 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  Rendered product_models/_form.html.erb (Duration: 10.8ms | Allocations: 2695)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 2753)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 2824)
+Completed 500 Internal Server Error in 14ms (Allocations: 3009)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    17: 	<div>
+    18:   	<%= form.text_field :sku, required: true %>
+    19: 	</div>
+    20: 	<%= form.collection_select :supplier_id, @suppliers, :id, :name, class: "selectpicker" %>
+    21:   
+    22:   <div> 
+    23: 		<%= form.submit 'Enviar', class: "btn btn-success" %>
+  
+app/views/product_models/_form.html.erb:20
+app/views/product_models/_form.html.erb:1
+app/views/product_models/new.html.erb:2
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:58:41 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/views/product_models/_form.html.erb:20
+  Rendered product_models/_form.html.erb (Duration: 7.9ms | Allocations: 7104)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 7164)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 11891)
+Completed 200 OK in 24ms (Views: 14.5ms | ActiveRecord: 1.4ms | Allocations: 18061)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:58:44 -0300
+Processing by ProductModelsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/views/product_models/_form.html.erb:20
+  Rendered product_models/_form.html.erb (Duration: 5.1ms | Allocations: 4792)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 4848)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 9392)
+Completed 200 OK in 11ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 9646)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-28 13:59:30 -0300
+Processing by ProductModelsController#new as HTML
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/controllers/product_models_controller.rb:16:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  Rendered product_models/_form.html.erb (Duration: 4.8ms | Allocations: 4655)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 4717)
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 4789)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.6ms | Allocations: 13598)
+
+
+  
+ActionView::Template::Error (undefined method `name' for "Magalu":String):
+    17: 	<div>
+    18:   	<%= form.text_field :sku, required: true %>
+    19: 	</div>
+    20: 	<%= form.collection_select :supplier_id, @suppliers, :id, :name, class: "selectpicker" %>
+    21:   
+    22:   <div> 
+    23: 		<%= form.submit 'Enviar', class: "btn btn-success" %>
+  
+app/views/product_models/_form.html.erb:20
+app/views/product_models/_form.html.erb:1
+app/views/product_models/new.html.erb:2
+Started GET "/product_models/new" for ::1 at 2022-09-28 14:01:20 -0300
+Processing by ProductModelsController#new as HTML
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/controllers/product_models_controller.rb:16:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  Rendered product_models/_form.html.erb (Duration: 5.4ms | Allocations: 4664)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 4726)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 4798)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 1.7ms | Allocations: 13682)
+
+
+  
+ActionView::Template::Error (undefined method `name' for "Magalu":String):
+    17: 	<div>
+    18:   	<%= form.text_field :sku, required: true %>
+    19: 	</div>
+    20: 	<%= form.collection_select :supplier_id, @suppliers, :id, :name, class: "selectpicker" %>
+    21:   
+    22:   <div> 
+    23: 		<%= form.submit 'Enviar', class: "btn btn-success" %>
+  
+app/views/product_models/_form.html.erb:20
+app/views/product_models/_form.html.erb:1
+app/views/product_models/new.html.erb:2
+Started GET "/product_models/new" for ::1 at 2022-09-28 14:02:33 -0300
+Processing by ProductModelsController#new as HTML
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/controllers/product_models_controller.rb:16:in `map'
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  Rendered product_models/_form.html.erb (Duration: 8.6ms | Allocations: 5032)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 5274)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 5346)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.4ms | Allocations: 6791)
+
+
+  
+ActionView::Template::Error (undefined method `sku' for "Magalu":String):
+    17: 	<div>
+    18:   	<%= form.text_field :sku, required: true %>
+    19: 	</div>
+    20: 	<%= form.collection_select :supplier_id, @suppliers, :id, :sku, class: "selectpicker" %>
+    21:   
+    22:   <div> 
+    23: 		<%= form.submit 'Enviar', class: "btn btn-success" %>
+  
+app/views/product_models/_form.html.erb:20
+app/views/product_models/_form.html.erb:1
+app/views/product_models/new.html.erb:2
+Started GET "/product_models/new" for ::1 at 2022-09-28 14:04:58 -0300
+Processing by ProductModelsController#new as HTML
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/controllers/product_models_controller.rb:17:in `puts'
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  Rendered product_models/_form.html.erb (Duration: 6.4ms | Allocations: 4614)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 4854)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 10003)
+Completed 200 OK in 26ms (Views: 14.3ms | ActiveRecord: 1.1ms | Allocations: 19162)
+
+
