@@ -56,6 +56,5 @@ describe 'Usuário cadastra um galpão' do
         expect(page).to have_content "Código não possui o tamanho esperado (3 caracteres)"
         expect(page).to have_content "CEP não possui o tamanho esperado (8 caracteres)"
         expect(page).to have_content "CEP não é um número"
-
     end
 end

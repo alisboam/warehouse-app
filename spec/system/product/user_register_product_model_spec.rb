@@ -20,6 +20,9 @@ describe 'Usuário cadastra um produto' do
         supplier = Supplier.create!(name: 'Magalu', company_name: 'MAGAZINE LUIZA S/A',
             cnpj:'47960950000121',address: 'VOLUNTARIOS DA FRANCA, 28',
             email: 'magalu@email.com', telephone: '08007733838')
+        supplier_b = Supplier.create!(name: 'Pernambucanas', company_name: 'Pernambucanas S/A',
+            cnpj:'95960950000125',address: 'Av Paulista, 28',
+            email: 'per@email.com', telephone: '4000095')
     
         visit(root_path)
         click_on 'Cadastrar Produto'
@@ -30,7 +33,6 @@ describe 'Usuário cadastra um produto' do
         fill_in 'Profundidade', with: 10
         fill_in 'SKU', with: 'TV 40-XPTO'
         select 'Magalu', from: 'Fornecedor'
-        
         click_on 'Enviar'
 
         expect(page).to have_content 'Modelo de produto cadastrado com sucesso'
@@ -40,5 +42,21 @@ describe 'Usuário cadastra um produto' do
         expect(page).to have_content '90cm'
         expect(page).to have_content '10cm '
         expect(page).to have_content '10000g '
+    end
+
+    it 'e deve preencher todos os campos' do
+        
+        supplier = Supplier.create!(name: 'Magalu', company_name: 'MAGAZINE LUIZA S/A',
+                                    cnpj:'47960950000121',address: 'VOLUNTARIOS DA FRANCA, 28',
+                                    email: 'magalu@email.com', telephone: '08007733838')
+        
+        visit(root_path)
+        click_on 'Cadastrar Produto'
+        fill_in 'Nome', with: ''
+        fill_in 'SKU', with: ''
+        select 'Magalu', from: 'Fornecedor'
+        click_on 'Enviar'
+
+        expect(page).to have_content 'Não foi possível cadastrar o modelo de produto'
     end
 end

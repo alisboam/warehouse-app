@@ -17,7 +17,7 @@
 	<div>
   	<%= form.text_field :sku, required: true %>
 	</div>
-	<%= form.collection_select :supplier_id, @suppliers, :id, :name, class: "selectpicker" %>
+	<%= form.collection_select :supplier_id, @suppliers.order(:name), :id, :name %>
   
   <div> 
 		<%= form.submit 'Enviar', class: "btn btn-success" %>
