@@ -15,7 +15,6 @@ describe 'Usuário vê lista de produtos' do
       click_on 'Modelos de Produtos'
     end
 
-
     expect(page).to have_content 'TV 32'
     expect(page).to have_content 'TV-32-SAMSU-XPTO'
     expect(page).to have_content 'Magalu'
@@ -24,11 +23,10 @@ describe 'Usuário vê lista de produtos' do
     expect(page).to have_content 'Magalu'
   end
 
-  it 'e não existem galpões cadastrados' do
+  it 'e não existem produtos cadastrados' do
     visit root_path
     click_on 'Modelos de Produtos'
     expect(page).to have_content 'Não existem produtos cadastrados'
-
   end
 
 end
