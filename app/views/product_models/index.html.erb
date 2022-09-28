@@ -1,0 +1,24 @@
+<h2>Modelos de Produtos</h2>
+<% if @product_models.any? %>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+        <th>Nome </th>
+        <th>SKU</th>
+        <th>Fornecedor</th>
+      </tr>
+      </thead>
+      <tbody>
+        <% @product_models.each do |field| %>
+          <tr>
+            <td><%= link_to(field.name, product_model_path(field.id)) %></td>
+            <td><%= link_to(field.sku, product_model_path(field.id)) %></td>
+            <td><%= link_to(field.supplier.name, product_model_path(field.id)) %></td>
+          </tr>
+        <% end %>
+        </tbody>
+    </table>
+<% else %>
+  <span> 'Não existem produtos cadastrados' </span>
+<% end %>

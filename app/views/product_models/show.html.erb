@@ -1,0 +1,27 @@
+<h3>Produto: <%= @product_model.name %> </h1>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+      <th>Nome</th>
+      <th>Peso</th>
+      <th>Largura</th>
+      <th>Altura</th>
+      <th>Profundidade</th>
+      <th>SKU</th>
+      <th>Fornecedo</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><%= @product_model.name %></td>
+          <td><%= @product_model.weight %>g</td>
+          <td><%= @product_model.width %>cm</td>
+          <td><%= @product_model.height %>cm</td>
+          <td><%= @product_model.depth %>cm</td>
+          <td><%= @product_model.sku %></td>
+          <td><%= @product_model.supplier.name %></td>
+        </tr>
+      </tbody>
+  </table>
+
