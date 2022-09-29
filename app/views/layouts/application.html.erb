@@ -32,11 +32,11 @@
         </ul>
       </div>
         <% if user_signed_in? %>
-          <div class="navbar-nav d-flex justify-content-end">
+          <div class="navbar-nav nav-link d-flex justify-content-end">
             <%= current_user.email %>
           </div>
           <div class="navbar-nav d-flex justify-content-end">
-            <%= link_to('Sair', root_path, class:'nav-link') %>
+            <%= button_to 'Sair', destroy_user_session_path, method: :delete, class:'nav-link btn btn-link' %>
           </div>
         <% else %>
           <div class="navbar-nav d-flex justify-content-end">

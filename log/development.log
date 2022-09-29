@@ -45545,3 +45545,936 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.2ms | Allocations: 5589)
 
 
+Started GET "/" for ::1 at 2022-09-29 12:29:39 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 417)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 37.7ms | Allocations: 35455)
+Completed 200 OK in 44ms (Views: 39.8ms | ActiveRecord: 0.6ms | Allocations: 39264)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-09-29 12:29:47 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 25ms (ActiveRecord: 0.2ms | Allocations: 10071)
+
+
+Started GET "/" for ::1 at 2022-09-29 12:29:47 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 4843)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 5069)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 12:29:50 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 850)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 50.4ms | Allocations: 4671)
+  Rendered layout layouts/application.html.erb (Duration: 58.0ms | Allocations: 9390)
+Completed 200 OK in 69ms (Views: 63.2ms | ActiveRecord: 0.0ms | Allocations: 11113)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-09-29 12:30:10 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joao@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "joao@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 202ms (ActiveRecord: 0.2ms | Allocations: 4214)
+
+
+Started GET "/" for ::1 at 2022-09-29 12:30:11 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 5574)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 5797)
+
+
+Started GET "/" for ::1 at 2022-09-29 12:33:45 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 417)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 35504)
+Completed 200 OK in 53ms (Views: 47.6ms | ActiveRecord: 0.6ms | Allocations: 39312)
+
+
+Started GET "/" for ::1 at 2022-09-29 12:34:04 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 1700)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms | Allocations: 2597)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>WarehouseApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+   
+  </head>
+
+  <body>
+
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarNav">
+      <%= link_to('Galpões & Estoque', root_path, class:"navbar-brand mb-0 h1") %>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to('Página Inicial', root_path, class:'nav-link') %>
+          </li>
+          <li class="nav-item">
+            <%=link_to('Galpões', warehouses_path, class:'nav-link') %>
+          </li>
+          <li class="nav-item">
+            <%= link_to('Fornecedores', suppliers_path, class:'nav-link') %>
+          </li>
+          <li class="nav-item">
+            <%= link_to('Modelos de Produtos', product_models_path, class:'nav-link') %>
+          </li>
+        </ul>
+      </div>
+        <% if user_signed_in? %>
+          <div class="navbar-nav d-flex justify-content-end">
+            <%= current_user.email, class:'nav-link' %>
+          </div>
+          <div class="navbar-nav d-flex justify-content-end">
+            <%= button_to 'Sair', destroy_user_session_path, method: :delete, class:'nav-link btn btn-link' %>
+          </div>
+        <% else %>
+          <div class="navbar-nav d-flex justify-content-end">
+            <%= link_to('Entrar', new_user_session_path, class:'nav-link') %>
+          </div>
+        <% end %>
+    </nav>
+  </header>
+  <main>
+    
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
+    
+    <%= yield %>
+  </main>
+  </body>
+</html>
+
+
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>WarehouseApp</title>
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag "application" %>
+10:       
+11:      </head>
+12:    
+13:      <body>
+14:    
+15:      <header>
+16:        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+17:          <div class="collapse navbar-collapse" id="navbarNav">
+18:          <%= link_to('Galpões & Estoque', root_path, class:"navbar-brand mb-0 h1") %>
+19:            <ul class="navbar-nav mr-auto">
+20:              <li class="nav-item active">
+21:                <%= link_to('Página Inicial', root_path, class:'nav-link') %>
+22:              </li>
+23:              <li class="nav-item">
+24:                <%=link_to('Galpões', warehouses_path, class:'nav-link') %>
+25:              </li>
+26:              <li class="nav-item">
+27:                <%= link_to('Fornecedores', suppliers_path, class:'nav-link') %>
+28:              </li>
+29:              <li class="nav-item">
+30:                <%= link_to('Modelos de Produtos', product_models_path, class:'nav-link') %>
+31:              </li>
+32:            </ul>
+33:          </div>
+34:            <% if user_signed_in? %>
+35:              <div class="navbar-nav d-flex justify-content-end">
+36:                <%= current_user.email, class:'nav-link' %>
+37:              </div>
+38:              <div class="navbar-nav d-flex justify-content-end">
+39:                <%= button_to 'Sair', destroy_user_session_path, method: :delete, class:'nav-link btn btn-link' %>
+40:              </div>
+41:            <% else %>
+42:              <div class="navbar-nav d-flex justify-content-end">
+43:                <%= link_to('Entrar', new_user_session_path, class:'nav-link') %>
+44:              </div>
+45:            <% end %>
+46:        </nav>
+47:      </header>
+48:      <main>
+49:        
+50:        <% if flash[:notice] %>
+51:          <div class="notice"><%= flash[:notice] %></div>
+52:        <% end %>
+53:        
+54:        <%= yield %>
+55:      </main>
+56:      </body>
+57:    </html>
+  
+app/views/layouts/application.html.erb:36: syntax error, unexpected label, expecting '='
+app/views/layouts/application.html.erb:36: syntax error, unexpected label, expecting '='
+app/views/layouts/application.html.erb:36: syntax error, unexpected label, expecting '='
+app/views/layouts/application.html.erb:36: syntax error, unexpected label, expecting '='
+Started GET "/" for ::1 at 2022-09-29 12:53:11 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 124)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 6541)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.8ms | Allocations: 7435)
+
+
+Started GET "/" for ::1 at 2022-09-29 12:53:40 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 748)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 1627)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>WarehouseApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+   
+  </head>
+
+  <body>
+
+  <header>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarNav">
+      <%= link_to('Galpões & Estoque', root_path, class:"navbar-brand mb-0 h1") %>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <%= link_to('Página Inicial', root_path, class:'nav-link') %>
+          </li>
+          <li class="nav-item">
+            <%=link_to('Galpões', warehouses_path, class:'nav-link') %>
+          </li>
+          <li class="nav-item">
+            <%= link_to('Fornecedores', suppliers_path, class:'nav-link') %>
+          </li>
+          <li class="nav-item">
+            <%= link_to('Modelos de Produtos', product_models_path, class:'nav-link') %>
+          </li>
+        </ul>
+      </div>
+        <% if user_signed_in? %>
+          <div class="navbar-nav d-flex justify-content-end">
+            <%= current_user.email, class:'nav-link' %>
+          </div>
+          <div class="navbar-nav d-flex justify-content-end">
+            <%= button_to 'Sair', destroy_user_session_path, method: :delete, class:'nav-link btn btn-link' %>
+          </div>
+        <% else %>
+          <div class="navbar-nav d-flex justify-content-end">
+            <%= link_to('Entrar', new_user_session_path, class:'nav-link') %>
+          </div>
+        <% end %>
+    </nav>
+  </header>
+  <main>
+    
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
+    
+    <%= yield %>
+  </main>
+  </body>
+</html>
+
+
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>WarehouseApp</title>
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag "application" %>
+10:       
+11:      </head>
+12:    
+13:      <body>
+14:    
+15:      <header>
+16:        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+17:          <div class="collapse navbar-collapse" id="navbarNav">
+18:          <%= link_to('Galpões & Estoque', root_path, class:"navbar-brand mb-0 h1") %>
+19:            <ul class="navbar-nav mr-auto">
+20:              <li class="nav-item active">
+21:                <%= link_to('Página Inicial', root_path, class:'nav-link') %>
+22:              </li>
+23:              <li class="nav-item">
+24:                <%=link_to('Galpões', warehouses_path, class:'nav-link') %>
+25:              </li>
+26:              <li class="nav-item">
+27:                <%= link_to('Fornecedores', suppliers_path, class:'nav-link') %>
+28:              </li>
+29:              <li class="nav-item">
+30:                <%= link_to('Modelos de Produtos', product_models_path, class:'nav-link') %>
+31:              </li>
+32:            </ul>
+33:          </div>
+34:            <% if user_signed_in? %>
+35:              <div class="navbar-nav d-flex justify-content-end">
+36:                <%= current_user.email, class:'nav-link' %>
+37:              </div>
+38:              <div class="navbar-nav d-flex justify-content-end">
+39:                <%= button_to 'Sair', destroy_user_session_path, method: :delete, class:'nav-link btn btn-link' %>
+40:              </div>
+41:            <% else %>
+42:              <div class="navbar-nav d-flex justify-content-end">
+43:                <%= link_to('Entrar', new_user_session_path, class:'nav-link') %>
+44:              </div>
+45:            <% end %>
+46:        </nav>
+47:      </header>
+48:      <main>
+49:        
+50:        <% if flash[:notice] %>
+51:          <div class="notice"><%= flash[:notice] %></div>
+52:        <% end %>
+53:        
+54:        <%= yield %>
+55:      </main>
+56:      </body>
+57:    </html>
+  
+app/views/layouts/application.html.erb:36: syntax error, unexpected label, expecting '='
+app/views/layouts/application.html.erb:36: syntax error, unexpected label, expecting '='
+app/views/layouts/application.html.erb:36: syntax error, unexpected label, expecting '='
+app/views/layouts/application.html.erb:36: syntax error, unexpected label, expecting '='
+Started GET "/" for ::1 at 2022-09-29 12:55:13 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 124)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 6389)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 0.2ms | Allocations: 7283)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-09-29 12:58:14 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.1ms | Allocations: 10072)
+
+
+Started GET "/" for ::1 at 2022-09-29 12:58:14 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 5572)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 6469)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 12:58:16 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 505)
+  Rendered layout layouts/application.html.erb (Duration: 1.6ms | Allocations: 578)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms | Allocations: 2281)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1+)):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= bootstrap_form_with(resource, as: resource_name, url: session_path, label_col: "col-sm-1", control_col: "col-sm-5") do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  
+app/views/devise/sessions/new.html.erb:3
+Started GET "/users/sign_in" for ::1 at 2022-09-29 12:59:23 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1359)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 1431)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 2655)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 0..1)):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= bootstrap_form_with(resource, as: resource_name, url: session_path(resource_name), label_col: "col-sm-1", control_col: "col-sm-5") do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  
+app/views/devise/sessions/new.html.erb:3
+Started GET "/users/sign_in" for ::1 at 2022-09-29 12:59:27 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 186)
+  Rendered layout layouts/application.html.erb (Duration: 0.7ms | Allocations: 257)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 776)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 0..1)):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= bootstrap_form_with(resource, as: resource_name, url: session_path(resource_name), label_col: "col-sm-1", control_col: "col-sm-5") do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  
+app/views/devise/sessions/new.html.erb:3
+Started GET "/users/sign_in" for ::1 at 2022-09-29 13:02:46 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 541)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 613)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 1837)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 0..1)):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= bootstrap_form_with(resource, as: resource_name, url: session_path(resource_name), layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-5") do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  
+app/views/devise/sessions/new.html.erb:3
+Started GET "/users/sign_in" for ::1 at 2022-09-29 13:03:25 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 409)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 482)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 1705)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Log in</h2>
+
+<%= bootstrap_form_with(resource, as: resource_name, url: session_path(resource_name), { layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-5" }) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Entrar" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Log in</h2>
+2:    
+3:    <%= bootstrap_form_with(resource, as: resource_name, url: session_path(resource_name), { layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-5" }) do |f| %>
+4:      <div class="field">
+5:        <%= f.label :email %><br />
+6:        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+7:      </div>
+8:    
+9:      <div class="field">
+10:        <%= f.label :password %><br />
+11:        <%= f.password_field :password, autocomplete: "current-password" %>
+12:      </div>
+13:    
+14:      <% if devise_mapping.rememberable? %>
+15:        <div class="field">
+16:          <%= f.check_box :remember_me %>
+17:          <%= f.label :remember_me %>
+18:        </div>
+19:      <% end %>
+20:    
+21:      <div class="actions">
+22:        <%= f.submit "Entrar" %>
+23:      </div>
+24:    <% end %>
+25:    
+26:    <%= render "devise/shared/links" %>
+  
+app/views/devise/sessions/new.html.erb:3: syntax error, unexpected ')', expecting =>
+app/views/devise/sessions/new.html.erb:29: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/sessions/new.html.erb:3: syntax error, unexpected ')', expecting =>
+app/views/devise/sessions/new.html.erb:29: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/sessions/new.html.erb:3: syntax error, unexpected ')', expecting =>
+app/views/devise/sessions/new.html.erb:29: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/sessions/new.html.erb:3: syntax error, unexpected ')', expecting =>
+app/views/devise/sessions/new.html.erb:29: syntax error, unexpected `end', expecting end-of-input
+Started GET "/users/sign_in" for ::1 at 2022-09-29 13:03:33 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 398)
+  Rendered layout layouts/application.html.erb (Duration: 3.4ms | Allocations: 470)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 991)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Log in</h2>
+
+<%= bootstrap_form_with(resource, as: resource_name, url: session_path(resource_name), { layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-5" }) do |f| %>
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.password_field :password, autocomplete: "current-password" %>
+  </div>
+
+  <% if devise_mapping.rememberable? %>
+    <div class="field">
+      <%= f.check_box :remember_me %>
+      <%= f.label :remember_me %>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit "Entrar" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Log in</h2>
+2:    
+3:    <%= bootstrap_form_with(resource, as: resource_name, url: session_path(resource_name), { layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-5" }) do |f| %>
+4:      <div class="field">
+5:        <%= f.label :email %><br />
+6:        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+7:      </div>
+8:    
+9:      <div class="field">
+10:        <%= f.label :password %><br />
+11:        <%= f.password_field :password, autocomplete: "current-password" %>
+12:      </div>
+13:    
+14:      <% if devise_mapping.rememberable? %>
+15:        <div class="field">
+16:          <%= f.check_box :remember_me %>
+17:          <%= f.label :remember_me %>
+18:        </div>
+19:      <% end %>
+20:    
+21:      <div class="actions">
+22:        <%= f.submit "Entrar" %>
+23:      </div>
+24:    <% end %>
+25:    
+26:    <%= render "devise/shared/links" %>
+  
+app/views/devise/sessions/new.html.erb:3: syntax error, unexpected ')', expecting =>
+app/views/devise/sessions/new.html.erb:29: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/sessions/new.html.erb:3: syntax error, unexpected ')', expecting =>
+app/views/devise/sessions/new.html.erb:29: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/sessions/new.html.erb:3: syntax error, unexpected ')', expecting =>
+app/views/devise/sessions/new.html.erb:29: syntax error, unexpected `end', expecting end-of-input
+app/views/devise/sessions/new.html.erb:3: syntax error, unexpected ')', expecting =>
+app/views/devise/sessions/new.html.erb:29: syntax error, unexpected `end', expecting end-of-input
+Started GET "/users/sign_in" for ::1 at 2022-09-29 13:05:39 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.7ms | Allocations: 534)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 606)
+Completed 500 Internal Server Error in 12ms (Allocations: 1826)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 0..1)):
+    1: <h2>Log in</h2>
+    2: 
+    3: <%= bootstrap_form_with(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    4:   <div class="field">
+    5:     <%= f.label :email %><br />
+    6:     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  
+app/views/devise/sessions/new.html.erb:3
+Started GET "/users/sign_in" for ::1 at 2022-09-29 13:07:06 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 844)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 51.2ms | Allocations: 13600)
+  Rendered layout layouts/application.html.erb (Duration: 57.1ms | Allocations: 18835)
+Completed 200 OK in 68ms (Views: 62.1ms | Allocations: 20093)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 13:07:30 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.3ms | Allocations: 569)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 2767)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 7899)
+Completed 200 OK in 33ms (Views: 31.4ms | Allocations: 9149)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 13:08:03 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 569)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.7ms | Allocations: 2612)
+  Rendered layout layouts/application.html.erb (Duration: 24.1ms | Allocations: 7744)
+Completed 200 OK in 30ms (Views: 28.0ms | Allocations: 8984)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 13:09:00 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 569)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2617)
+  Rendered layout layouts/application.html.erb (Duration: 21.2ms | Allocations: 7749)
+Completed 200 OK in 28ms (Views: 25.7ms | Allocations: 8987)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 13:09:01 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 137)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 10.0ms | Allocations: 1769)
+  Rendered layout layouts/application.html.erb (Duration: 20.9ms | Allocations: 6310)
+Completed 200 OK in 25ms (Views: 22.9ms | Allocations: 6848)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 13:09:42 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 569)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 2618)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 7750)
+Completed 200 OK in 30ms (Views: 28.6ms | Allocations: 9003)
+
+
+Started GET "/" for ::1 at 2022-09-29 13:24:50 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 16272)
+Completed 200 OK in 31ms (Views: 27.5ms | ActiveRecord: 0.0ms | Allocations: 20082)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 13:24:52 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 842)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 30.9ms | Allocations: 21051)
+  Rendered layout layouts/application.html.erb (Duration: 35.1ms | Allocations: 25675)
+Completed 200 OK in 64ms (Views: 36.6ms | ActiveRecord: 1.6ms | Allocations: 44696)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-09-29 13:25:07 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joao@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "joao@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 210ms (ActiveRecord: 0.2ms | Allocations: 5518)
+
+
+Started GET "/" for ::1 at 2022-09-29 13:25:07 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 5657)
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.1ms | Allocations: 5881)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-09-29 13:25:17 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 0.1ms | Allocations: 2517)
+
+
+Started GET "/" for ::1 at 2022-09-29 13:25:17 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 4756)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 4980)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 13:33:41 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 849)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 30.2ms | Allocations: 21459)
+  Rendered layout layouts/application.html.erb (Duration: 57.9ms | Allocations: 36790)
+Completed 200 OK in 78ms (Views: 62.3ms | ActiveRecord: 0.4ms | Allocations: 58292)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-09-29 13:33:44 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 228)
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 222)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 3638)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 8279)
+Completed 200 OK in 26ms (Views: 24.0ms | ActiveRecord: 0.0ms | Allocations: 9441)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-09-29 13:34:22 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 222)
+  Rendered devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 513)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 3240)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 8382)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.0ms | Allocations: 9569)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-09-29 13:34:59 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 222)
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 513)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 3089)
+  Rendered layout layouts/application.html.erb (Duration: 21.6ms | Allocations: 8231)
+Completed 200 OK in 28ms (Views: 26.5ms | ActiveRecord: 0.0ms | Allocations: 9429)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-09-29 13:40:36 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 237)
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 662)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 32.9ms | Allocations: 21449)
+  Rendered layout layouts/application.html.erb (Duration: 53.5ms | Allocations: 36838)
+Completed 200 OK in 75ms (Views: 58.4ms | ActiveRecord: 0.4ms | Allocations: 57718)
+
+
+Started POST "/users" for ::1 at 2022-09-29 13:40:57 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"maria@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Cadastrar"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "maria@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "maria@email.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["name", nil], ["created_at", "2022-09-29 16:40:58.036072"], ["updated_at", "2022-09-29 16:40:58.036072"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 213ms (ActiveRecord: 2.5ms | Allocations: 8934)
+
+
+Started GET "/" for ::1 at 2022-09-29 13:40:58 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 124)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 6318)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 7812)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-09-29 13:42:59 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 0.6ms | Allocations: 28809)
+
+
+Started GET "/" for ::1 at 2022-09-29 13:42:59 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 413)
+  Rendered layout layouts/application.html.erb (Duration: 35.4ms | Allocations: 16056)
+Completed 200 OK in 41ms (Views: 37.9ms | ActiveRecord: 0.0ms | Allocations: 19730)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 13:43:01 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 848)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 53.9ms | Allocations: 13767)
+  Rendered layout layouts/application.html.erb (Duration: 59.2ms | Allocations: 18392)
+Completed 200 OK in 68ms (Views: 63.5ms | ActiveRecord: 0.0ms | Allocations: 20115)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-09-29 13:43:39 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 228)
+  Rendered devise/shared/_links.html.erb (Duration: 1.7ms | Allocations: 646)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 3405)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 8554)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms | Allocations: 9925)
+
+
+Started GET "/" for ::1 at 2022-09-29 13:49:41 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 16350)
+Completed 200 OK in 31ms (Views: 27.4ms | ActiveRecord: 0.0ms | Allocations: 20159)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 13:49:47 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 845)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 38.8ms | Allocations: 21054)
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 25773)
+Completed 200 OK in 67ms (Views: 44.6ms | ActiveRecord: 0.9ms | Allocations: 44788)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-09-29 13:49:55 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 228)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 222)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 2927)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 7559)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.0ms | Allocations: 8712)
+
+
+Started GET "/" for ::1 at 2022-09-29 14:36:41 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 16344)
+Completed 200 OK in 32ms (Views: 28.6ms | ActiveRecord: 0.0ms | Allocations: 20153)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 14:36:43 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 845)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 53.9ms | Allocations: 21054)
+  Rendered layout layouts/application.html.erb (Duration: 59.0ms | Allocations: 25773)
+Completed 200 OK in 91ms (Views: 61.1ms | ActiveRecord: 1.3ms | Allocations: 44794)
+
+
+Started GET "/users/sign_up" for ::1 at 2022-09-29 14:36:49 -0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.8ms | Allocations: 228)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 222)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2926)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 7558)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 8717)
+
+
+Started POST "/users" for ::1 at 2022-09-29 14:37:13 -0300
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"aa@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Criar conta"}
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "aa@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "aa@email.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["name", nil], ["created_at", "2022-09-29 17:37:14.101227"], ["updated_at", "2022-09-29 17:37:14.101227"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 214ms (ActiveRecord: 2.5ms | Allocations: 8411)
+
+
+Started GET "/" for ::1 at 2022-09-29 14:37:14 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 6.2ms | Allocations: 5995)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.4ms | Allocations: 6219)
+
+
