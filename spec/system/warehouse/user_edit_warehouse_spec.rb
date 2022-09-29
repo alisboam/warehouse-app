@@ -2,18 +2,15 @@ require 'rails_helper'
 
 describe 'Usuário edita um galpão' do
   it 'a partir da página de editar' do
-    #Arrange 
-    
     Warehouse.create!(name: 'Aeroporto RJ', code: 'SDU', city: 'Rio de Janeiro', area: 60_000,
       address: 'Praça Sen. Salgado Filho', cep: '20021340',
       description: 'Galpão destinado a cargas pequenas')
 
-    #act - visitar a tela inicial
+    user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+    login_as(user)
     visit(warehouses_path)
     click_on('Aeroporto RJ')
     click_on('Editar')
-
-    # assert
 
     expect(page).to have_content 'Editar Galpão'
     expect(page).to have_field('Nome', with: 'Aeroporto RJ')
@@ -31,7 +28,8 @@ describe 'Usuário edita um galpão' do
       address: 'Praça Sen. Salgado Filho', cep: '20021340',
       description: 'Galpão destinado a cargas pequenas')
 
-    #act - visitar a tela inicial
+    user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+    login_as(user)
     visit(warehouses_path)
     click_on('Aeroporto RJ')
     click_on('Editar')
@@ -49,7 +47,8 @@ describe 'Usuário edita um galpão' do
       address: 'Praça Sen. Salgado Filho', cep: '20021340',
       description: 'Galpão destinado a cargas pequenas')
 
-    #act - visitar a tela inicial
+    user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+    login_as(user)
     visit(warehouses_path)
     click_on('Aeroporto RJ')
     click_on('Editar')

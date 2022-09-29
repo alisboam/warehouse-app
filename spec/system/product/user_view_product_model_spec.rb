@@ -9,7 +9,8 @@ describe 'Usuário vê lista de produtos' do
                 sku:'TV-32-SAMSU-XPTO-500', supplier: supplier)
     ProductModel.create!(name: 'Monitor 18', weight: 3000, width: 50, height: 15, depth:20,
                 sku:'MOB-32-SAMSU-XPTO-00', supplier: supplier)
-
+    user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+    login_as(user)
     visit root_path
     within('nav') do
       click_on 'Modelos de Produtos'
@@ -24,6 +25,8 @@ describe 'Usuário vê lista de produtos' do
   end
 
   it 'e não existem produtos cadastrados' do
+    user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+    login_as(user)
     visit root_path
     click_on 'Modelos de Produtos'
     expect(page).to have_content 'Não existem produtos cadastrados'

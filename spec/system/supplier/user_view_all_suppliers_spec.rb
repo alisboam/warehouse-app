@@ -9,6 +9,8 @@ describe 'usuário visita tela fornecedores' do
         Supplier.create!(name: 'Pernambucanas', company_name: 'Pernambucanas S/A',
                     cnpj:'95960950000121',address: 'Av Paulista, 28',
                     email: 'per@email.com', telephone: '4000095')
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+        login_as(user)
         
         visit (root_path)
         click_on 'Fornecedores'
@@ -20,6 +22,8 @@ describe 'usuário visita tela fornecedores' do
     end
 
     it 'e não existem fornecedores cadastrados' do
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+        login_as(user)
         visit(suppliers_path)
         expect(page).to have_content('Não existem fornecedores cadastrados')
     end

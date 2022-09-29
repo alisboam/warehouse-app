@@ -6,7 +6,9 @@ describe 'Usuário edita um fornecedor' do
     supplier = Supplier.create!(name: 'Magalu', company_name: 'MAGAZINE LUIZA S/A',
       cnpj:'47960950000121',address: 'VOLUNTARIOS DA FRANCA, 28',
       email: 'magalu@email.com', telephone: '08007733838')
-      
+    user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+
+    login_as(user)
     visit(root_path)
     click_on('Fornecedores')
     click_on('Magalu')
@@ -25,7 +27,9 @@ describe 'Usuário edita um fornecedor' do
     supplier = Supplier.create!(name: 'Magalu', company_name: 'MAGAZINE LUIZA S/A',
       cnpj:'47960950000121',address: 'VOLUNTARIOS DA FRANCA, 28',
       email: 'magalu@email.com', telephone: '08007733838')
+    user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
 
+    login_as(user)
     visit(root_path)
     click_on('Fornecedores')
     click_on('Magalu')
@@ -42,7 +46,9 @@ describe 'Usuário edita um fornecedor' do
     supplier = Supplier.create!(name: 'Magalu', company_name: 'MAGAZINE LUIZA S/A',
       cnpj:'47960950000121',address: 'VOLUNTARIOS DA FRANCA, 28',
       email: 'magalu@email.com', telephone: '08007733838')
-
+    user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+    
+    login_as(user)
     visit(root_path)
     click_on('Fornecedores')
     click_on('Magalu')

@@ -5,13 +5,13 @@ describe 'usuário vê detalhes de um fornecedor' do
         Supplier.create!(name: 'Magalu', company_name: 'MAGAZINE LUIZA S/A',
             cnpj:'47960950000121',address: 'VOLUNTARIOS DA FRANCA, 28',
             email: 'magalu@email.com', telephone: '08007733838')
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
 
-        #act
+        login_as(user)
         visit(root_path)
         click_on('Fornecedores')
         click_on('Magalu')
 
-        #assert
         expect(page).to have_content('Magalu')
         expect(page).to have_content('MAGAZINE LUIZA S/A')
         expect(page).to have_content('47960950000121')
@@ -25,13 +25,14 @@ describe 'usuário vê detalhes de um fornecedor' do
         Supplier.create(name: 'Magalu', company_name: 'MAGAZINE LUIZA S/A',
             cnpj:'47960950000121',address: 'VOLUNTARIOS DA FRANCA, 28',
             email: 'magalu@email.com', telephone: '08007733838')
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
 
+        login_as(user)
         visit(root_path)
         click_on('Fornecedores')
         click_on('Magalu')
         click_on('Voltar')
 
-        #assert
         expect(current_path).to eq(suppliers_path)
     end
 

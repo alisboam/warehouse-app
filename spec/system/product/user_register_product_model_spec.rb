@@ -2,6 +2,8 @@ require 'rails_helper'
 
 describe 'Usuário cadastra um produto' do
     it 'a partir da tela inicial' do
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+        login_as(user)
         visit(root_path)
         within('nav') do
             click_on 'Modelos de Produtos'
@@ -24,6 +26,8 @@ describe 'Usuário cadastra um produto' do
         supplier_b = Supplier.create!(name: 'Pernambucanas', company_name: 'Pernambucanas S/A',
             cnpj:'95960950000125',address: 'Av Paulista, 28',
             email: 'per@email.com', telephone: '4000095')
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+        login_as(user)
     
         visit(product_models_path)
         click_on 'Cadastrar Produto'
@@ -49,7 +53,8 @@ describe 'Usuário cadastra um produto' do
         supplier = Supplier.create!(name: 'Magalu', company_name: 'MAGAZINE LUIZA S/A',
                                     cnpj:'47960950000121',address: 'VOLUNTARIOS DA FRANCA, 28',
                                     email: 'magalu@email.com', telephone: '08007733838')
-        
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+        login_as(user)
         visit(product_models_path)
         click_on 'Cadastrar Produto'
         fill_in 'Nome', with: ''

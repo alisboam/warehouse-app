@@ -7,7 +7,8 @@ describe 'usuário vê detalhes de um produto' do
             email: 'magalu@email.com', telephone: '08007733838')
         ProductModel.create!(name: 'TV 32', weight: 8000, width: 70, height: 45, depth:10,
               sku:'TV-32-SAMSU-XPTO-500', supplier: supplier)
-
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+        login_as(user)
         visit(root_path)
         click_on('Modelos de Produtos')
         click_on('TV 32')
@@ -27,8 +28,9 @@ describe 'usuário vê detalhes de um produto' do
             email: 'magalu@email.com', telephone: '08007733838')
         ProductModel.create!(name: 'TV 32', weight: 8000, width: 70, height: 45, depth:10,
               sku:'TV-32-SAMSU-XPTO-500', supplier: supplier)
-        
-        visit root_path
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+        login_as(user)
+        visit(root_path)
         within('nav') do
           click_on 'Modelos de Produtos'
         end

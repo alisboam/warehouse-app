@@ -4,7 +4,9 @@ describe 'Usuário cadastra um galpão' do
     
     it 'a partir da tela inicial' do
 
-        visit(root_path)
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+        login_as(user)
+        visit root_path
         within('nav') do
             click_on('Galpões')
         end
@@ -22,6 +24,8 @@ describe 'Usuário cadastra um galpão' do
 
     it 'com sucesso' do
         #act
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+        login_as(user)
         visit(new_warehouse_path)
 
         fill_in 'Nome', with: 'Rio de Janeiro'
@@ -40,6 +44,9 @@ describe 'Usuário cadastra um galpão' do
     end
 
     it 'com dados incompletos' do
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+        login_as(user)
+        visit root_path
         visit(new_warehouse_path)
 
         fill_in 'Nome', with: ''

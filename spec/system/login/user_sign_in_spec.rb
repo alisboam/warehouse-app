@@ -24,7 +24,10 @@ describe 'Usuário se autentica' do
   it 'e faz logout' do
     User.create!(email: 'joao@email.com', password: 'password')
 
-    visit new_user_session_path
+    visit root_path
+    within('nav') do 
+      click_on 'Entrar'
+    end
     within('form') do
       fill_in 'E-mail', with: 'joao@email.com'
       fill_in 'Senha', with: 'password'
@@ -39,6 +42,6 @@ describe 'Usuário se autentica' do
       expect(page).to have_link 'Entrar'
       expect(page).not_to have_content 'joao@email.com'
     end
-    expect(page).to have_content 'Logout efetuado com sucesso.'
+    expect(page).to have_content 'Para continuar, faça login ou registre-se.'
   end
 end

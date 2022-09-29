@@ -1,4 +1,8 @@
 <h2>Log in</h2>
+<% if flash[:alert] %>
+      <div class="notice"><%= flash[:alert] %></div>
+<% end %>
+    
 
 <%= bootstrap_form_for(resource, as: resource_name, url: session_path(resource_name), layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-5") do |f| %>
   <div class="field">

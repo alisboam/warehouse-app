@@ -16,6 +16,8 @@ describe 'usuário visita tela inicial' do
     end
 
     it 'e clica no link página inicial' do
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+        login_as(user)
         visit(root_path)
         within('nav') do
         click_on('Página Inicial')
@@ -24,7 +26,9 @@ describe 'usuário visita tela inicial' do
     end
 
     it 'e clica no link galpões' do
-        visit(root_path)
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+        login_as(user)
+        visit root_path
         within('nav') do
             click_on('Galpões')
         end
@@ -32,6 +36,8 @@ describe 'usuário visita tela inicial' do
     end
 
     it 'e clica no link fornecedores' do
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+        login_as(user)
         visit(root_path)
         within('nav') do
             click_on('Fornecedores')
@@ -39,17 +45,11 @@ describe 'usuário visita tela inicial' do
         expect(current_path).to eq(suppliers_path)
     end
 
-    # it 'e clica no link cadastrar fornecedor' do
-    #     visit(root_path)
-    #     click_on('Cadastrar Fornecedor')
-    #     expect(current_path).to eq(new_supplier_path)
-    # end
-
     it 'e clica no link modelos de produtos' do
-        visit(root_path)
-        within('nav') do
-            click_on('Modelos de Produtos')
-        end
+        user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+        login_as(user)
+        visit root_path
+        click_on 'Modelos de Produtos'
         expect(current_path).to eq(product_models_path)
     end
 end
