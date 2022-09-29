@@ -45174,3 +45174,374 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 30ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 6290)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20220929131323)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220929131323"]]
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2022-09-29 10:30:34 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 16029)
+Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 0.0ms | Allocations: 19838)
+
+
+Started GET "/" for ::1 at 2022-09-29 10:30:56 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 18.4ms | Allocations: 5292)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 6195)
+
+
+Started GET "/" for ::1 at 2022-09-29 10:31:51 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 5298)
+Completed 200 OK in 22ms (Views: 19.9ms | ActiveRecord: 0.0ms | Allocations: 6191)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 10:31:54 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 841)
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 10698)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 15363)
+Completed 200 OK in 63ms (Views: 21.3ms | ActiveRecord: 1.1ms | Allocations: 34522)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 10:31:58 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 1.6ms | Allocations: 137)
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 5721)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.0ms | Allocations: 6263)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 10:32:06 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 137)
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 5723)
+Completed 200 OK in 25ms (Views: 23.2ms | ActiveRecord: 0.0ms | Allocations: 6266)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 10:32:36 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 2.2ms | Allocations: 569)
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 2129)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 7105)
+Completed 200 OK in 29ms (Views: 27.3ms | ActiveRecord: 0.0ms | Allocations: 8420)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 10:33:35 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.9ms | Allocations: 137)
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 4845.1ms | Allocations: 41840)
+Completed 200 OK in 4848ms (Views: 4846.0ms | ActiveRecord: 0.0ms | Allocations: 42392)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 10:34:01 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 137)
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 4209.0ms | Allocations: 33376)
+Completed 200 OK in 4211ms (Views: 4209.7ms | ActiveRecord: 0.0ms | Allocations: 33911)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 10:35:25 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 137)
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 4229.8ms | Allocations: 33383)
+Completed 200 OK in 4232ms (Views: 4230.7ms | ActiveRecord: 0.0ms | Allocations: 33931)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 10:36:28 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 137)
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 4205.1ms | Allocations: 33392)
+Completed 200 OK in 4207ms (Views: 4205.8ms | ActiveRecord: 0.0ms | Allocations: 33946)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 10:36:51 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 137)
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 4242.1ms | Allocations: 33387)
+Completed 200 OK in 4245ms (Views: 4243.2ms | ActiveRecord: 0.0ms | Allocations: 33930)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 10:38:57 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 137)
+  Rendered /usr/share/rvm/gems/ruby-3.0.0/gems/devise-4.8.1/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 7.8ms | Allocations: 1233)
+  Rendered layout layouts/application.html.erb (Duration: 4584.0ms | Allocations: 33375)
+Completed 200 OK in 4587ms (Views: 4585.0ms | Allocations: 33922)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-29 11:00:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 848)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 15.1ms | Allocations: 12368)
+  Rendered layout layouts/application.html.erb (Duration: 54.8ms | Allocations: 40273)
+Completed 200 OK in 74ms (Views: 59.1ms | ActiveRecord: 0.4ms | Allocations: 61763)
+
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "joao@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)[0m  [["email", "joao@email.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["name", nil], ["created_at", "2022-09-29 14:08:50.437077"], ["updated_at", "2022-09-29 14:08:50.437077"]]
+  [1m[36mTRANSACTION (14.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/users/sign_in" for ::1 at 2022-09-29 11:09:09 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.4ms | Allocations: 848)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 16.1ms | Allocations: 12368)
+  Rendered layout layouts/application.html.erb (Duration: 46.9ms | Allocations: 27524)
+Completed 200 OK in 70ms (Views: 52.9ms | ActiveRecord: 0.6ms | Allocations: 49009)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-09-29 11:09:26 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joao@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "joao@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 199ms (ActiveRecord: 0.2ms | Allocations: 5552)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:09:26 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 4.2ms | Allocations: 4938)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 6430)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:18:35 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 417)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 35.8ms | Allocations: 35267)
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 0.6ms | Allocations: 39075)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:18:39 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 5373)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.3ms | Allocations: 5606)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:18:42 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 39.3ms | Allocations: 5409)
+Completed 200 OK in 41ms (Views: 40.1ms | ActiveRecord: 0.1ms | Allocations: 5640)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:18:43 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 24.4ms | Allocations: 5378)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.3ms | Allocations: 5608)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:18:44 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 5381)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.1ms | Allocations: 5611)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:18:44 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 18.2ms | Allocations: 5359)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.1ms | Allocations: 5581)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:18:49 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 5363)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.1ms | Allocations: 5585)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:19:32 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 5383)
+Completed 200 OK in 14ms (Views: 13.3ms | ActiveRecord: 0.1ms | Allocations: 5605)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:19:34 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5373)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.2ms | Allocations: 5595)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:32:43 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 417)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 38.8ms | Allocations: 35280)
+Completed 200 OK in 45ms (Views: 40.9ms | ActiveRecord: 0.6ms | Allocations: 39088)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:32:47 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 5381)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 5614)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:32:50 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 5404)
+Completed 200 OK in 37ms (Views: 36.0ms | ActiveRecord: 0.2ms | Allocations: 5635)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:32:52 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 5378)
+Completed 200 OK in 28ms (Views: 27.2ms | ActiveRecord: 0.3ms | Allocations: 5608)
+
+
+Started GET "/product_models" for ::1 at 2022-09-29 11:32:54 -0300
+Processing by ProductModelsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/index.html.erb within layouts/application
+  [1m[36mProductModel Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "product_models" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:2
+  [1m[36mProductModel Load (0.5ms)[0m  [1m[34mSELECT "product_models".* FROM "product_models"[0m
+  ↳ app/views/product_models/index.html.erb:13
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  [1m[36mSupplier Load (0.0ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  Rendered product_models/index.html.erb within layouts/application (Duration: 51.4ms | Allocations: 39303)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 57.2ms | Allocations: 44756)
+Completed 200 OK in 79ms (Views: 58.2ms | ActiveRecord: 2.7ms | Allocations: 47779)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:32:56 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 5377)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.2ms | Allocations: 5601)
+
+
+Started GET "/" for ::1 at 2022-09-29 11:32:58 -0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:34
+  Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 5367)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.2ms | Allocations: 5589)
+
+

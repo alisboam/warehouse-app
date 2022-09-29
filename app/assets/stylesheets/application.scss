@@ -15,6 +15,11 @@
  */
  @import "bootstrap";
 
+ .navbar-nav, .nav, .navbar-brand {
+  padding-right: 10px;
+  padding-left: 10px;
+ }
+
  .lorem {
   margin-top: 20px;
   margin-left: 40px;

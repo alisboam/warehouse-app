@@ -31,13 +31,25 @@
           </li>
         </ul>
       </div>
+        <% if user_signed_in? %>
+          <div class="navbar-nav d-flex justify-content-end">
+            <%= current_user.email %>
+          </div>
+          <div class="navbar-nav d-flex justify-content-end">
+            <%= link_to('Sair', root_path, class:'nav-link') %>
+          </div>
+        <% else %>
+          <div class="navbar-nav d-flex justify-content-end">
+            <%= link_to('Entrar', new_user_session_path, class:'nav-link') %>
+          </div>
+        <% end %>
     </nav>
   </header>
   <main>
     
     <% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
-<% end %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
     
     <%= yield %>
   </main>

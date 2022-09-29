@@ -18,6 +18,10 @@ gem "puma", "~> 5.0"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
+gem 'email_validator'
+gem 'bootstrap'
+gem "bootstrap_form"
+gem 'devise'
 
 
 group :development, :test do
@@ -25,9 +29,6 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "rspec-rails"
   gem "capybara"
-  gem 'email_validator'
-  gem 'bootstrap'
-  gem "bootstrap_form"
 end
 
 group :development do
