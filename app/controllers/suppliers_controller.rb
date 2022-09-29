@@ -42,6 +42,7 @@ class SuppliersController < ApplicationController
     supplier_params = params.require(:supplier)
                       .permit(:name, :company_name, :cnpj, :address, :email, :telephone)
     supplier_params[:cnpj] = supplier_params[:cnpj].gsub(/\D/,  "")
+
     supplier_params
   end
 end

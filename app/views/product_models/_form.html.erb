@@ -1,3 +1,14 @@
+<% if(@product_model.errors.any?) %>
+	<div class="alert alert-danger" role="alert">
+		<p> A validação falhou: </p>
+		<ul>
+			<% @product_model.errors.full_messages.each do |message| %>
+			<li> <%= message %> </li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
+
 <%= bootstrap_form_with(model: @product_model, layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-5") do |form| %>
   <div>
 		<%= form.text_field :name, required: true %>
@@ -15,24 +26,12 @@
   	<%= form.text_field :depth, required: true %>
 	</div>
 	<div>
-  	<%= form.text_field :sku, required: true %>
+  	<%= form.text_field :sku, required: true, maxlength:20 %>
 	</div>
 	<%= form.collection_select :supplier_id, @suppliers.order(:name), :id, :name %>
-  
   <div> 
 		<%= form.submit 'Enviar', class: "btn btn-success" %>
 	</div>
-
-<% end %>
-
-
-<% if(@product_model.errors.any?) %>
-<p> A validação falhou: </p>
-	<ul>
-		<% @product_model.errors.full_messages.each do |message| %>
-		<li> <%= message %> </li>
-		<% end %>
-	</ul>
 <% end %>
 
 <script src="/assets/cnpj_mask.js"></script>

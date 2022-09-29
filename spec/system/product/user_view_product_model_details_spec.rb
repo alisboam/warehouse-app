@@ -6,14 +6,14 @@ describe 'usuário vê detalhes de um produto' do
             cnpj:'47960950000121',address: 'VOLUNTARIOS DA FRANCA, 28',
             email: 'magalu@email.com', telephone: '08007733838')
         ProductModel.create!(name: 'TV 32', weight: 8000, width: 70, height: 45, depth:10,
-              sku:'TV-32-SAMSU-XPTO', supplier: supplier)
+              sku:'TV-32-SAMSU-XPTO-500', supplier: supplier)
 
         visit(root_path)
         click_on('Modelos de Produtos')
         click_on('TV 32')
 
         expect(page).to have_content 'TV 32'
-        expect(page).to have_content 'TV-32-SAMSU-XPTO'
+        expect(page).to have_content 'TV-32-SAMSU-XPTO-500'
         expect(page).to have_content '70cm'
         expect(page).to have_content '45cm'
         expect(page).to have_content '10cm'
@@ -26,7 +26,7 @@ describe 'usuário vê detalhes de um produto' do
             cnpj:'47960950000121',address: 'VOLUNTARIOS DA FRANCA, 28',
             email: 'magalu@email.com', telephone: '08007733838')
         ProductModel.create!(name: 'TV 32', weight: 8000, width: 70, height: 45, depth:10,
-              sku:'TV-32-SAMSU-XPTO', supplier: supplier)
+              sku:'TV-32-SAMSU-XPTO-500', supplier: supplier)
         
         visit root_path
         within('nav') do

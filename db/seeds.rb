@@ -24,7 +24,7 @@ Warehouse.create(name: 'São Paulo', code: 'GRU', city: 'São Paulo', area: 100_
                 email: 'per@email.com', telephone: '4000095')
 
 ProductModel.create!(name: 'TV 32', weight: 8000, width: 70, height: 45, depth:10,
-                  sku:'TV-32-SAMSU-XPTO', supplier: @supplier)
+                  sku:'TV-32-SAMSU-XPTO-500', supplier: @supplier)
 
 ProductModel.create!(name: 'Monitor 18', weight: 3000, width: 50, height: 15, depth:20,
-                  sku:'MOB-32-SAMSU-XPTO', supplier: @supplier_b)
+                  sku:'MOB-32-SAMSU-XPTO-500', supplier: @supplier_b)

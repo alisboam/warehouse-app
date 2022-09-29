@@ -6,6 +6,7 @@
       <th>Nome Fantasia</th>
       <th>Razão Social</th>
       <th>CNPJ</th>
+      <th>Ver Detalhes</th>
     </tr>
     </thead>
     <tbody>
@@ -14,6 +15,7 @@
           <td><%= link_to(field.name, supplier_path(field.id)) %></td>
           <td><%= link_to(field.company_name, supplier_path(field.id)) %></td>
           <td><%= link_to(field.cnpj, supplier_path(field.id)) %></td>
+          <td><%= link_to('Ver detalhes', supplier_path(field.id)) %></td>
         </tr>
       <% end %>
       </tbody>
@@ -22,7 +24,8 @@
  <% if @supplier.empty? %>
       <p>Não existem fornecedores cadastrados</p>
   <% end %>
+   <div>
+    <%= link_to('Cadastrar Fornecedor', new_supplier_path, class:'btn btn-primary')%>
+  </div>
 </section>
-
-<%= link_to('Página Inicial', root_path)%>
 

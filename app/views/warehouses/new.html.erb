@@ -1,15 +1,4 @@
-
 <h1>Novo Galpão</h1>
-
-<% if(@warehouse.errors.any?) %>
-	<ul>
-		<% @warehouse.errors.full_messages.each do |message| %>
-		<li> <%= message %> </li>
-		<% end %>
-	</ul>
-<% end %>
-
-
 <%= render 'form' %>
 
 <script src="/assets/cep_mask.js"></script>

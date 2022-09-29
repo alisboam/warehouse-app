@@ -15,7 +15,7 @@
   <header>
     <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
       <div class="collapse navbar-collapse" id="navbarNav">
-      <span class="navbar-brand mb-0 h1">Galpões & Estoque</span>
+      <%= link_to('Galpões & Estoque', root_path, class:"navbar-brand mb-0 h1") %>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <%= link_to('Página Inicial', root_path, class:'nav-link') %>
@@ -27,16 +27,7 @@
             <%= link_to('Fornecedores', suppliers_path, class:'nav-link') %>
           </li>
           <li class="nav-item">
-            <%= link_to('Cadastrar Galpão', new_warehouse_path, class:'nav-link') %>
-          </li>
-          <li class="nav-item">
-            <%= link_to('Cadastrar Fornecedor', new_supplier_path, class:'nav-link') %>
-          </li>
-          <li class="nav-item">
             <%= link_to('Modelos de Produtos', product_models_path, class:'nav-link') %>
-          </li>
-          <li class="nav-item">
-            <%= link_to('Cadastrar Produto', new_product_model_path, class:'nav-link') %>
           </li>
         </ul>
       </div>
@@ -44,10 +35,9 @@
   </header>
   <main>
     
-    <div>
-      <%= flash[:notice] %>
-    </div>
-     
+    <% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
     
     <%= yield %>
   </main>

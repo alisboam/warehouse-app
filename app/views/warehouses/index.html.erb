@@ -1,7 +1,4 @@
 <section>
-
-
-
 <h2>Galpões</h2>
 <div class="table-responsive">
   <table class="table">
@@ -10,6 +7,7 @@
       <th>Nome</th>
       <th>Código</th>
       <th>Cidade</th>
+      <th>Detalhes</th>
     </tr>
     </thead>
     <tbody>
@@ -18,6 +16,7 @@
           <td><%= link_to(field.name, warehouse_path(field.id)) %></td>
           <td><%= link_to(field.code, warehouse_path(field.id)) %></td>
           <td><%= link_to(field.city, warehouse_path(field.id)) %></td>
+          <td><%= link_to('Ver detalhes', warehouse_path(field.id)) %></td>
         </tr>
       <% end %>
       </tbody>
@@ -26,4 +25,7 @@
   <% if @warehouses.empty? %>
       <p>Não existem galpões cadastrados</p>
   <% end %>
+  <div>
+    <%= link_to('Cadastrar Galpão', new_warehouse_path, class:'btn btn-primary')%>
+  </div>
 </section>

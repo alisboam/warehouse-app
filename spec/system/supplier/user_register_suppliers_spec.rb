@@ -3,6 +3,9 @@ require 'rails_helper'
 describe 'Usuário cadastra um fornecedor' do
     it 'a partir da tela inicial' do
         visit(root_path)
+        within('nav') do
+            click_on 'Fornecedores'
+        end
         click_on 'Cadastrar Fornecedor'
 
         expect(page).to have_field('Nome Fantasia')
@@ -15,7 +18,7 @@ describe 'Usuário cadastra um fornecedor' do
 
     it 'com sucesso' do
     
-        visit(root_path)
+        visit(suppliers_path)
         click_on 'Cadastrar Fornecedor'
         fill_in 'Nome Fantasia', with: 'Magalu'
         fill_in 'Razão Social', with: 'Magazine Luiza'
@@ -30,7 +33,7 @@ describe 'Usuário cadastra um fornecedor' do
     end
 
     it 'com dados incompletos' do
-        visit(root_path)
+        visit(suppliers_path)
         click_on 'Cadastrar Fornecedor'
         fill_in 'Nome Fantasia', with: ''
         fill_in 'Razão Social', with: ''

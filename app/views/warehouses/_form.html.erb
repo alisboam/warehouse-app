@@ -1,3 +1,13 @@
+<% if(@warehouse.errors.any?) %>
+	<div class="alert alert-danger" role="alert">
+		<ul>
+			<% @warehouse.errors.full_messages.each do |message| %>
+			<li> <%= message %> </li>
+			<% end %>
+		</ul>
+	</div>
+<% end %>
+
 <%= bootstrap_form_with(model: @warehouse, layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-5") do |form| %>
  <div class="form-group">
   <div>
@@ -21,10 +31,8 @@
   <div>
   	<%= form.number_field :area, required: true %>
 	</div>
-  
   <div> 
 		<%= form.submit 'Enviar', class: "btn btn-success" %>
 	</div>
 </div>
-
 <% end %>

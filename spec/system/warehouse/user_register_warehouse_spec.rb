@@ -1,14 +1,16 @@
 require 'rails_helper'
 
 describe 'Usuário cadastra um galpão' do
+    
     it 'a partir da tela inicial' do
-         #Arrange
 
-        #act
         visit(root_path)
+        within('nav') do
+            click_on('Galpões')
+        end
         click_on 'Cadastrar Galpão'
 
-        #assert
+        expect(current_path).to eq(new_warehouse_path)
         expect(page).to have_field('Nome')
         expect(page).to have_field('Descrição')
         expect(page).to have_field('Código')
@@ -20,8 +22,8 @@ describe 'Usuário cadastra um galpão' do
 
     it 'com sucesso' do
         #act
-        visit(root_path)
-        click_on 'Cadastrar Galpão'
+        visit(new_warehouse_path)
+
         fill_in 'Nome', with: 'Rio de Janeiro'
         fill_in 'Descrição', with: 'Galpão da zona portuária do Rio de Janeiro'
         fill_in 'Código', with: 'RIO'
@@ -38,8 +40,7 @@ describe 'Usuário cadastra um galpão' do
     end
 
     it 'com dados incompletos' do
-        visit(root_path)
-        click_on 'Cadastrar Galpão'
+        visit(new_warehouse_path)
 
         fill_in 'Nome', with: ''
         fill_in 'Descrição', with: ''
