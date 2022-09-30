@@ -1,0 +1,22 @@
+<h3>Pedido: <%= @order.id %> </h1>
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+      <th>Usuário</th>
+      <th>Galpão Destino</th>
+      <th>Fornecedor</th>
+      <th>Data Prevista de Entrega</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><%= current_user.name %> | <%= current_user.email %></td>
+          <td><%= @order.warehouse.name %></td>
+          <td><%= @order.supplier.company_name %></td>
+          <td><%= I18n.localize(@order.estimated_delivery_date) %></td>
+        </tr>
+      </tbody>
+  </table>
+
+<%= link_to('Voltar', product_models_path, class: "btn btn-success")%>

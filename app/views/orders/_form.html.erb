@@ -1,0 +1,29 @@
+<% if @order.errors.any? %>
+	<div class="alert alert-danger" role="alert">
+			<p> A validação falhou: </p>
+			<ul>
+				<% @order.errors.full_messages.each do |message| %>
+				<li> <%= message %> </li>
+				<% end %>
+			</ul>
+		</div>
+<% end %>
+
+
+
+
+<%= bootstrap_form_with(model: @order, layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-5") do |form| %>
+  <div>
+		<%= form.collection_select :warehouse_id, @warehouses.order(:name), :id, :name %>
+	</div>
+	<div>
+		<%= form.collection_select :supplier_id, @suppliers.order(:name), :id, :company_name %>
+	</div>
+	<div>
+		<%= form.text_field :estimated_delivery_date, required: true %>
+	</div>
+  <div> 
+		<%= form.submit 'Gravar', class: "btn btn-success" %>
+	</div>
+<% end %>
+

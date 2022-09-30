@@ -47380,3 +47380,1091 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 6716)
 
 
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateOrders (20220929220111)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "warehouse_id" integer NOT NULL, "supplier_id" integer NOT NULL, "user_id" integer NOT NULL, "estimated_delivery_date" date, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_51a277863b"
+FOREIGN KEY ("warehouse_id")
+  REFERENCES "warehouses" ("id")
+, CONSTRAINT "fk_rails_d426350910"
+FOREIGN KEY ("supplier_id")
+  REFERENCES "suppliers" ("id")
+, CONSTRAINT "fk_rails_f868b47f6a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_warehouse_id" ON "orders" ("warehouse_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_supplier_id" ON "orders" ("supplier_id")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_orders_on_user_id" ON "orders" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20220929220111"]]
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_in" for ::1 at 2022-09-30 08:25:10 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 849)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 42.5ms | Allocations: 21659)
+  Rendered layout layouts/application.html.erb (Duration: 79.1ms | Allocations: 37028)
+Completed 200 OK in 106ms (Views: 86.3ms | ActiveRecord: 0.5ms | Allocations: 58551)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-09-30 08:25:22 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joao@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "joao@email.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 240ms (ActiveRecord: 0.4ms | Allocations: 3888)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"joao@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 137)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1781)
+  Rendered layout layouts/application.html.erb (Duration: 8.0ms | Allocations: 6318)
+Completed 200 OK in 227ms (Views: 8.8ms | ActiveRecord: 0.0ms | Allocations: 6832)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-09-30 08:25:34 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"aline@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aline@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 234ms (ActiveRecord: 0.1ms | Allocations: 2971)
+
+
+Started GET "/" for ::1 at 2022-09-30 08:25:35 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 5035)
+Completed 200 OK in 11ms (Views: 7.6ms | ActiveRecord: 0.1ms | Allocations: 7709)
+
+
+Started GET "/orders" for ::1 at 2022-09-30 08:25:42 -0300
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  Rendered orders/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 5057)
+Completed 200 OK in 22ms (Views: 13.9ms | ActiveRecord: 0.3ms | Allocations: 6939)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 08:25:43 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" ORDER BY "company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 42.6ms | Allocations: 33844)
+  Rendered orders/new.html.erb within layouts/application (Duration: 43.4ms | Allocations: 34082)
+  Rendered layout layouts/application.html.erb (Duration: 50.2ms | Allocations: 38924)
+Completed 200 OK in 76ms (Views: 49.7ms | ActiveRecord: 2.9ms | Allocations: 59981)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 08:30:33 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" ORDER BY "company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 23.6ms | Allocations: 15294)
+  Rendered orders/new.html.erb within layouts/application (Duration: 23.8ms | Allocations: 15354)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 20208)
+Completed 200 OK in 58ms (Views: 29.8ms | ActiveRecord: 3.1ms | Allocations: 35322)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 08:30:35 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.4ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" ORDER BY "company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 10.6ms | Allocations: 3086)
+  Rendered orders/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 3142)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 7888)
+Completed 200 OK in 29ms (Views: 23.3ms | ActiveRecord: 0.8ms | Allocations: 9264)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 08:30:49 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" ORDER BY "company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 11.4ms | Allocations: 3086)
+  Rendered orders/new.html.erb within layouts/application (Duration: 11.7ms | Allocations: 3142)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 7888)
+Completed 200 OK in 26ms (Views: 19.6ms | ActiveRecord: 1.0ms | Allocations: 9244)
+
+
+Started GET "/" for ::1 at 2022-09-30 08:31:57 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4987)
+Completed 200 OK in 14ms (Views: 11.3ms | ActiveRecord: 0.1ms | Allocations: 6774)
+
+
+Started GET "/orders" for ::1 at 2022-09-30 08:32:01 -0300
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  Rendered orders/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 58)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 4868)
+Completed 200 OK in 17ms (Views: 13.6ms | ActiveRecord: 0.1ms | Allocations: 6162)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 08:32:02 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" ORDER BY "company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 7.1ms | Allocations: 3084)
+  Rendered orders/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 3140)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 7886)
+Completed 200 OK in 24ms (Views: 16.1ms | ActiveRecord: 0.8ms | Allocations: 9261)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 09:32:58 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" ORDER BY "company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 8.4ms | Allocations: 3125)
+  Rendered orders/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 3181)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 7927)
+Completed 200 OK in 24ms (Views: 16.4ms | ActiveRecord: 2.1ms | Allocations: 9439)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 09:34:43 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" ORDER BY "company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 19.0ms | Allocations: 15971)
+  Rendered orders/new.html.erb within layouts/application (Duration: 20.0ms | Allocations: 16216)
+  Rendered layout layouts/application.html.erb (Duration: 25.6ms | Allocations: 21724)
+Completed 200 OK in 110ms (Views: 46.4ms | ActiveRecord: 2.4ms | Allocations: 37126)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 09:34:45 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" ORDER BY "company_name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 11.5ms | Allocations: 3411)
+  Rendered orders/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 3467)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 8213)
+Completed 200 OK in 30ms (Views: 20.6ms | ActiveRecord: 1.1ms | Allocations: 9578)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:07:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 57.5ms | Allocations: 51904)
+  Rendered orders/new.html.erb within layouts/application (Duration: 58.9ms | Allocations: 52463)
+  Rendered layout layouts/application.html.erb (Duration: 80.1ms | Allocations: 68146)
+Completed 200 OK in 118ms (Views: 81.6ms | ActiveRecord: 2.0ms | Allocations: 113607)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:07:21 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 10.8ms | Allocations: 3360)
+  Rendered orders/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 3416)
+  Rendered layout layouts/application.html.erb (Duration: 22.1ms | Allocations: 8165)
+Completed 200 OK in 30ms (Views: 22.5ms | ActiveRecord: 0.7ms | Allocations: 9524)
+
+
+Started GET "/" for ::1 at 2022-09-30 10:07:23 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 5008)
+Completed 200 OK in 15ms (Views: 10.9ms | ActiveRecord: 0.2ms | Allocations: 6904)
+
+
+Started GET "/orders" for ::1 at 2022-09-30 10:07:27 -0300
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  Rendered orders/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 177)
+  Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 4927)
+Completed 200 OK in 27ms (Views: 17.9ms | ActiveRecord: 0.4ms | Allocations: 6293)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:07:28 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.5ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 14.0ms | Allocations: 3360)
+  Rendered orders/new.html.erb within layouts/application (Duration: 15.1ms | Allocations: 3416)
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 8165)
+Completed 200 OK in 32ms (Views: 24.9ms | ActiveRecord: 1.0ms | Allocations: 9510)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:14:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 55.7ms | Allocations: 51995)
+  Rendered orders/new.html.erb within layouts/application (Duration: 56.6ms | Allocations: 52554)
+  Rendered layout layouts/application.html.erb (Duration: 77.2ms | Allocations: 68196)
+Completed 200 OK in 116ms (Views: 79.2ms | ActiveRecord: 2.1ms | Allocations: 113656)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:14:59 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 11.3ms | Allocations: 3360)
+  Rendered orders/new.html.erb within layouts/application (Duration: 11.9ms | Allocations: 3416)
+  Rendered layout layouts/application.html.erb (Duration: 19.5ms | Allocations: 8165)
+Completed 200 OK in 29ms (Views: 20.5ms | ActiveRecord: 0.7ms | Allocations: 9520)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:22:56 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 59.5ms | Allocations: 51907)
+  Rendered orders/new.html.erb within layouts/application (Duration: 60.9ms | Allocations: 52466)
+  Rendered layout layouts/application.html.erb (Duration: 81.4ms | Allocations: 68136)
+Completed 200 OK in 119ms (Views: 82.8ms | ActiveRecord: 1.9ms | Allocations: 113613)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:23:08 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 10.1ms | Allocations: 3663)
+  Rendered orders/new.html.erb within layouts/application (Duration: 11.1ms | Allocations: 3903)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 9302)
+Completed 200 OK in 25ms (Views: 20.7ms | ActiveRecord: 0.5ms | Allocations: 11325)
+
+
+Started GET "/" for ::1 at 2022-09-30 10:25:05 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 16.2ms | Allocations: 5008)
+Completed 200 OK in 31ms (Views: 20.1ms | ActiveRecord: 0.4ms | Allocations: 6899)
+
+
+Started GET "/suppliers" for ::1 at 2022-09-30 10:25:06 -0300
+Processing by SuppliersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:13
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1969)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 6821)
+Completed 200 OK in 20ms (Views: 13.9ms | ActiveRecord: 0.4ms | Allocations: 8755)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-30 10:25:09 -0300
+Processing by SuppliersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 10.4ms | Allocations: 3914)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 4151)
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 8897)
+Completed 200 OK in 25ms (Views: 19.8ms | ActiveRecord: 0.2ms | Allocations: 10280)
+
+
+Started GET "/orders" for ::1 at 2022-09-30 10:25:11 -0300
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  Rendered orders/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 180)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5022)
+Completed 200 OK in 16ms (Views: 11.4ms | ActiveRecord: 0.2ms | Allocations: 6383)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:25:13 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 10.1ms | Allocations: 3361)
+  Rendered orders/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 3417)
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 8166)
+Completed 200 OK in 28ms (Views: 20.4ms | ActiveRecord: 0.9ms | Allocations: 9519)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:15 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 17.9ms | Allocations: 16431)
+  Rendered orders/new.html.erb within layouts/application (Duration: 18.0ms | Allocations: 16491)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 21437)
+Completed 200 OK in 42ms (Views: 23.2ms | ActiveRecord: 2.1ms | Allocations: 35747)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:17 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 11.6ms | Allocations: 3360)
+  Rendered orders/new.html.erb within layouts/application (Duration: 12.1ms | Allocations: 3416)
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 8162)
+Completed 200 OK in 27ms (Views: 20.4ms | ActiveRecord: 0.7ms | Allocations: 9485)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:26 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 55.4ms | Allocations: 51956)
+  Rendered orders/new.html.erb within layouts/application (Duration: 56.6ms | Allocations: 52515)
+  Rendered layout layouts/application.html.erb (Duration: 76.8ms | Allocations: 68122)
+Completed 200 OK in 114ms (Views: 78.8ms | ActiveRecord: 1.8ms | Allocations: 113591)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:28 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 8.1ms | Allocations: 3360)
+  Rendered orders/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3416)
+  Rendered layout layouts/application.html.erb (Duration: 14.8ms | Allocations: 8165)
+Completed 200 OK in 19ms (Views: 15.0ms | ActiveRecord: 0.5ms | Allocations: 9512)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:28 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 8.3ms | Allocations: 3360)
+  Rendered orders/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 3416)
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 8165)
+Completed 200 OK in 24ms (Views: 18.6ms | ActiveRecord: 0.5ms | Allocations: 9523)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:29 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.6ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 12.5ms | Allocations: 3360)
+  Rendered orders/new.html.erb within layouts/application (Duration: 12.9ms | Allocations: 3416)
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 8165)
+Completed 200 OK in 28ms (Views: 21.4ms | ActiveRecord: 1.1ms | Allocations: 9515)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:29 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 13.5ms | Allocations: 3360)
+  Rendered orders/new.html.erb within layouts/application (Duration: 14.0ms | Allocations: 3416)
+  Rendered layout layouts/application.html.erb (Duration: 22.3ms | Allocations: 8165)
+Completed 200 OK in 31ms (Views: 22.9ms | ActiveRecord: 0.9ms | Allocations: 9513)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:30 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 9.0ms | Allocations: 3358)
+  Rendered orders/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 3414)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 8160)
+Completed 200 OK in 20ms (Views: 15.8ms | ActiveRecord: 0.6ms | Allocations: 9495)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:30 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 8.5ms | Allocations: 3358)
+  Rendered orders/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 3414)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 8160)
+Completed 200 OK in 20ms (Views: 15.6ms | ActiveRecord: 0.5ms | Allocations: 9489)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:30 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.6ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 12.3ms | Allocations: 3358)
+  Rendered orders/new.html.erb within layouts/application (Duration: 12.8ms | Allocations: 3414)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 8160)
+Completed 200 OK in 28ms (Views: 21.1ms | ActiveRecord: 1.0ms | Allocations: 9499)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:30 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 9.9ms | Allocations: 3358)
+  Rendered orders/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 3414)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 8160)
+Completed 200 OK in 30ms (Views: 21.8ms | ActiveRecord: 0.8ms | Allocations: 9489)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:30 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 16.9ms | Allocations: 3358)
+  Rendered orders/new.html.erb within layouts/application (Duration: 17.5ms | Allocations: 3414)
+  Rendered layout layouts/application.html.erb (Duration: 35.1ms | Allocations: 8160)
+Completed 200 OK in 46ms (Views: 35.6ms | ActiveRecord: 1.1ms | Allocations: 9495)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:31 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 9.2ms | Allocations: 3359)
+  Rendered orders/new.html.erb within layouts/application (Duration: 9.5ms | Allocations: 3415)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 8161)
+Completed 200 OK in 23ms (Views: 16.5ms | ActiveRecord: 0.7ms | Allocations: 9492)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:31 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 13.9ms | Allocations: 3358)
+  Rendered orders/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 3414)
+  Rendered layout layouts/application.html.erb (Duration: 28.4ms | Allocations: 8169)
+Completed 200 OK in 37ms (Views: 29.0ms | ActiveRecord: 0.9ms | Allocations: 9507)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:32 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 11.7ms | Allocations: 3359)
+  Rendered orders/new.html.erb within layouts/application (Duration: 12.2ms | Allocations: 3415)
+  Rendered layout layouts/application.html.erb (Duration: 19.6ms | Allocations: 8162)
+Completed 200 OK in 29ms (Views: 20.2ms | ActiveRecord: 0.8ms | Allocations: 9503)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:33 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 13.7ms | Allocations: 3359)
+  Rendered orders/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 3415)
+  Rendered layout layouts/application.html.erb (Duration: 23.4ms | Allocations: 8171)
+Completed 200 OK in 32ms (Views: 23.8ms | ActiveRecord: 0.8ms | Allocations: 9492)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:27:46 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:7
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:9
+  Rendered orders/_form.html.erb (Duration: 10.5ms | Allocations: 3358)
+  Rendered orders/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 3414)
+  Rendered layout layouts/application.html.erb (Duration: 21.9ms | Allocations: 8160)
+Completed 200 OK in 27ms (Views: 22.2ms | ActiveRecord: 0.6ms | Allocations: 9484)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:28:18 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (Duration: 34.8ms | Allocations: 16103)
+  Rendered orders/new.html.erb within layouts/application (Duration: 35.8ms | Allocations: 16664)
+  Rendered layout layouts/application.html.erb (Duration: 35.9ms | Allocations: 16747)
+Completed 500 Internal Server Error in 77ms (ActiveRecord: 0.9ms | Allocations: 62154)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/alinemoraes/Documentos/warehouse-app/config/locales/order.pt-BR.yml: expects it to return a hash, but does not):
+    1: 
+    2: <%= bootstrap_form_with(model: @order, layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-5") do |form| %>
+    3:   <div>
+    4: 		<%= form.text_field :name, required: true %>
+    5: 	</div>
+    6: 	<label form.label :supplier_id >Fornecedor</label>
+    7: 	<%= form.collection_select :supplier_id, @suppliers, :id, :company_name %>
+  
+app/views/orders/_form.html.erb:4
+app/views/orders/_form.html.erb:2
+app/views/orders/new.html.erb:2
+Started GET "/orders/new" for ::1 at 2022-09-30 10:28:54 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (Duration: 13.9ms | Allocations: 5806)
+  Rendered orders/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 6048)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 6121)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.3ms | Allocations: 8112)
+
+
+  
+ActionView::Template::Error (can not load translations from /home/alinemoraes/Documentos/warehouse-app/config/locales/order.pt-BR.yml: expects it to return a hash, but does not):
+    1: 
+    2: <%= bootstrap_form_with(model: @order, layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-5") do |form| %>
+    3:   <div>
+    4: 		<%= form.text_field :name, required: true %>
+    5: 	</div>
+    6: 	<%= form.collection_select :supplier_id, @suppliers, :id, :company_name %>
+    7: 
+  
+app/views/orders/_form.html.erb:4
+app/views/orders/_form.html.erb:2
+app/views/orders/new.html.erb:2
+Started GET "/orders/new" for ::1 at 2022-09-30 10:29:33 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:6
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 35.9ms | Allocations: 42245)
+  Rendered orders/new.html.erb within layouts/application (Duration: 36.1ms | Allocations: 42305)
+  Rendered layout layouts/application.html.erb (Duration: 60.3ms | Allocations: 57880)
+Completed 200 OK in 78ms (Views: 60.6ms | ActiveRecord: 2.4ms | Allocations: 72213)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:32:26 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:6
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 18.1ms | Allocations: 16462)
+  Rendered orders/new.html.erb within layouts/application (Duration: 18.3ms | Allocations: 16522)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 21376)
+Completed 200 OK in 40ms (Views: 22.6ms | ActiveRecord: 2.6ms | Allocations: 35637)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:32:37 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:6
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 58.1ms | Allocations: 51975)
+  Rendered orders/new.html.erb within layouts/application (Duration: 59.5ms | Allocations: 52534)
+  Rendered layout layouts/application.html.erb (Duration: 79.6ms | Allocations: 68173)
+Completed 200 OK in 118ms (Views: 81.2ms | ActiveRecord: 2.2ms | Allocations: 113632)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:32:38 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:6
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 13.7ms | Allocations: 3360)
+  Rendered orders/new.html.erb within layouts/application (Duration: 14.1ms | Allocations: 3416)
+  Rendered layout layouts/application.html.erb (Duration: 23.0ms | Allocations: 8165)
+Completed 200 OK in 31ms (Views: 23.5ms | ActiveRecord: 0.9ms | Allocations: 9522)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-09-30 10:39:51 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 0.5ms | Allocations: 29593)
+
+
+Started GET "/" for ::1 at 2022-09-30 10:39:51 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 386)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-09-30 10:39:51 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.2ms | Allocations: 857)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 33.5ms | Allocations: 13482)
+  Rendered layout layouts/application.html.erb (Duration: 54.6ms | Allocations: 28855)
+Completed 200 OK in 61ms (Views: 59.9ms | ActiveRecord: 0.0ms | Allocations: 32316)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-09-30 10:40:04 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"aline@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aline@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 215ms (ActiveRecord: 0.3ms | Allocations: 4219)
+
+
+Started GET "/" for ::1 at 2022-09-30 10:40:04 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 122)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 5029)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 0.1ms | Allocations: 7573)
+
+
+Started GET "/orders" for ::1 at 2022-09-30 10:40:09 -0300
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  Rendered orders/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 202)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 5057)
+Completed 200 OK in 18ms (Views: 11.7ms | ActiveRecord: 0.4ms | Allocations: 6949)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:40:10 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/orders/_form.html.erb:6
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 31.8ms | Allocations: 34961)
+  Rendered orders/new.html.erb within layouts/application (Duration: 32.5ms | Allocations: 35199)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 40044)
+Completed 200 OK in 68ms (Views: 36.8ms | ActiveRecord: 1.9ms | Allocations: 60256)
+
+
+Started GET "/suppliers" for ::1 at 2022-09-30 10:40:41 -0300
+Processing by SuppliersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:13
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1977)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 6923)
+Completed 200 OK in 21ms (Views: 14.9ms | ActiveRecord: 0.4ms | Allocations: 8880)
+
+
+Started GET "/suppliers/new" for ::1 at 2022-09-30 10:40:42 -0300
+Processing by SuppliersController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/new.html.erb within layouts/application
+  Rendered suppliers/_form.html.erb (Duration: 5.2ms | Allocations: 3702)
+  Rendered suppliers/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 3939)
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 8685)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.1ms | Allocations: 10066)
+
+
+Started GET "/product_models" for ::1 at 2022-09-30 10:41:01 -0300
+Processing by ProductModelsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/index.html.erb within layouts/application
+  [1m[36mProductModel Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "product_models" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:2
+  [1m[36mProductModel Load (0.3ms)[0m  [1m[34mSELECT "product_models".* FROM "product_models"[0m
+  ↳ app/views/product_models/index.html.erb:13
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  Rendered product_models/index.html.erb within layouts/application (Duration: 39.3ms | Allocations: 23462)
+  Rendered layout layouts/application.html.erb (Duration: 45.3ms | Allocations: 28315)
+Completed 200 OK in 66ms (Views: 46.7ms | ActiveRecord: 2.5ms | Allocations: 31728)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-30 10:41:03 -0300
+Processing by ProductModelsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/views/product_models/_form.html.erb:30
+  Rendered product_models/_form.html.erb (Duration: 13.6ms | Allocations: 5450)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 15.7ms | Allocations: 5686)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 10435)
+Completed 200 OK in 31ms (Views: 23.2ms | ActiveRecord: 0.6ms | Allocations: 11824)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-30 10:42:53 -0300
+Processing by ProductModelsController#new as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/views/product_models/_form.html.erb:30
+  Rendered product_models/_form.html.erb (Duration: 8.4ms | Allocations: 5183)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 5423)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 10902)
+Completed 200 OK in 25ms (Views: 21.6ms | ActiveRecord: 0.3ms | Allocations: 12902)
+
+
+Started GET "/orders" for ::1 at 2022-09-30 10:42:58 -0300
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  Rendered orders/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 5123)
+Completed 200 OK in 17ms (Views: 12.0ms | ActiveRecord: 0.5ms | Allocations: 6899)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:42:59 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.4ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:6
+  [1m[36mWarehouse Load (1.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" ORDER BY "warehouses"."name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 12.9ms | Allocations: 3755)
+  Rendered orders/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 3992)
+  Rendered layout layouts/application.html.erb (Duration: 22.6ms | Allocations: 8824)
+Completed 200 OK in 30ms (Views: 22.1ms | ActiveRecord: 1.8ms | Allocations: 10209)
+
+
+Started GET "/suppliers" for ::1 at 2022-09-30 10:45:08 -0300
+Processing by SuppliersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering suppliers/index.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  ↳ app/views/suppliers/index.html.erb:13
+  Rendered suppliers/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 1937)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 6771)
+Completed 200 OK in 26ms (Views: 18.4ms | ActiveRecord: 0.6ms | Allocations: 8567)
+
+
+Started GET "/product_models" for ::1 at 2022-09-30 10:45:10 -0300
+Processing by ProductModelsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/index.html.erb within layouts/application
+  [1m[36mProductModel Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "product_models" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:2
+  [1m[36mProductModel Load (0.3ms)[0m  [1m[34mSELECT "product_models".* FROM "product_models"[0m
+  ↳ app/views/product_models/index.html.erb:13
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/product_models/index.html.erb:17
+  Rendered product_models/index.html.erb within layouts/application (Duration: 19.3ms | Allocations: 4161)
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 8908)
+Completed 200 OK in 35ms (Views: 27.0ms | ActiveRecord: 1.8ms | Allocations: 10268)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-30 10:45:10 -0300
+Processing by ProductModelsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.3ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/views/product_models/_form.html.erb:30
+  Rendered product_models/_form.html.erb (Duration: 16.5ms | Allocations: 4735)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 17.0ms | Allocations: 4791)
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 9537)
+Completed 200 OK in 33ms (Views: 26.1ms | ActiveRecord: 0.6ms | Allocations: 10849)
+
+
+Started GET "/product_models/new" for ::1 at 2022-09-30 10:51:42 -0300
+Processing by ProductModelsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering product_models/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/views/product_models/_form.html.erb:30
+  Rendered product_models/_form.html.erb (Duration: 8.1ms | Allocations: 7008)
+  Rendered product_models/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 7068)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 12011)
+Completed 200 OK in 62ms (Views: 15.2ms | ActiveRecord: 0.7ms | Allocations: 23989)
+
+
+Started GET "/orders" for ::1 at 2022-09-30 10:51:47 -0300
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  Rendered orders/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4976)
+Completed 200 OK in 18ms (Views: 13.0ms | ActiveRecord: 0.2ms | Allocations: 6769)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 10:51:49 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:6
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" ORDER BY "warehouses"."name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:8
+  Rendered orders/_form.html.erb (Duration: 9.0ms | Allocations: 6195)
+  Rendered orders/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 6253)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 11057)
+Completed 200 OK in 35ms (Views: 15.4ms | ActiveRecord: 0.5ms | Allocations: 17590)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 11:04:39 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:4
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" ORDER BY "warehouses"."name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:6
+  Rendered orders/_form.html.erb (Duration: 60.2ms | Allocations: 51692)
+  Rendered orders/new.html.erb within layouts/application (Duration: 61.1ms | Allocations: 52251)
+  Rendered layout layouts/application.html.erb (Duration: 80.9ms | Allocations: 67908)
+Completed 200 OK in 118ms (Views: 82.3ms | ActiveRecord: 2.1ms | Allocations: 113363)
+
+
+Started GET "/orders/new" for ::1 at 2022-09-30 11:19:50 -0300
+Processing by OrdersController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/new.html.erb within layouts/application
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" ORDER BY "suppliers"."name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:4
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" ORDER BY "warehouses"."name" ASC[0m
+  ↳ app/views/orders/_form.html.erb:5
+  Rendered orders/_form.html.erb (Duration: 9.3ms | Allocations: 3851)
+  Rendered orders/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 4091)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 9487)
+Completed 200 OK in 28ms (Views: 18.6ms | ActiveRecord: 2.3ms | Allocations: 11670)
+
+
+  [1m[36mSupplier Load (0.5ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+Started POST "/orders" for ::1 at 2022-09-30 13:25:42 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "order"=>{"supplier_id"=>"5", "warehouse_id"=>"1", "estimated_delivery_date"=>"22"}, "commit"=>"Gravar"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+[31mUnpermitted parameter: :estimated_delivery_date. Context: { controller: OrdersController, action: create, request: #<ActionDispatch::Request:0x00005624de69ebd8>, params: {"authenticity_token"=>"[FILTERED]", "order"=>{"supplier_id"=>"5", "warehouse_id"=>"1", "estimated_delivery_date"=>"22"}, "commit"=>"Gravar", "controller"=>"orders", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/orders_controller.rb:18:in `create'
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:18:in `create'
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:18:in `create'
+  [1m[36mOrder Create (0.3ms)[0m  [1m[32mINSERT INTO "orders" ("warehouse_id", "supplier_id", "user_id", "estimated_delivery_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["warehouse_id", 1], ["supplier_id", 5], ["user_id", 7], ["estimated_delivery_date", nil], ["created_at", "2022-09-30 16:25:42.951580"], ["updated_at", "2022-09-30 16:25:42.951580"]]
+  ↳ app/controllers/orders_controller.rb:18:in `create'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/orders_controller.rb:18:in `create'
+Redirected to http://localhost:3000/orders/1
+Completed 302 Found in 78ms (ActiveRecord: 4.5ms | Allocations: 81506)
+
+
+Started GET "/orders/1" for ::1 at 2022-09-30 13:25:42 -0300
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:30:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.1ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:12
+  [1m[36mSupplier Load (0.0ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:13
+  Rendered orders/show.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1827)
+  Rendered layout layouts/application.html.erb (Duration: 23.3ms | Allocations: 17455)
+Completed 200 OK in 32ms (Views: 25.9ms | ActiveRecord: 0.4ms | Allocations: 22166)
+
+
+  [1m[36mSupplier Load (0.2ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers"[0m
+  [1m[36mWarehouse Load (0.5ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
+  [1m[36mWarehouse Load (0.2ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses"[0m
