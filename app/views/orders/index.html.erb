@@ -1,4 +1,29 @@
-
+<h2>Todos os pedidos</h2>
+<% if @orders.any? %>
+  <div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+      <th>Pedido</th>
+      <th>Criado por</th>
+      <%# <% <th><%= Order.human_attribute_name(:estimated_delivery_date)</th>  %>
+      <th>Data Prevista de Entrega</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <% @orders.each do |field| %>
+          <tr>
+            <td><%= link_to(field.code, order_path(field.id)) %></td>
+            <td><%= link_to(field.user.email, order_path(field.id)) %></td>
+            <td><%= link_to(I18n.localize(field.estimated_delivery_date), order_path(field.id)) %></td>
+          </tr>
+        <% end %>
+      </tbody>
+      </table>
+<% else %>
+  <span> 'Não existem pedidos cadastrados' </span>
+<% end %>
 <div>
     <%= link_to('Registrar Pedido', new_order_path, class:'btn btn-primary')%>
   </div>

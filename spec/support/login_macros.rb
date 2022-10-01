@@ -1,2 +1,1 @@
-def login(user)
-end
+def login(user); end

@@ -3,8 +3,8 @@ require 'rails_helper'
 describe 'Usuário edita um galpão' do
   it 'a partir da página de editar' do
     Warehouse.create!(name: 'Aeroporto RJ', code: 'SDU', city: 'Rio de Janeiro', area: 60_000,
-      address: 'Praça Sen. Salgado Filho', cep: '20021340',
-      description: 'Galpão destinado a cargas pequenas')
+                      address: 'Praça Sen. Salgado Filho', cep: '20021340',
+                      description: 'Galpão destinado a cargas pequenas')
 
     user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
     login_as(user)
@@ -23,10 +23,9 @@ describe 'Usuário edita um galpão' do
   end
 
   it 'com sucesso' do
-    
     Warehouse.create!(name: 'Aeroporto RJ', code: 'SDU', city: 'Rio de Janeiro', area: 60_000,
-      address: 'Praça Sen. Salgado Filho', cep: '20021340',
-      description: 'Galpão destinado a cargas pequenas')
+                      address: 'Praça Sen. Salgado Filho', cep: '20021340',
+                      description: 'Galpão destinado a cargas pequenas')
 
     user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
     login_as(user)
@@ -44,8 +43,8 @@ describe 'Usuário edita um galpão' do
 
   it 'e mantém os campos obrigatórios' do
     Warehouse.create!(name: 'Aeroporto RJ', code: 'SDU', city: 'Rio de Janeiro', area: 60_000,
-      address: 'Praça Sen. Salgado Filho', cep: '20021340',
-      description: 'Galpão destinado a cargas pequenas')
+                      address: 'Praça Sen. Salgado Filho', cep: '20021340',
+                      description: 'Galpão destinado a cargas pequenas')
 
     user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
     login_as(user)

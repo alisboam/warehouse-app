@@ -1,15 +1,14 @@
 class WarehousesController < ApplicationController
-  before_action :set_warehouse, only: [:show, :edit, :update, :destroy]
+  before_action :set_warehouse, only: %i[show edit update destroy]
 
   def index
     @warehouses = Warehouse.all
-    
   end
-  
+
   def show; end
 
   def new
-    @warehouse = Warehouse.new()
+    @warehouse = Warehouse.new
   end
 
   def create
@@ -36,10 +35,10 @@ class WarehousesController < ApplicationController
   def destroy
     @warehouse.destroy
     redirect_to warehouses_path, notice: 'Galpão excluído com sucesso'
-    
   end
 
   private
+
   def set_warehouse
     @warehouse = Warehouse.find(params[:id])
   end
@@ -47,8 +46,7 @@ class WarehousesController < ApplicationController
   def warehouse_params
     # Strong parameters
     w_params = params.require(:warehouse).permit(:name, :code, :description, :city, :address, :cep, :area)
-    w_params[:cep] = w_params[:cep].gsub("-", "")
-    w_params          
+    w_params[:cep] = w_params[:cep].gsub('-', '')
+    w_params
   end
 end
-

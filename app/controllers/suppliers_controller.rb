@@ -1,10 +1,10 @@
 class SuppliersController < ApplicationController
-  before_action :set_supplier, only: [:show, :edit, :update]
-  
+  before_action :set_supplier, only: %i[show edit update]
+
   def show; end
 
   def new
-    @supplier = Supplier.new()
+    @supplier = Supplier.new
   end
 
   def create
@@ -17,7 +17,7 @@ class SuppliersController < ApplicationController
       render 'new'
     end
   end
-    
+
   def index
     @supplier = Supplier.all
   end
@@ -34,14 +34,15 @@ class SuppliersController < ApplicationController
   end
 
   private
+
   def set_supplier
     @supplier = Supplier.find(params[:id])
   end
 
   def supplier_params
     supplier_params = params.require(:supplier)
-                      .permit(:name, :company_name, :cnpj, :address, :email, :telephone)
-    supplier_params[:cnpj] = supplier_params[:cnpj].gsub(/\D/,  "")
+                            .permit(:name, :company_name, :cnpj, :address, :email, :telephone)
+    supplier_params[:cnpj] = supplier_params[:cnpj].gsub(/\D/, '')
 
     supplier_params
   end

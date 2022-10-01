@@ -2,7 +2,6 @@ require 'rails_helper'
 
 describe 'Usuário se autentica' do
   it 'com sucesso' do
-
     visit root_path
     within('nav') do
       click_on 'Entrar'

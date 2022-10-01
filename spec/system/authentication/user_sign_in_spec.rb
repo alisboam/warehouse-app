@@ -25,7 +25,7 @@ describe 'Usuário se autentica' do
     User.create!(email: 'joao@email.com', password: 'password')
 
     visit root_path
-    within('nav') do 
+    within('nav') do
       click_on 'Entrar'
     end
     within('form') do

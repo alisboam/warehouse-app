@@ -9,9 +9,6 @@
 		</div>
 <% end %>
 
-
-
-
 <%= bootstrap_form_with(model: @order, layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-5") do |form| %>
   <div>
 		<%= form.collection_select :warehouse_id, @warehouses.order(:name), :id, :name %>

@@ -1,4 +1,4 @@
-<h3>Pedido: <%= @order.id %> </h1>
+<h3><%= @order.model_name.human %>: <%= @order.code %> </h1>
 <div class="table-responsive">
   <table class="table">
     <thead>
@@ -19,4 +19,4 @@
       </tbody>
   </table>
 
-<%= link_to('Voltar', product_models_path, class: "btn btn-success")%>
+<%= link_to('Voltar', order_path, class: "btn btn-success")%>
