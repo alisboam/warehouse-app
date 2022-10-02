@@ -11,12 +11,38 @@ RSpec.describe Order, type: :model do
                                   email: 'magalu@email.com', telephone: '08007733838')
       user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
       order = Order.create(user: user, supplier: supplier, warehouse: warehouse, 
-                      estimated_delivery_date: '2022-10-01')
+                      estimated_delivery_date: 1.day.from_now)
             
       expect(order.valid?).to be true
     end
-    
+
+    it 'and date is mandatory' do
+      order = Order.create(estimated_delivery_date: '')
+      order.valid?
+      expect(order.errors.include? :estimated_delivery_date).to be true
+    end
+
+    it 'and can not be a past date' do
+      order = Order.create(estimated_delivery_date: 1.day.ago)
+      order.valid?
+      expect(order.errors.include?(:estimated_delivery_date)).to be true
+      expect(order.errors[:estimated_delivery_date]).to include(' deve ser futura.')
+    end
+
+    it 'and can not be today' do
+      order = Order.create(estimated_delivery_date: Date.today)
+      order.valid?
+      expect(order.errors.include?(:estimated_delivery_date)).to be true
+      expect(order.errors[:estimated_delivery_date]).to include(' deve ser futura.')
+    end
+
+    it 'and date must be >= tomorrow ' do
+      order = Order.create(estimated_delivery_date: Date.today)
+      order.valid?
+      expect(order.errors.include?(:estimated_delivery_date)).to be true
+    end
   end
+
     describe 'generate random code' do
     it 'when create an order' do
       warehouse = Warehouse.create!(name: 'São Paulo', code: 'GRU', city: 'São Paulo', area: 100_000,
@@ -27,11 +53,12 @@ RSpec.describe Order, type: :model do
                   email: 'magalu@email.com', telephone: '08007733838')
       user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
       order = Order.create(user: user, supplier: supplier, warehouse: warehouse, 
-                          estimated_delivery_date: '2022-10-01')
+                          estimated_delivery_date: 1.day.from_now)
      
       expect(order.code).not_to be_empty
-      expect(order.code.length).to eq 8
+      expect(order.code.length).to eq 10
     end
+
     it 'and code is unique' do
       warehouse = Warehouse.create!(name: 'São Paulo', code: 'GRU', city: 'São Paulo', area: 100_000,
                   address: 'Av. São Paulo', cep: '20021340',
@@ -41,9 +68,9 @@ RSpec.describe Order, type: :model do
                                   email: 'magalu@email.com', telephone: '08007733838')
       user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
       first_order = Order.create!(user: user, supplier: supplier, warehouse: warehouse,
-                                  estimated_delivery_date: '2022-10-01')
+                                  estimated_delivery_date: 1.day.from_now)
       second_order = Order.create!(user: user, supplier: supplier, warehouse: warehouse,
-                                  estimated_delivery_date: '2022-10-01')
+                                  estimated_delivery_date: 1.day.from_now)
      
       expect(second_order.code).not_to eq first_order.code
     end

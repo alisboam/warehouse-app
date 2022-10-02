@@ -22,6 +22,8 @@ gem 'bootstrap'
 gem 'bootstrap_form'
 gem 'devise'
 gem 'email_validator'
+gem 'will_paginate'
+gem 'will_paginate-bootstrap' 
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
