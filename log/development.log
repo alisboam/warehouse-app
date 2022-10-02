@@ -52850,3 +52850,1299 @@ Processing by OrdersController#create as HTML
 Completed 200 OK in 21ms (Views: 11.9ms | ActiveRecord: 0.8ms | Allocations: 13891)
 
 
+Started GET "/" for ::1 at 2022-10-02 16:59:11 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 16191)
+Completed 200 OK in 47ms (Views: 23.6ms | ActiveRecord: 0.5ms | Allocations: 42800)
+
+
+Started GET "/" for ::1 at 2022-10-02 16:59:58 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 5557)
+Completed 200 OK in 27ms (Views: 18.6ms | ActiveRecord: 0.4ms | Allocations: 7551)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:00:16 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 5557)
+Completed 200 OK in 26ms (Views: 17.9ms | ActiveRecord: 0.4ms | Allocations: 7548)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:01:04 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4947.5ms | Allocations: 46524)
+Completed 200 OK in 4956ms (Views: 4948.8ms | ActiveRecord: 0.3ms | Allocations: 47843)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:05:41 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 5611)
+Completed 200 OK in 20ms (Views: 13.0ms | ActiveRecord: 0.2ms | Allocations: 7603)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:06:24 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 5558)
+Completed 200 OK in 15ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 7535)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:06:28 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 4764)
+Completed 200 OK in 23ms (Views: 16.9ms | ActiveRecord: 0.3ms | Allocations: 6065)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:06:29 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 4764)
+Completed 200 OK in 20ms (Views: 14.2ms | ActiveRecord: 0.3ms | Allocations: 6070)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:07:49 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 15.5ms | Allocations: 5558)
+Completed 200 OK in 27ms (Views: 18.4ms | ActiveRecord: 0.4ms | Allocations: 7530)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:07:53 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 4764)
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 0.2ms | Allocations: 6075)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:08:11 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 5558)
+Completed 200 OK in 26ms (Views: 17.4ms | ActiveRecord: 0.3ms | Allocations: 7526)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:09:05 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 5558)
+Completed 200 OK in 20ms (Views: 12.7ms | ActiveRecord: 0.3ms | Allocations: 7527)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:09:26 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 5558)
+Completed 200 OK in 29ms (Views: 20.3ms | ActiveRecord: 0.3ms | Allocations: 7543)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:18:21 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 16194)
+Completed 200 OK in 49ms (Views: 24.1ms | ActiveRecord: 0.5ms | Allocations: 42808)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:19:24 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 34.8ms | Allocations: 18701)
+Completed 200 OK in 38ms (Views: 35.3ms | ActiveRecord: 0.1ms | Allocations: 20025)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:21:07 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 5559)
+Completed 200 OK in 19ms (Views: 13.3ms | ActiveRecord: 0.2ms | Allocations: 7543)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:21:28 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 5556)
+Completed 200 OK in 26ms (Views: 17.3ms | ActiveRecord: 0.3ms | Allocations: 7526)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:23:49 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 5550)
+Completed 200 OK in 24ms (Views: 16.4ms | ActiveRecord: 0.3ms | Allocations: 7523)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:25:04 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 14.4ms | Allocations: 5554)
+Completed 200 OK in 26ms (Views: 18.2ms | ActiveRecord: 0.4ms | Allocations: 7539)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:26:47 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 5554)
+Completed 200 OK in 21ms (Views: 15.5ms | ActiveRecord: 0.2ms | Allocations: 7535)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:27:37 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 5554)
+Completed 200 OK in 26ms (Views: 15.1ms | ActiveRecord: 0.5ms | Allocations: 7541)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:28:31 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 5557)
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.1ms | Allocations: 7546)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:29:42 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 5544)
+Completed 200 OK in 25ms (Views: 18.0ms | ActiveRecord: 0.3ms | Allocations: 7507)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:30:44 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 9.5ms | Allocations: 5550)
+Completed 200 OK in 18ms (Views: 12.0ms | ActiveRecord: 0.2ms | Allocations: 7513)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:31:08 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 5550)
+Completed 200 OK in 25ms (Views: 15.8ms | ActiveRecord: 0.3ms | Allocations: 7525)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:31:22 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 25.7ms | Allocations: 4832)
+Completed 200 OK in 34ms (Views: 27.2ms | ActiveRecord: 0.3ms | Allocations: 6140)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:31:23 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4761)
+Completed 200 OK in 13ms (Views: 9.6ms | ActiveRecord: 0.2ms | Allocations: 6059)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:32:17 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 5154)
+Completed 200 OK in 29ms (Views: 20.3ms | ActiveRecord: 0.3ms | Allocations: 7146)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:33:06 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 5549)
+Completed 200 OK in 17ms (Views: 11.5ms | ActiveRecord: 0.2ms | Allocations: 7520)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:34:47 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 16.5ms | Allocations: 5550)
+Completed 200 OK in 29ms (Views: 20.5ms | ActiveRecord: 0.3ms | Allocations: 7525)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:34:49 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 4772)
+Completed 200 OK in 26ms (Views: 20.1ms | ActiveRecord: 0.3ms | Allocations: 6065)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:34:49 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 4821)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 6123)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:35:24 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 125)
+  Rendered layout layouts/application.html.erb (Duration: 12.9ms | Allocations: 5552)
+Completed 200 OK in 22ms (Views: 16.5ms | ActiveRecord: 0.2ms | Allocations: 7523)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:38:35 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 5553)
+Completed 200 OK in 14ms (Views: 10.2ms | ActiveRecord: 0.1ms | Allocations: 7520)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:40:35 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 5553)
+Completed 200 OK in 21ms (Views: 13.0ms | ActiveRecord: 0.2ms | Allocations: 7528)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:41:49 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 4884.0ms | Allocations: 32933)
+Completed 200 OK in 4892ms (Views: 4885.0ms | ActiveRecord: 0.3ms | Allocations: 34228)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:41:56 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 15.8ms | Allocations: 4760)
+Completed 200 OK in 24ms (Views: 16.8ms | ActiveRecord: 0.4ms | Allocations: 6060)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:43:36 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 4208.7ms | Allocations: 33231)
+Completed 200 OK in 4216ms (Views: 4211.2ms | ActiveRecord: 0.2ms | Allocations: 35197)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:44:19 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 5556)
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 0.2ms | Allocations: 7535)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:45:09 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 5552)
+Completed 200 OK in 29ms (Views: 21.9ms | ActiveRecord: 0.3ms | Allocations: 7527)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:46:24 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 9.9ms | Allocations: 5544)
+Completed 200 OK in 19ms (Views: 12.5ms | ActiveRecord: 0.3ms | Allocations: 7511)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:48:09 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 5544)
+Completed 200 OK in 23ms (Views: 15.3ms | ActiveRecord: 0.3ms | Allocations: 7511)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:48:10 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 4760)
+Completed 200 OK in 22ms (Views: 16.2ms | ActiveRecord: 0.3ms | Allocations: 6061)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:49:15 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 5544)
+Completed 200 OK in 24ms (Views: 16.0ms | ActiveRecord: 0.3ms | Allocations: 7518)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:53:06 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 5558)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.1ms | Allocations: 7533)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:54:09 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 5552)
+Completed 200 OK in 29ms (Views: 18.9ms | ActiveRecord: 0.5ms | Allocations: 7527)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:54:55 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 5552)
+Completed 200 OK in 26ms (Views: 18.6ms | ActiveRecord: 0.3ms | Allocations: 7537)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:55:36 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 12.8ms | Allocations: 5554)
+Completed 200 OK in 25ms (Views: 16.8ms | ActiveRecord: 0.3ms | Allocations: 7537)
+
+
+Started GET "/" for ::1 at 2022-10-02 17:55:56 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 5554)
+Completed 200 OK in 18ms (Views: 13.2ms | ActiveRecord: 0.2ms | Allocations: 7535)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:03:40 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 65.5ms | Allocations: 38469)
+Completed 500 Internal Server Error in 106ms (ActiveRecord: 0.9ms | Allocations: 65025)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `f' for #<ActionView::Base:0x000000000088e0>):
+    32:               </li>
+    33:             </ul>
+    34:             
+    35:             <%= f.text_field :search, append: link_to("Buscar", "#", class: "btn btn-secondary") %>
+    36:           
+    37:         </form>
+    38:             
+  
+app/views/layouts/application.html.erb:35
+Started GET "/" for ::1 at 2022-10-02 18:05:14 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 42.6ms | Allocations: 23966)
+Completed 200 OK in 48ms (Views: 44.3ms | ActiveRecord: 0.1ms | Allocations: 25992)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:06:29 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 5366)
+Completed 200 OK in 25ms (Views: 17.6ms | ActiveRecord: 0.4ms | Allocations: 6681)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:08:38 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 6245)
+Completed 200 OK in 27ms (Views: 19.3ms | ActiveRecord: 0.3ms | Allocations: 8239)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:09:01 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 848)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.4ms | Allocations: 2811)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+  <head>
+    <title>WarehouseApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+   
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="collapse navbar-collapse d-flex align-content-around flex-wrap" id="navbarNav">
+          <%= link_to('Galpões & Estoque', root_path, class:"navbar-brand mb-0 h1") %>
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <%= link_to('Página Inicial', root_path, class:'nav-link') %>
+              </li>
+              <li class="nav-item">
+                <%=link_to('Galpões', warehouses_path, class:'nav-link') %>
+              </li>
+              <li class="nav-item">
+                <%= link_to('Fornecedores', suppliers_path, class:'nav-link') %>
+              </li>
+              <li class="nav-item">
+                <%= link_to('Modelos de Produtos', product_models_path, class:'nav-link') %>
+              </li>
+              <li class="nav-item">
+                <%= link_to('Pedidos', orders_path, class:'nav-link') %>
+              </li>
+            </ul>
+            
+            <%= bootstrap_form_with(model: @order, layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-3"), class:'nav-link' do |form| %>
+  <
+            <%= form.text_field :search, append: link_to("Buscar", "#", class: "btn btn-secondary") %>
+<% end %>
+          
+        </form>
+            
+          <% if user_signed_in? %>
+            <div class="navbar-nav nav-link d-flex justify-content-end">
+              <%= current_user.name %> |
+            </div>
+            <div class="navbar-nav nav-link d-flex justify-content-end">
+              <%= current_user.email %>
+            </div>
+            <div class="navbar-nav d-flex justify-content-end">
+              <%= button_to 'Sair', destroy_user_session_path, method: :delete, class:'nav-link btn btn-link' %>
+            </div>
+          <% else %>
+            <div class="navbar-nav d-flex justify-content-end">
+              <%= link_to('Entrar', new_user_session_path, class:'nav-link') %>
+            </div>
+          <% end %>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <% if flash[:notice] %>
+        <div class="notice"><%= flash[:notice] %></div>
+      <% end %>
+      <%= yield %>
+    </main>
+  </body>
+</html>
+
+
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:      <head>
+4:        <title>WarehouseApp</title>
+5:        <meta name="viewport" content="width=device-width,initial-scale=1">
+6:        <%= csrf_meta_tags %>
+7:        <%= csp_meta_tag %>
+8:    
+9:        <%= stylesheet_link_tag "application" %>
+10:       
+11:      </head>
+12:      <body>
+13:        <header>
+14:          <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+15:            <div class="collapse navbar-collapse d-flex align-content-around flex-wrap" id="navbarNav">
+16:              <%= link_to('Galpões & Estoque', root_path, class:"navbar-brand mb-0 h1") %>
+17:                <ul class="navbar-nav mr-auto">
+18:                  <li class="nav-item active">
+19:                    <%= link_to('Página Inicial', root_path, class:'nav-link') %>
+20:                  </li>
+21:                  <li class="nav-item">
+22:                    <%=link_to('Galpões', warehouses_path, class:'nav-link') %>
+23:                  </li>
+24:                  <li class="nav-item">
+25:                    <%= link_to('Fornecedores', suppliers_path, class:'nav-link') %>
+26:                  </li>
+27:                  <li class="nav-item">
+28:                    <%= link_to('Modelos de Produtos', product_models_path, class:'nav-link') %>
+29:                  </li>
+30:                  <li class="nav-item">
+31:                    <%= link_to('Pedidos', orders_path, class:'nav-link') %>
+32:                  </li>
+33:                </ul>
+34:                
+35:                <%= bootstrap_form_with(model: @order, layout: :horizontal, label_col: "col-sm-1", control_col: "col-sm-3"), class:'nav-link' do |form| %>
+36:      <
+37:                <%= form.text_field :search, append: link_to("Buscar", "#", class: "btn btn-secondary") %>
+38:    <% end %>
+39:              
+40:            </form>
+41:                
+42:              <% if user_signed_in? %>
+43:                <div class="navbar-nav nav-link d-flex justify-content-end">
+44:                  <%= current_user.name %> |
+45:                </div>
+46:                <div class="navbar-nav nav-link d-flex justify-content-end">
+47:                  <%= current_user.email %>
+48:                </div>
+49:                <div class="navbar-nav d-flex justify-content-end">
+50:                  <%= button_to 'Sair', destroy_user_session_path, method: :delete, class:'nav-link btn btn-link' %>
+51:                </div>
+52:              <% else %>
+53:                <div class="navbar-nav d-flex justify-content-end">
+54:                  <%= link_to('Entrar', new_user_session_path, class:'nav-link') %>
+55:                </div>
+56:              <% end %>
+57:            </div>
+58:          </nav>
+59:        </header>
+60:        <main>
+61:          <% if flash[:notice] %>
+62:            <div class="notice"><%= flash[:notice] %></div>
+63:          <% end %>
+64:          <%= yield %>
+65:        </main>
+66:      </body>
+67:    </html>
+  
+app/views/layouts/application.html.erb:35: syntax error, unexpected label
+app/views/layouts/application.html.erb:35: syntax error, unexpected `do', expecting `end'
+app/views/layouts/application.html.erb:72: syntax error, unexpected `end', expecting end-of-input
+app/views/layouts/application.html.erb:35: syntax error, unexpected label
+app/views/layouts/application.html.erb:35: syntax error, unexpected `do', expecting `end'
+app/views/layouts/application.html.erb:72: syntax error, unexpected `end', expecting end-of-input
+app/views/layouts/application.html.erb:35: syntax error, unexpected label
+app/views/layouts/application.html.erb:35: syntax error, unexpected `do', expecting `end'
+app/views/layouts/application.html.erb:72: syntax error, unexpected `end', expecting end-of-input
+app/views/layouts/application.html.erb:35: syntax error, unexpected label
+app/views/layouts/application.html.erb:35: syntax error, unexpected `do', expecting `end'
+app/views/layouts/application.html.erb:72: syntax error, unexpected `end', expecting end-of-input
+Started GET "/" for ::1 at 2022-10-02 18:09:19 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 6346)
+Completed 200 OK in 28ms (Views: 20.3ms | ActiveRecord: 0.3ms | Allocations: 8344)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:09:31 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 26.9ms | Allocations: 6243)
+Completed 200 OK in 40ms (Views: 32.4ms | ActiveRecord: 0.3ms | Allocations: 8220)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:09:51 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 6248)
+Completed 200 OK in 30ms (Views: 21.4ms | ActiveRecord: 0.4ms | Allocations: 8229)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:12:02 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 13389)
+Completed 200 OK in 38ms (Views: 24.1ms | ActiveRecord: 1.7ms | Allocations: 22107)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:12:22 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 53.4ms | Allocations: 34627)
+Completed 200 OK in 91ms (Views: 56.3ms | ActiveRecord: 1.7ms | Allocations: 61252)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:15:48 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 6248)
+Completed 200 OK in 25ms (Views: 17.2ms | ActiveRecord: 0.4ms | Allocations: 8242)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:16:17 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 6199)
+Completed 200 OK in 29ms (Views: 21.1ms | ActiveRecord: 0.4ms | Allocations: 8196)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:16:36 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 6197)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.1ms | Allocations: 8190)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:17:05 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 6190)
+Completed 200 OK in 18ms (Views: 13.4ms | ActiveRecord: 0.1ms | Allocations: 8159)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:18:08 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 20.1ms | Allocations: 6195)
+Completed 200 OK in 31ms (Views: 24.4ms | ActiveRecord: 0.3ms | Allocations: 8192)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:18:09 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 15.0ms | Allocations: 5303)
+Completed 200 OK in 20ms (Views: 15.7ms | ActiveRecord: 0.2ms | Allocations: 6623)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:18:38 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 13.2ms | Allocations: 6190)
+Completed 200 OK in 24ms (Views: 16.4ms | ActiveRecord: 0.3ms | Allocations: 8160)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:18:39 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 5303)
+Completed 200 OK in 22ms (Views: 15.0ms | ActiveRecord: 0.4ms | Allocations: 6594)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:18:40 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 5303)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 0.2ms | Allocations: 6601)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:18:41 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 5303)
+Completed 200 OK in 21ms (Views: 13.8ms | ActiveRecord: 0.3ms | Allocations: 6609)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:19:00 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 5303)
+Completed 200 OK in 23ms (Views: 17.3ms | ActiveRecord: 0.3ms | Allocations: 6597)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:19:53 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 127)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 6294)
+Completed 200 OK in 30ms (Views: 21.5ms | ActiveRecord: 0.3ms | Allocations: 8266)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:24:54 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 6193)
+Completed 200 OK in 22ms (Views: 15.7ms | ActiveRecord: 0.3ms | Allocations: 8164)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:25:28 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 6193)
+Completed 200 OK in 30ms (Views: 21.3ms | ActiveRecord: 0.4ms | Allocations: 8164)
+
+
+Started GET "/" for ::1 at 2022-10-02 18:26:03 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 6192)
+Completed 200 OK in 23ms (Views: 15.4ms | ActiveRecord: 0.2ms | Allocations: 8161)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for ::1 at 2022-10-02 19:09:11 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 44.5ms | Allocations: 34570)
+Completed 200 OK in 74ms (Views: 47.1ms | ActiveRecord: 0.6ms | Allocations: 61197)
+
+
+Started GET "/" for ::1 at 2022-10-02 19:15:33 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 44.5ms | Allocations: 34550)
+Completed 200 OK in 72ms (Views: 48.2ms | ActiveRecord: 0.6ms | Allocations: 61165)
+
+
+Started GET "/" for ::1 at 2022-10-02 19:19:32 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 7557)
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.2ms | Allocations: 9546)
+
+
+  
+ActionView::Template::Error (undefined method `input' for #<BootstrapForm::FormBuilder:0x00007fde900bc090 @layout=:default, @label_col="col-sm-2", @control_col="col-sm-3", @label_errors=false, @inline_errors=true, @acts_like_form_tag=nil, @nested_child_index={}, @options={:allow_method_names_outside_object=>true, :skip_default_ids=>false, :builder=>BootstrapForm::FormBuilder, :control_col=>"col-sm-3", :html=>{}}, @template=#<ActionView::Base:0x00000000008b10>, @object=nil, @object_name=nil, @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>true}, @default_html_options={}, @multipart=nil, @index=nil>):
+    33:             </ul>
+    34:             <div class="d-flex align-items-center">
+    35:             <%= bootstrap_form_with(model: @order, control_col: "col-sm-3") do |form| %>
+    36:             <%= form.input :search, append: link_to("Buscar", search_orders_path, class: "btn btn-secondary") %>
+    37:             <% end %>
+    38:             </div>
+    39:           
+  
+app/views/layouts/application.html.erb:36
+app/views/layouts/application.html.erb:35
+Started GET "/" for ::1 at 2022-10-02 19:20:03 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 20.2ms | Allocations: 6568)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.3ms | Allocations: 8535)
+
+
+  
+ActionView::Template::Error (undefined method `input_field' for #<BootstrapForm::FormBuilder:0x00007fde9800ac70 @layout=:default, @label_col="col-sm-2", @control_col="col-sm-3", @label_errors=false, @inline_errors=true, @acts_like_form_tag=nil, @nested_child_index={}, @options={:allow_method_names_outside_object=>true, :skip_default_ids=>false, :builder=>BootstrapForm::FormBuilder, :control_col=>"col-sm-3", :html=>{}}, @template=#<ActionView::Base:0x00000000008d40>, @object=nil, @object_name=nil, @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>true}, @default_html_options={}, @multipart=nil, @index=nil>
+Did you mean?  input_with_error):
+    33:             </ul>
+    34:             <div class="d-flex align-items-center">
+    35:             <%= bootstrap_form_with(model: @order, control_col: "col-sm-3") do |form| %>
+    36:             <%= form.input_field :search, append: link_to("Buscar", search_orders_path, class: "btn btn-secondary") %>
+    37:             <% end %>
+    38:             </div>
+    39:           
+  
+app/views/layouts/application.html.erb:36
+app/views/layouts/application.html.erb:35
+Started GET "/" for ::1 at 2022-10-02 19:20:49 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 6214)
+Completed 200 OK in 30ms (Views: 22.0ms | ActiveRecord: 0.3ms | Allocations: 8190)
+
+
+Started GET "/" for ::1 at 2022-10-02 19:21:12 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 14.7ms | Allocations: 6568)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms | Allocations: 8519)
+
+
+  
+ActionView::Template::Error (undefined method `input' for #<BootstrapForm::FormBuilder:0x00007fde90067e50 @layout=:default, @label_col="col-sm-2", @control_col="col-sm-3", @label_errors=false, @inline_errors=true, @acts_like_form_tag=nil, @nested_child_index={}, @options={:allow_method_names_outside_object=>true, :skip_default_ids=>false, :builder=>BootstrapForm::FormBuilder, :control_col=>"col-sm-3", :html=>{}}, @template=#<ActionView::Base:0x00000000008fc0>, @object=nil, @object_name=nil, @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>true}, @default_html_options={}, @multipart=nil, @index=nil>):
+    33:             </ul>
+    34:             <div class="d-flex align-items-center">
+    35:             <%= bootstrap_form_with(model: @order, control_col: "col-sm-3") do |form| %>
+    36:             <%= form.input :search, append: link_to("Buscar", search_orders_path, class: "btn btn-secondary"), label: false %>
+    37:             <% end %>
+    38:             </div>
+    39:           
+  
+app/views/layouts/application.html.erb:36
+app/views/layouts/application.html.erb:35
+Started GET "/" for ::1 at 2022-10-02 19:22:29 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 124)
+  Rendered layout layouts/application.html.erb (Duration: 16.3ms | Allocations: 6218)
+Completed 200 OK in 27ms (Views: 19.7ms | ActiveRecord: 0.8ms | Allocations: 8194)
+
+
+Started GET "/" for ::1 at 2022-10-02 19:23:33 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 45.4ms | Allocations: 34576)
+Completed 200 OK in 72ms (Views: 47.9ms | ActiveRecord: 0.6ms | Allocations: 61197)
+
+
+Started GET "/" for ::1 at 2022-10-02 19:27:58 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 417)
+  Rendered layout layouts/application.html.erb (Duration: 44.3ms | Allocations: 34530)
+Completed 200 OK in 73ms (Views: 47.2ms | ActiveRecord: 1.1ms | Allocations: 61135)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2022-10-02 19:28:02 -0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 7ms (ActiveRecord: 0.1ms | Allocations: 3343)
+
+
+Started GET "/" for ::1 at 2022-10-02 19:28:02 -0300
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 325)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-10-02 19:28:02 -0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 842)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.9ms | Allocations: 3893)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 8546)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 9822)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-10-02 19:28:15 -0300
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"aline@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Entrar"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "aline@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 218ms (ActiveRecord: 0.3ms | Allocations: 4224)
+
+
+Started GET "/" for ::1 at 2022-10-02 19:28:15 -0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 5341)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.1ms | Allocations: 6655)
+
+
+Started GET "/orders" for ::1 at 2022-10-02 19:29:03 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:2
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/index.html.erb:15
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:18
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:18
+  Rendered orders/index.html.erb within layouts/application (Duration: 28.2ms | Allocations: 30488)
+  Rendered layout layouts/application.html.erb (Duration: 63.1ms | Allocations: 56759)
+Completed 200 OK in 94ms (Views: 65.1ms | ActiveRecord: 1.7ms | Allocations: 86537)
+
+
+Started GET "/orders/7" for ::1 at 2022-10-02 19:29:05 -0300
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:28:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/show.html.erb within layouts/application
+  [1m[36mWarehouse Load (0.3ms)[0m  [1m[34mSELECT "warehouses".* FROM "warehouses" WHERE "warehouses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:15
+  [1m[36mSupplier Load (0.1ms)[0m  [1m[34mSELECT "suppliers".* FROM "suppliers" WHERE "suppliers"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/views/orders/show.html.erb:16
+  Rendered orders/show.html.erb within layouts/application (Duration: 40.4ms | Allocations: 33707)
+  Rendered layout layouts/application.html.erb (Duration: 46.1ms | Allocations: 39412)
+Completed 200 OK in 58ms (Views: 44.6ms | ActiveRecord: 3.2ms | Allocations: 41377)
+
+
+Started GET "/orders/search" for ::1 at 2022-10-02 19:47:12 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#search as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  Rendered orders/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2171)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 2256)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.5ms | Allocations: 28131)
+
+
+  
+ActionView::Template::Error (undefined method `any?' for nil:NilClass):
+    1: <h2>Todos os pedidos</h2>
+    2: <% if @orders.any? %>
+    3:   <div class="table-responsive">
+    4:   <table class="table">
+    5:     <thead>
+  
+app/views/orders/index.html.erb:2
+app/controllers/orders_controller.rb:33:in `search'
+Started GET "/orders/search" for ::1 at 2022-10-02 19:58:47 -0300
+Processing by OrdersController#search as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."code" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:32:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/search.html.erb within layouts/application
+  Rendered orders/search.html.erb within layouts/application (Duration: 0.2ms | Allocations: 92)
+  Rendered layout layouts/application.html.erb (Duration: 47.7ms | Allocations: 33973)
+Completed 200 OK in 75ms (Views: 48.8ms | ActiveRecord: 1.1ms | Allocations: 61341)
+
+
+Started GET "/orders" for ::1 at 2022-10-02 19:58:49 -0300
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:2
+  [1m[36mOrder Load (0.5ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/_order.html.erb:12
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:15
+  Rendered orders/_order.html.erb (Duration: 38.2ms | Allocations: 6490)
+  Rendered orders/index.html.erb within layouts/application (Duration: 45.2ms | Allocations: 7538)
+  Rendered layout layouts/application.html.erb (Duration: 55.5ms | Allocations: 13495)
+Completed 200 OK in 64ms (Views: 55.0ms | ActiveRecord: 1.7ms | Allocations: 14865)
+
+
+Started GET "/orders/search" for ::1 at 2022-10-02 19:58:54 -0300
+Processing by OrdersController#search as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."code" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:32:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/search.html.erb within layouts/application
+  Rendered orders/search.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 5513)
+Completed 200 OK in 19ms (Views: 11.5ms | ActiveRecord: 0.4ms | Allocations: 7361)
+
+
+Started GET "/orders" for ::1 at 2022-10-02 20:11:28 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering orders/index.html.erb within layouts/application
+  [1m[36mOrder Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "orders" LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/views/orders/index.html.erb:2
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  ↳ app/views/orders/_order.html.erb:12
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:15
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/orders/_order.html.erb:15
+  Rendered orders/_order.html.erb (Duration: 24.7ms | Allocations: 28969)
+  Rendered orders/index.html.erb within layouts/application (Duration: 27.3ms | Allocations: 30784)
+  Rendered layout layouts/application.html.erb (Duration: 60.9ms | Allocations: 57063)
+Completed 200 OK in 91ms (Views: 62.4ms | ActiveRecord: 1.4ms | Allocations: 86834)
+
+
+Started GET "/orders/search" for ::1 at 2022-10-02 20:11:37 -0300
+Processing by OrdersController#search as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.4ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."code" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:33:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/search.html.erb within layouts/application
+  Rendered orders/_order.html.erb (Duration: 4.3ms | Allocations: 1551)
+  Rendered orders/search.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1764)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 1836)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.8ms | Allocations: 4038)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+     9:     </thead>
+    10:     <tbody>
+    11:         <tr>
+    12:         <% @orders.each do |field| %>
+    13:           <tr>
+    14:             <td><%= link_to(field.code, order_path(field.id)) %></td>
+    15:             <td><%= link_to(field.user.email, order_path(field.id)) %></td>
+  
+app/views/orders/_order.html.erb:12
+app/views/orders/search.html.erb:5
+Started GET "/orders/search" for ::1 at 2022-10-02 20:15:04 -0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by OrdersController#search as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."code" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:33:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/search.html.erb within layouts/application
+  Rendered orders/search.html.erb within layouts/application (Duration: 6.9ms | Allocations: 4941)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 5026)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 1.1ms | Allocations: 50647)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `field' for #<ActionView::Base:0x00000000008750>
+Did you mean?  fields
+               yield):
+    14:     <tbody>
+    15:         <tr>
+    16:           <tr>
+    17:             <td><%= link_to(field.code, order_path(field.id)) %></td>
+    18:             <td><%= link_to(field.user.email, order_path(field.id)) %></td>
+    19:             <td><%= link_to(I18n.localize(field.estimated_delivery_date), order_path(field.id)) %></td>
+    20:           </tr>
+  
+app/views/orders/search.html.erb:17
+Started GET "/orders/search" for ::1 at 2022-10-02 20:15:17 -0300
+Processing by OrdersController#search as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."code" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:33:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/search.html.erb within layouts/application
+  Rendered orders/search.html.erb within layouts/application (Duration: 7.9ms | Allocations: 3391)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3463)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms | Allocations: 5424)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `field' for #<ActionView::Base:0x000000000088b8>
+Did you mean?  fields
+               yield):
+    14:     <tbody>
+    15:         <tr>
+    16:           <tr>
+    17:             <td><%= link_to(field.code, order_path(field.id)) %></td>
+    18:             <td><%= link_to(field.user.email, order_path(field.id)) %></td>
+    19:             <td><%= link_to(I18n.localize(field.estimated_delivery_date), order_path(field.id)) %></td>
+    20:           </tr>
+  
+app/views/orders/search.html.erb:17
+Started GET "/orders/search" for ::1 at 2022-10-02 20:16:14 -0300
+Processing by OrdersController#search as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."code" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  ↳ app/controllers/orders_controller.rb:33:in `search'
+  Rendering layout layouts/application.html.erb
+  Rendering orders/search.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/views/orders/search.html.erb:18
+  Rendered orders/search.html.erb within layouts/application (Duration: 25.0ms | Allocations: 12346)
+  Rendered layout layouts/application.html.erb (Duration: 65.3ms | Allocations: 38365)
+Completed 200 OK in 81ms (Views: 68.1ms | ActiveRecord: 1.3ms | Allocations: 41051)
+
+

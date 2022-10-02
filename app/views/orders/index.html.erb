@@ -6,7 +6,6 @@
       <tr>
       <th>Pedido</th>
       <th>Criado por</th>
-      <%# <% <th><%= Order.human_attribute_name(:estimated_delivery_date)</th>  %>
       <th>Data Prevista de Entrega</th>
     </tr>
     </thead>
@@ -21,9 +20,9 @@
         <% end %>
       </tbody>
       </table>
+  <div>
 <% else %>
   <span> 'Não existem pedidos cadastrados' </span>
 <% end %>
-<div>
     <%= link_to('Registrar Pedido', new_order_path, class:'btn btn-primary')%>
-  </div>
+</div>

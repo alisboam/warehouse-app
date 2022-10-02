@@ -11,3 +11,5 @@ pt-BR:
         estimated_delivery_date: 'Data Prevista de Entrega'
         user: 'Usuário Responsável'
         user_id: 'Usuário Responsável'
+        search: 'Buscar Pedido'
+        code: 'Código'

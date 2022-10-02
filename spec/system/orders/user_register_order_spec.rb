@@ -38,4 +38,27 @@ describe 'Usuário cadastra um pedido' do
     expect(page).to have_content('Data Prevista de Entrega')
     expect(page).to have_content('20/12/2022')
   end
+  it 'e não informa a data de entrega' do
+    warehouse = Warehouse.create(name: 'Rio', code: 'SDU', city: 'Rio de Janeiro', area: 60_000,
+                                 address: 'Praça Sen. Salgado Filho', cep: '20021340',
+                                 description: 'Galpão destinado a cargas pequenas')
+    supplier = Supplier.create(name: 'Pernambucanas', company_name: 'Pernambucanas S/A',
+                               cnpj: '95960950000125', address: 'Av Paulista, 28',
+                               email: 'per@email.com', telephone: '4000095')
+    user = User.create!(name: 'João', email: 'joao@email.com', password: 'password')
+    allow(SecureRandom).to receive(:alphanumeric).and_return('ABC12345')
+
+    login_as(user)
+    visit(root_path)
+    within('nav') do
+      click_on 'Pedidos'
+    end
+    click_on 'Registrar Pedido'
+    select warehouse.name, from: 'Galpão Destino'
+    select supplier.company_name, from: 'Fornecedor'
+    fill_in 'Data Prevista de Entrega', with: ''
+    click_on 'Gravar'
+
+    expect(page).to have_content('Não foi possível criar o pedido')
+  end
 end

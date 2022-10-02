@@ -5,13 +5,13 @@ describe 'Usuário se autentica' do
     User.create!(email: 'joao@email.com', password: 'password')
 
     visit root_path
-    within('nav') do
+    within('header nav') do
       click_on 'Entrar'
     end
-    within('form') do
+    within('body') do
       fill_in 'E-mail', with: 'joao@email.com'
       fill_in 'Senha', with: 'password'
-      click_on 'Entrar'
+      click_button 'Entrar'
     end
 
     within('nav') do
@@ -21,20 +21,21 @@ describe 'Usuário se autentica' do
     end
     expect(page).to have_content 'Login efetuado com sucesso'
   end
+  
   it 'e faz logout' do
     User.create!(email: 'joao@email.com', password: 'password')
 
     visit root_path
-    within('nav') do
+    within('header nav') do
       click_on 'Entrar'
     end
-    within('form') do
+    within('body') do
       fill_in 'E-mail', with: 'joao@email.com'
       fill_in 'Senha', with: 'password'
-      click_on 'Entrar'
+      click_button 'Entrar'
     end
     within('nav') do
-      click_on 'Sair'
+      click_button 'Sair'
     end
 
     within('nav') do
