@@ -2,7 +2,7 @@ require 'rails_helper'
 
 describe 'Usuário cadastra um pedido' do
   it 'com sucesso' do
-    Warehouse.create(name: 'São Paulo', code: 'GRU', city: 'São Paulo', area: 100_000,
+    Warehouse.create!(name: 'São Paulo', code: 'GRU', city: 'São Paulo', area: 100_000,
                      address: 'Av. São Paulo', cep: '20021340',
                      description: 'Galpão destinado a cargas grandes')
     warehouse = Warehouse.create(name: 'Rio', code: 'SDU', city: 'Rio de Janeiro', area: 60_000,

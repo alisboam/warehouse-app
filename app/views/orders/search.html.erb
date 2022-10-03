@@ -4,10 +4,24 @@
   <div class="notice">
     <span> <%= @orders.count %> <%= Order.model_name.human(count: @orders.count).downcase %> <%= I18n.t(:found, count: @orders.count)%></span>
   </div>  
-  <% @orders.each do |order| %>
-    <%= render order %>
-  <% end %>
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Pedido</th>
+          <th>Criado por</th>
+          <th>Galpão</th>
+          <th>Data Prevista de Entrega</th>
+      </tr>
+      </thead>
+      <% @orders.each do |order| %>
+        <%= render order %>
+      <% end %>
+    </table>
+<div>
 <% else %>
-  <span> 'Não existem pedidos cadastrados' </span>
+  <div class="notice">
+    <span> 'Não existem pedidos cadastrados' </span>
+  </div> 
 <% end %>
 

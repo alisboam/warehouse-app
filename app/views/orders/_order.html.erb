@@ -1,21 +1,10 @@
-<div class="table-responsive">
-      <table class="table">
-        <thead>
-          <tr>
-          <th>Pedido</th>
-          <th>Criado por</th>
-          <th>Galpão</th>
-          <th>Data Prevista de Entrega</th>
-        </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <tr>
-              <td><%= link_to(order.code, order_path(order.id)) %></td>
-              <td><%= link_to(order.user.email, order_path(order.id)) %></td>
-              <td><%= link_to(order.warehouse.name, order_path(order.id)) %></td>
-              <td><%= link_to(I18n.localize(order.estimated_delivery_date), order_path(order.id)) %></td>
-            </tr>
-        </tbody>
-      </table>
-    <div>
+<tbody>
+  <tr>
+    <tr>
+      <td><%= link_to(order.code, order_path(order.id)) %></td>
+      <td><%= link_to(order.user.email, order_path(order.id)) %></td>
+      <td><%= link_to(order.warehouse.name, order_path(order.id)) %></td>
+      <td><%= link_to(I18n.localize(order.estimated_delivery_date), order_path(order.id)) %></td>
+    </tr>
+</tbody>
+     
