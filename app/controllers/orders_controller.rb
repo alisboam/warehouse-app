@@ -1,6 +1,8 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
+
   def index
-    @orders = Order.all
+    @orders = current_user.orders
   end
 
   def new
@@ -29,10 +31,7 @@ class OrdersController < ApplicationController
   end
 
   def search
-    @code = params["query"]
-    @order = Order.find_by(code: @code )
-    p @order
-    p @code
-  
+    @code = params["search"]
+    @orders = Order.where("code LIKE ?", "%#{@code}%")
   end
 end
