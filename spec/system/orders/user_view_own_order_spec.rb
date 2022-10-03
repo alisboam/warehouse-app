@@ -48,7 +48,8 @@ describe 'Usuário vê seus próprios pedidos' do
     
     order_1 = Order.create!(user: user_john, supplier: supplier, warehouse: warehouse, estimated_delivery_date: 1.day.from_now.to_fs)
     order_3 = Order.create!(user: user_john, supplier: supplier, warehouse: warehouse, estimated_delivery_date: 1.day.from_now)
-      date = order_1.estimated_delivery_date.to_fs
+      date = order_1.estimated_delivery_date
+      # I18n.localize(1.day.from_now.to_date)
     p date
     login_as(user_john)
     visit(root_path)
