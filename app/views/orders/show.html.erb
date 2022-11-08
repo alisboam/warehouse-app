@@ -7,6 +7,7 @@
       <th>Galpão Destino</th>
       <th>Fornecedor</th>
       <th>Data Prevista de Entrega</th>
+      <th>Status</th>
     </tr>
     </thead>
     <tbody>
@@ -15,9 +16,24 @@
         <td><%= @order.warehouse.name %></td>
         <td><%= @order.supplier.company_name %></td>
         <td><%= I18n.localize(@order.estimated_delivery_date) %></td>
+        <td><%= I18n.t(@order.status) %></td>
       </tr>
     </tbody>
   </table>
 
+  <h2>Itens do Pedido</h2>
+<%= link_to 'Adicionar Item', new_order_order_item_path(order_id: @order.id) %>
+
+<ul>
+  <% @order.order_items.each do |item| %>
+  <li><%= item.quantity %> x <%= item.product_model.name %></li>
+  <% end %>
+</ul>
+
 <%= link_to('Voltar', order_path, class: "btn btn-success")%>
 <%= link_to('Editar', edit_order_path, class: "btn btn-success")%>
+
+<% if @order.pending? %>
+  <%= button_to('Marcar como ENTREGUE', delivered_order_path(@order.id), class: "btn btn-warning")%>
+  <%= button_to('Marcar como CANCELADO', canceled_order_path(@order.id), class: "btn btn-danger")%>
+<% end %>

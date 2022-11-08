@@ -1,6 +1,6 @@
 <h1>Resultados da busca por: <%= @code %></h1>
 
-<% if @orders.any? %>
+<% if @orders.present? %>
   <div class="notice">
     <span> <%= @orders.count %> <%= Order.model_name.human(count: @orders.count).downcase %> <%= I18n.t(:found, count: @orders.count)%></span>
   </div>  
@@ -19,7 +19,7 @@
       <% end %>
     </table>
 <div>
-<% else %>
+<% else  %>
   <div class="notice">
     <span> 'Não existem pedidos cadastrados' </span>
   </div> 

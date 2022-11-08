@@ -37,7 +37,10 @@ describe 'Usuário cadastra um pedido' do
     expect(page).to have_content('João | joao@email.com')
     expect(page).to have_content('Data Prevista de Entrega')
     expect(page).to have_content('20/12/2022')
+    expect(page).to have_content('Status')
+    expect(page).to have_content('Pendente')
   end
+  
   it 'e não informa a data de entrega' do
     warehouse = Warehouse.create(name: 'Rio', code: 'SDU', city: 'Rio de Janeiro', area: 60_000,
                                  address: 'Praça Sen. Salgado Filho', cep: '20021340',

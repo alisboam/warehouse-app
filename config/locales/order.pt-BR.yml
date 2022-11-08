@@ -1,4 +1,7 @@
 pt-BR:
+  pending: 'Pendente'
+  canceled: 'Cancelado'
+  delivered: 'Entregue'
   activerecord:
     models:
       order: 
@@ -15,4 +18,5 @@ pt-BR:
         user_id: 'Usuário Responsável'
         search: 'Buscar Pedido'
         code: 'Código'
+        
        

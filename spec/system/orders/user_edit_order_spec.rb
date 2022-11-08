@@ -31,6 +31,7 @@ describe 'Usuário edita um pedido' do
     
     order = Order.create!(user: user, supplier: supplier, warehouse: warehouse, 
                             estimated_delivery_date: 1.day.from_now)
+  
     login_as(user)
     visit(root_path)
     within('header nav') do

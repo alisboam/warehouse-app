@@ -5,6 +5,7 @@
       <td><%= link_to(order.user.email, order_path(order.id)) %></td>
       <td><%= link_to(order.warehouse.name, order_path(order.id)) %></td>
       <td><%= link_to(I18n.localize(order.estimated_delivery_date), order_path(order.id)) %></td>
+      <td><%= link_to(I18n.t(order.status), order_path(order.id)) %></td>
     </tr>
 </tbody>
      
